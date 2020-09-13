@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>libimobiledevice</title>
+    <description><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></description>
+    <lastBuildDate>2020-06-27T00:36:12+02:00</lastBuildDate>
+    <link>https://libimobiledevice.github.io/</link>
+    <item>
+      <guid>https://libimobiledevice.github.io/footer/</guid>
+      <title>footer</title>
+      <description><![CDATA[<p>Apple, iPhone, iPad, iPod, iPod Touch, Apple TV, Apple Watch, Mac, iOS, iPadOS, tvOS, watchOS, and macOS are trademarks of <a href="https://apple.com">Apple Inc</a>.
+This project is an independent software solution and has not been authorized, sponsored or otherwise approved by Apple Inc. The library has not been sponsored by and is not affilated with <a href="https://ubuntu.com">Ubuntu</a> or <a href="https://canonical.com">Canonical Ltd</a>.</p>]]></description>
+      <pubDate>2020-06-27T00:36:12+02:00</pubDate>
+      <link>https://libimobiledevice.github.io/footer/</link>
+    </item>
+    <item>
+      <guid>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</guid>
+      <title>New Logo and Website</title>
+      <description><![CDATA[<p>Welcome to our new project website! Finally the old paint is gone and a new state of art modern look is here.</p>
+<!-- excerpt -->
+<p>The website has been overhauled due to popular demand. <strong>We really needed a refresh.</strong>
+In that process upfront I decided to go for a <em>full rebranding of the project</em>, too.</p>
+<p>Looking at the results I think it was worth the wait. The new colorful isometric logo that relates to the letters <em>&quot;L&quot;</em> and <em>&quot;i&quot;</em> alongside the flow of colors which symbolizes the &quot;flow of communication and related components&quot; should hopefully hit the spot of what the project stands for.</p>
+<p><img src="/images/thumbs/512/img/brand/brand-ontop-gradient-alpha.png" alt="libimobiledevice logo" title="The new logo and font" width="512" loading="lazy" /></p>
+<p>The next milestone is to integrate this page to be hosted using <a href="https://pages.github.com">Github Pages</a>.
+This should allow contributions for all content by the community!
+Looks like we arrived in the <em>&quot;static website generator era&quot;</em>.</p>
+<p>I really hope you guys enjoy the effort and there is much more coming in the next weeks!</p>
+<p><small>P.S.: Just want to congratulate <a href="https://inkscape.org">Inkscape to their fantastic 1.0 release</a>. That helped all the way in our process so, &quot;All your base are belong to us&quot;!</small></p>]]></description>
+      <pubDate>2020-06-26T00:10:00+02:00</pubDate>
+      <link>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</link>
+    </item>
+    <item>
+      <guid>https://libimobiledevice.github.io/status/</guid>
+      <title>Status</title>
+      <description><![CDATA[]]></description>
+      <pubDate>2020-06-22T00:55:37+02:00</pubDate>
+      <link>https://libimobiledevice.github.io/status/</link>
+    </item>
+    <item>
+      <guid>https://libimobiledevice.github.io/news/2020/06/16/fresh-documentation/</guid>
+      <title>Fresh Documentation</title>
+      <description><![CDATA[<p>The <a href="https://libimobiledevice.org/docs/libimobiledevice/latest">API Documentation</a> for libimobiledevice has been updated.
+A refresh of this website is planned next.</p>]]></description>
+      <pubDate>2020-06-16T20:00:00+02:00</pubDate>
+      <link>https://libimobiledevice.github.io/news/2020/06/16/fresh-documentation/</link>
+    </item>
+    <item>
+      <guid>https://libimobiledevice.github.io/news/2020/06/15/release-galore/</guid>
+      <title>Release Galore</title>
+      <description><![CDATA[<p>Proud to announce long standing releases with first time releases of <a href="/#download-libirecovery">libirecovery</a> and <a href="/#download-libirecovery">idevicerestore</a>.
+Bear with us for some cool stuff coming up next.</p>
+<!-- excerpt -->
+<p>Please find the latest source archives in our <a href="/#downloads">download section</a> alongside release information.</p>
+<p>This release round included:</p>
+<ul>
+<li><strong>libirecovery</strong> 1.0.0</li>
+<li><strong>libplist</strong> 2.2.0</li>
+<li><strong>libusbmuxd</strong> 2.0.2</li>
+<li><strong>libimobiledevice</strong> 1.3.0</li>
+<li><strong>usbmuxd</strong> 1.1.1</li>
+<li><strong>libideviceactivation</strong> 1.1.1</li>
+<li><strong>ideviceinstaller</strong> 1.1.1</li>
+<li><strong>idevicerestore</strong> 1.0.0</li>
+<li><strong>ifuse</strong> 1.1.4.</li>
+</ul>]]></description>
+      <pubDate>2020-06-15T20:00:00+02:00</pubDate>
+      <link>https://libimobiledevice.github.io/news/2020/06/15/release-galore/</link>
+    </item>
+    <item>
+      <guid>https://libimobiledevice.github.io/news/2020/06/14/ios-13-support/</guid>
+      <title>iOS 13 Support</title>
+      <description><![CDATA[<p>Yep, libimobiledevice works with iOS 13.</p>]]></description>
+      <pubDate>2020-06-14T20:00:00+02:00</pubDate>
+      <link>https://libimobiledevice.github.io/news/2020/06/14/ios-13-support/</link>
+    </item>
+    <item>
+      <guid>https://libimobiledevice.github.io/news/2017/04/26/libplist-release/</guid>
+      <title>libplist 2.0.0</title>
+      <description><![CDATA[<p><a href="/#download-libplist">libplist 2.0.0</a> has been released.</p>
+<!-- excerpt -->
+<p>The release features a completely new parser, dropped libxml2 dependency, various improvements, bugfixes and many security fixes.
+More releases coming up.</p>]]></description>
+      <pubDate>2017-04-26T20:00:00+02:00</pubDate>
+      <link>https://libimobiledevice.github.io/news/2017/04/26/libplist-release/</link>
+    </item>
+  </channel>
+</rss>
