@@ -3,15 +3,22 @@
   <channel>
     <title>libimobiledevice</title>
     <description><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></description>
-    <lastBuildDate>2020-06-27T00:36:12+02:00</lastBuildDate>
+    <lastBuildDate>2020-09-26T00:51:06+02:00</lastBuildDate>
     <link>https://libimobiledevice.github.io/</link>
     <item>
       <guid>https://libimobiledevice.github.io/footer/</guid>
       <title>footer</title>
       <description><![CDATA[<p>Apple, iPhone, iPad, iPod, iPod Touch, Apple TV, Apple Watch, Mac, iOS, iPadOS, tvOS, watchOS, and macOS are trademarks of <a href="https://apple.com">Apple Inc</a>.
 This project is an independent software solution and has not been authorized, sponsored or otherwise approved by Apple Inc. The library has not been sponsored by and is not affilated with <a href="https://ubuntu.com">Ubuntu</a> or <a href="https://canonical.com">Canonical Ltd</a>.</p>]]></description>
-      <pubDate>2020-06-27T00:36:12+02:00</pubDate>
+      <pubDate>2020-09-26T00:51:06+02:00</pubDate>
       <link>https://libimobiledevice.github.io/footer/</link>
+    </item>
+    <item>
+      <guid>https://libimobiledevice.github.io/status/</guid>
+      <title>Status</title>
+      <description><![CDATA[]]></description>
+      <pubDate>2020-09-26T00:51:06+02:00</pubDate>
+      <link>https://libimobiledevice.github.io/status/</link>
     </item>
     <item>
       <guid>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</guid>
@@ -29,13 +36,6 @@ Looks like we arrived in the <em>&quot;static website generator era&quot;</em>.<
 <p><small>P.S.: Just want to congratulate <a href="https://inkscape.org">Inkscape to their fantastic 1.0 release</a>. That helped all the way in our process so, &quot;All your base are belong to us&quot;!</small></p>]]></description>
       <pubDate>2020-06-26T00:10:00+02:00</pubDate>
       <link>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</link>
-    </item>
-    <item>
-      <guid>https://libimobiledevice.github.io/status/</guid>
-      <title>Status</title>
-      <description><![CDATA[]]></description>
-      <pubDate>2020-06-22T00:55:37+02:00</pubDate>
-      <link>https://libimobiledevice.github.io/status/</link>
     </item>
     <item>
       <guid>https://libimobiledevice.github.io/news/2020/06/16/fresh-documentation/</guid>

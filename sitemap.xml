@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://libimobiledevice.github.io/</loc>
-    <lastmod>2020-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://libimobiledevice.github.io/footer/</loc>
-    <lastmod>2020-06-27</lastmod>
+    <lastmod>2020-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</loc>
-    <lastmod>2020-06-26</lastmod>
+    <loc>https://libimobiledevice.github.io/</loc>
+    <lastmod>2020-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://libimobiledevice.github.io/status/</loc>
+    <lastmod>2020-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -25,8 +25,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/status/</loc>
-    <lastmod>2020-06-22</lastmod>
+    <loc>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</loc>
+    <lastmod>2020-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
