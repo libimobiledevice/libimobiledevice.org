@@ -1,0 +1,70 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'assets/**'
+      - 'content/**'
+      - 'data/*.json'
+      - 'layouts/**'
+      - 'config.*.yml'
+      - 'composer.json'
+      - 'package.json'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache composer downloads 🗄
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.*') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Cache PHP dependencies 🗄
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.*') }}
+
+      - name: Install php intl extension  🏗
+        run: |
+          apt-get update
+          apt-get install php-intl
+
+      - name: Install composer dependencies 🏗
+        shell: bash
+        run: |
+          composer install
+
+      - name: Install node dependencies 🏗
+        shell: bash
+        run: |
+          yarn install
+
+      - name: Build 🔧
+        shell: bash
+        run: |
+          make production
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: public
+          CLEAN: true
