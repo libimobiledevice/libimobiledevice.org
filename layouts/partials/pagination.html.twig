@@ -1,0 +1,62 @@
+{% extends 'partials/container.html.twig' %}
+
+{% block container_content %}
+{% if page.pagination.pages is defined %}
+{% set pagination = page.pagination %}
+<nav>
+<ul class="pagination pagination-sm justify-content-center">
+	{% if pagination.links.first is defined and pagination.links.first != page.id %}
+	<li class="page-item">
+		<a href="{{ url(site.pages[pagination.links.first]) }}" class="page-link"><i class="fas fa-angle-double-left"></i></a>
+	</li>
+	{% else %}
+	<li class="page-item disabled">
+		<span class="page-link"><i class="fas fa-angle-double-left"></i></span>
+	</li>
+	{% endif %}
+
+	{% if pagination.links.prev is defined %}
+	<li class="page-item">
+		<a href="{{ url(site.pages[pagination.links.prev]) }}" class="page-link"><i class="fas fa-angle-left"></i></a>
+	</li>
+	{% else %}
+	<li class="page-item disabled">
+		<span class="page-link"><i class="fas fa-angle-left"></i></span>
+	</li>
+	{% endif %}
+
+	{% for page_index in 1..pagination.count %}
+	{% if page_index != pagination.current %}
+	<li class="page-item">
+		<a href="{{ url(site.pages[(pagination.links.last | split('/', -1) | join('/') ~ '/' ~ page_index)]) }}" class="page-link">{{ page_index }}</a>
+	</li>
+	{% else %}
+	<li class="page-item active">
+		<span class="page-link">{{ page_index }}</span>
+	</li>
+	{% endif %}
+	{% endfor %}
+
+	{% if pagination.links.next is defined %}
+	<li class="page-item">
+		<a href="{{ url(site.pages[pagination.links.next]) }}" class="page-link"><i class="fas fa-angle-right"></i></a>
+	</li>
+	{% else %}
+	<li class="page-item disabled">
+		<span class="page-link"><i class="fas fa-angle-right"></i></span>
+	</li>
+	{% endif %}
+
+	{% if pagination.links.last is defined and pagination.current != pagination.count %}
+	<li class="page-item">
+		<a href="{{ url(site.pages[pagination.links.last]) }}" class="page-link"><i class="fas fa-angle-double-right"></i></a>
+	</li>
+	{% else %}
+	<li class="page-item disabled">
+		<span class="page-link"><i class="fas fa-angle-double-right"></i></span>
+	</li>
+	{% endif %}
+</ul>
+</nav>
+{% endif %}
+{% endblock %}

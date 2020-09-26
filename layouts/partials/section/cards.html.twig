@@ -1,0 +1,42 @@
+{% extends 'partials/section.html.twig' %}
+
+{% block section_content %}
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+	{% for item in items %}
+	<div class="col mb-4">
+		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
+			{% if item.image is defined %}
+			<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
+				<a href="{{ url(item) }}">
+					<img data-src="{{ item.image | resize(384) | url }}" class="img-fluid filter-grayscale-hover" alt="{{ item.title | e }} Picture">
+				</a>
+			</div>
+			{% else %}
+			<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
+				<a href="{{ url(item) }}">
+					<img data-src="{{ url('img/logo.svg') }}" class="img-fluid filter-grayscale-hover" height="180" alt="Download">
+				</a>
+			</div>
+			{% endif %}
+			<div class="card-body">
+				<h5 class="card-title"><a href="{{ url(item) }}" class="text-reset">{{ item.title | e }}</a></h5>
+				<p class="card-text">{{ item.content | excerpt_html }}</p>
+			</div>
+			<div class="card-footer">
+				<p class="card-text"><small class="text-muted">{{ item.date | localizeddate('medium', 'short') }}</small></p>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock section_content %}
+
+{% block section_footer %}
+{% if view_all is defined and view_all != false %}
+<div class="row">
+	<div class="col-12 text-center">
+		<a href="{{ url(site.pages['news']) }}">View all</a>
+	</div>
+</div>
+{% endif %}
+{% endblock section_footer %}

@@ -1,0 +1,36 @@
+.loading {
+  position: relative;
+}
+
+.loading:after {
+  @extend .fa;
+  -webkit-animation: loading 2s infinite linear;
+  animation: loading 2s infinite linear;
+  content: $fa-circle-o-notch;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

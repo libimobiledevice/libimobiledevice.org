@@ -1,0 +1,31 @@
+{% extends 'partials/section.html.twig' %}
+
+{% block section %}
+{% set anchor_base_url = (page.type == 'homepage' ? '': url('/', {canonical:true})) %}
+<section id="jumbotron">
+	<div class="container-fluid p-0">
+		<div class="jumbotron jumbotron-fluid m-0 pb-0 px-md-5 text-center position-relative" style="background-image: url('{{ url('img/xs-vector.svg') }}'); background-repeat: no-repeat; background-position: 50% 20%; background-blend-mode: overlay; background-size: contain;">
+			<div class="svg">{{- asset('img/logo-gradient.svg') | inline | raw -}}</div>
+
+			<div class="py-3"><div class="img-fluid d-inline-block" style="width: 60%; fill: var(--dark); stroke: var(--dark);">{{- asset('img/brand-name.svg') | inline | raw -}}</div></div>
+
+			<p class="lead font-weight-normal">{{ site.baseline | e('html') }}</p>
+			<hr>
+			<p class="font-weight-light">... and a bunch of libraries and command-line utilities.</p>
+
+			<a class="btn btn-lg btn-info mb-2 mx-1" href="{{ anchor_base_url }}#get-started" role="button"><i class="fas fa-rocket fa-fw"></i>&nbsp;Get Started</a>
+			<div class="btn-group mx-1" role="group">
+				<a class="btn btn-lg btn-success mb-2" href="{{ anchor_base_url }}#downloads" role="button"><i class="fas fa-download fa-fw"></i>&nbsp;Download</a>
+				<a id="download-btn-dropdown" class="btn btn-lg btn-success dropdown-toggle dropdown-toggle-split mb-2" href="https://github.com/libimobiledevice/libimobiledevice/releases/latest" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"><span class="sr-only">Toggle Dropdown</span></a>
+
+				<div class="dropdown-menu" aria-labelledby="download-btn-dropdown">
+					{% set repos = site.data.github.libimobiledevice.repos | filter(p => site.data.github.libimobiledevice[p.name].releases.latest is defined) | sort((a, b) => (a.name | length) > (b.name | length)) %}
+					{% for repo in repos %}
+						<a class="dropdown-item" href="{{ attribute(site.data.github.libimobiledevice[repo.name].releases.latest.assets | first, 'browser_download_url') }}">{{ repo.name }} <span class="font-weight-light text-muted">{{ site.data.github.libimobiledevice[repo.name].releases.latest.tag_name }}</span></a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock section %}

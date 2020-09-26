@@ -1,0 +1,27 @@
+{% extends 'partials/section.html.twig' %}
+
+{%- set heading = heading is defined ? heading: 'h2' -%}
+
+{% block section_header %}
+<div class="row section-heading mb-4">
+	<div class="col-12">
+		{{ '<%s class="section-title">%s</%s>' | format(heading, page.title, heading) | raw }}
+		<hr class="bg-info">
+	</div>
+</div>
+{% endblock section_header %}
+
+{% block section_content %}
+<div class="row">
+	<div class="col">
+		<article>
+			<div class="entry-content">{{ page.content }}</div>
+		</article>
+	</div>
+	{% if page.image is defined %}
+	<div class="col-4">
+		<div class="entry-image border"><img src="{{ url(page.image) }}" class="img-fluid border border-light" alt="{{ page.title }}"></div>
+	</div>
+	{% endif %}
+</div>
+{% endblock section_content %}

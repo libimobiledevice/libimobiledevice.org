@@ -1,0 +1,92 @@
+title: "libimobiledevice"
+baseline: "A cross-platform FOSS library written in C to communicate with iOS devices natively."
+baseurl: http://localhost:8000/
+description: "libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking."
+keywords: "Linux, iOS, iPhone, iPod Touch, iPad, iPad mini, Apple TV, iTunes, development, library, afc, lockdownd, libplist, installation_proxy, usbmux, plist, libirecovery, idevicerestore, iTunesCDB, tethering, backup, restore, C/C++, instruments, MDM, mobileconfig, provisioning, FOSS"
+image: img/brand/brand-ontop-gradient-alpha.png
+canonicalurl: false
+googleanalytics: false
+twitter:
+  username: libimobiledev
+language: en
+languages:
+  - code: en
+    name: English
+    locale: en_US
+  - code: de
+    name: German
+    locale: de_DE
+date:
+  format: "j F Y H:i"
+  timezone: Europe/Berlin
+author:
+  name: Mirell Development
+  url:  https://mirell.com
+output:
+  dir: public
+  formats:
+    - name: html
+      mediatype: "text/html"
+      suffix: "/index"
+      extension: "html"
+      exclude: [exclude]
+static:
+  dir: assets
+  exclude:
+    - '*.scss'
+    - '*.html'
+    - '/^scss/'
+    - 'animate.*'
+    - 'bootstrap.js*'
+    - 'bootstrap.min.*'
+    - 'fa-regular*'
+    - 'prism.js'
+    - 'jquery-*'
+    - 'jquery.waypoints*'
+    - 'jquery.back-to-top*'
+    - '*.src.*'
+  load: true
+assets:
+  fingerprint:
+    enabled: false
+  compile:
+    enabled: true
+    style: expanded
+    import:
+      0: ../node_modules
+      1: scss
+  minify:
+    enabled: false
+node:
+  dir: ../node_modules
+postprocess:
+  enabled: true
+  html:
+    ext: [html, htm]
+    enabled: false
+  css:
+    ext: [css]
+  js:
+    ext: [js]
+  images:
+    ext: [jpeg, jpg, png, gif, webp, svg]
+menus:
+  main:
+    - id: download
+      name: Download
+      url: "#downloads"
+      weight: 3
+    - id: community
+      name: Community
+      url: "#community"
+      weight: 8
+    - id: faq
+      name: FAQ
+      url: "#faq"
+      weight: 8
+paths:
+  - section: news
+    path: :section/:year/:month/:day/:slug
+pagination:
+  max: 3
+  path: page

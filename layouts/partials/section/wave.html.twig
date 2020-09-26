@@ -1,0 +1,9 @@
+{# template: wave #}
+{%- apply spaceless %}
+{% set start = start | default('transparent') %}
+{% set end = end | default('transparent') %}
+{% set height = height | default('200') %}
+<div class="shape-1 bottom" style="background-color: {{ start }}; overflow: hidden; width: 100%; height: {{ height }}px;">
+	<svg viewBox="0 0 600 {{ height }}" preserveAspectRatio="none" style="width: 100%; height: 100%; -webkit-transform: scale(1); transform: scale(1);"><path d="M 0,{{ height / 2 }} C {{ height }},{{ height }} 400,-{{ height / 2 }} 600,{{ height / 2 }} V {{ height }} H 0 Z" style="stroke: none; fill: {{ end }};"></path></svg>
+</div>
+{% endapply -%}

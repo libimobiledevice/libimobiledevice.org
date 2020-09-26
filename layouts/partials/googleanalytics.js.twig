@@ -1,0 +1,10 @@
+{% if site.googleanalytics is defined and site.googleanalytics is not empty %}
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '{{ site.googleanalytics }}', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src="//www.google-analytics.com/analytics.js"></script>
+<!-- End Google Analytics -->
+{% endif %}

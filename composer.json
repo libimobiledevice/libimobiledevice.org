@@ -1,0 +1,54 @@
+{
+  "name": "libimobiledevice/libimobiledevice.github.io",
+  "description": "Official libimobiledevice website sources",
+  "keywords": [
+    "libimobiledevice",
+    "website",
+    "static-site",
+    "markdown",
+    "twig"
+  ],
+  "homepage": "https://libimobiledevice.org",
+  "license": "AGPL-3.0-or-later",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Martin Szulecki",
+      "email": "martin.szulecki@libimobiledevice.org",
+      "homepage": "https://libimobiledevice.org",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/libimobiledevice/libimobiledevice.github.io",
+    "issues": "https://github.com/libimobiledevice/libimobiledevice.github.io/issues"
+  },
+  "scripts": {
+    "yarn-install": [
+      "if [ ! -f ./yarn.lock ]; then yarn --silent install; else yarn --silent upgrade; fi"
+    ],
+    "yarn-build": [
+      "yarn --silent build:${PROJECT_ENVIRONMENT:-development}"
+    ],
+    "build": [
+      "cecil build"
+    ],
+    "watch": [
+      "cecil serve"
+    ],
+    "post-install-cmd": [
+    ],
+    "post-update-cmd": [
+    ]
+  },
+  "require": {
+    "php": ">=7.1",
+    "ext-intl": "*",
+    "ext-gettext": "*",
+    "cecil/cecil": "^5.33.0",
+    "yosymfony/resource-watcher": "3.0.0 as 2.0.1",
+    "twig/extensions": "^1.5"
+  },
+  "require-dev": {
+  }
+}

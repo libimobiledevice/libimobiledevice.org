@@ -1,0 +1,39 @@
+{% extends 'partials/section.html.twig' %}
+
+{% block section_content %}
+<div class="row">
+	<div class="col-12 mb-4">
+		<h2 class="entry-title mb-4">Device Services</h2>
+		<div class="entry-content">
+			<p>The following list shows all iOS device services, their current state of implementation in the library and firmware compatibility.</p>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12 mb-5 mb-lg-0">
+			<table class="table table-block-md table-striped table-hover table-bordered table-responsive-sm bg-white">
+				<thead class="thead-light">
+					<tr>
+						<th scope="col" class="d-none d-md-table-cell">Service</th>
+						<th scope="col" class="d-none d-md-table-cell">Progress</th>
+						<th scope="col" class="d-none d-md-table-cell text-md-center">iOS</th>
+						<th scope="col" class="d-none d-md-table-cell">Note</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for service in site.data.services %}
+					{% set state_context = (service.state == 'done' ? 'success': (service.state == 'partly' ? 'warning': 'dark')) %}
+					<tr class="mb-4 mb-md-auto">
+						<th scope="row"><i class="fas fa-cog fa-fw text-info mr-2"></i>{{ service.id }}</th>
+						<td{% if service.state != 'none' %} class="table-{{ state_context }}"{% endif %}><strong class="d-md-none">Progress:&nbsp;</strong><div class="d-inline-block">{{ service.state | capitalize }}<div></td>
+						<td class="text-md-center"><strong class="d-md-none">iOS:&nbsp;</strong>{{ service.firmware }}</td>
+						<td{{ service.comment | length ? '': ' class="d-none d-md-table-cell"' }}>{{ service.comment }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+				<caption class="alert alert-warning w-100">This list is based on known services until iOS 13.5.</caption>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock section_content %}

@@ -1,0 +1,7 @@
+{% block container %}
+<div {% if id is defined %}id="{{ id }}" {% endif %}class="{% block container_classes %}container-fluid{% endblock %}{% if attr is defined %}{{ attr }}{% endif %}"{% block container_attr %}{% endblock %}>
+	<div class="container py-4 px-lg-5 px-0">
+	{% block container_content %}{% endblock container_content %}
+	</div>
+</div>
+{% endblock container %}

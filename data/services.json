@@ -1,0 +1,240 @@
+[
+	{
+		"id": "com.apple.bluetooth.BTPacketLogger",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.PurpleReverseProxy.Conn",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.PurpleReverseProxy.Ctrl",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.afc",
+		"name": "",
+		"state": "done",
+		"firmware": "13.5.1",
+		"comment": "Fully implemented except a few details."
+	},
+	{
+		"id": "com.apple.atc",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.atc2",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.companion_proxy",
+		"name": "",
+		"state": "partly",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.crashreportcopymobile",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.crashreportmover",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.idamd",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.iosdiagnostics.relay",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented except a few details."
+	},
+	{
+		"id": "com.apple.misagent",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.mobileactivationd",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobile.MCInstall",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.mobile.assertion_agent",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.mobile.diagnostics_relay",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobile.file_relay",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.mobile.heartbeat",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobile.house_arrest",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobile.insecure_notification_proxy",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobile.installation_proxy",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobile.mobile_image_mounter",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobile.notification_proxy",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobilebackup",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobilebackup2",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.mobilesync",
+		"name": "",
+		"state": "partly",
+		"firmware": "11+",
+		"comment": "Partly implemented."
+	},
+	{
+		"id": "com.apple.os_trace_relay",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.pcapd",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.preboardservice",
+		"name": "",
+		"state": "partly",
+		"firmware": "11+",
+		"comment": "Partly implemented."
+	},
+	{
+		"id": "com.apple.preboardservice_v2",
+		"name": "",
+		"state": "partly",
+		"firmware": "11+",
+		"comment": "Partly implemented."
+	},
+	{
+		"id": "com.apple.springboardservices",
+		"name": "",
+		"state": "partly",
+		"firmware": "11+",
+		"comment": "Partly implemented."
+	},
+	{
+		"id": "com.apple.streaming_zip_conduit",
+		"name": "",
+		"state": "none",
+		"firmware": "11+",
+		"comment": ""
+	},
+	{
+		"id": "com.apple.syslog_relay",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	},
+	{
+		"id": "com.apple.webinspector",
+		"name": "",
+		"state": "done",
+		"firmware": "11+",
+		"comment": "Fully implemented."
+	}
+]

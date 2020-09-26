@@ -1,0 +1,66 @@
+{% extends 'partials/section.html.twig' %}
+
+{% block section_header %}
+<div class="row section-heading text-white">
+	<div class="col-12">
+		<h2 class="section-title mb-5">Download</h2>
+	</div>
+</div>
+<div class="row mb-3">
+	<div class="col-12">
+		<p class="lead text-white">Please select a component to view download, release and dependency information of the latest release.</p>
+	</div>
+</div>
+{% endblock section_header %}
+
+{% block section_content %}
+<div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
+
+	{% set repos = site.data.github.libimobiledevice.repos | filter(p => site.data.github.libimobiledevice[p.name].releases.latest is defined) | sort((a, b) => a.stargazers_count < b.stargazers_count) %}
+
+	{% for repo in repos %}
+	{% set release = site.data.github.libimobiledevice[repo.name].releases.latest %}
+	<div class="col mb-4">
+		<div id="download-{{ repo.name | slugify | e }}" class="card card-download accordion h-100 shadow">
+			<div class="card-header">
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-{{ repo.name | slugify | e }}" href="#download-details-{{ repo.name | slugify | e }}" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;{{ repo.name }}</a>&nbsp;<a href="{{ release.html_url }}"><small class="font-weight-light text-muted">{{ release.tag_name }}</small></a>{% if repo.name == 'libplist' %} <div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/workflow/status/libimobiledevice/{{ repo.name }}/build"></div>{% endif %}</h3>
+			</div>
+			<div class="card-details collapse" id="download-details-{{ repo.name | slugify | e }}" data-parent="#download-{{ repo.name | slugify | e }}">
+				<div class="card-body">
+					<p class="card-text">{{ repo.description }}</p>
+					{% for download in release.assets %}
+					<a href="{{ download.browser_download_url }}" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>{{ download.name | split('.') | slice(-2, 2) | join('.') }}</em>)</a>
+					{% endfor %}
+
+					{% if repo.license.key is defined and repo.license.key != 'other' %}
+					{% set license = repo.license %}
+					<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/{{ license.key }}" target="_blank" rel="noreferrer" class="text-reset" title="View {{ license.name | e }}">{{ repo.license.spdx_id }} License</a></span>
+					{% endif %}
+				</div>
+				{% set deps = site.data.github.libimobiledevice[repo.name].dependencies %}
+				{% if deps | length %}
+				<div class="card-header border-top">
+					<small class="text-muted">Depends on:</small>
+					<ul class="list-inline m-0">
+						{% for dep in deps | sort((a, b) => (site.data.github.libimobiledevice[a] is defined) ? 0: ((site.data.github.libimobiledevice[b] is defined) ? 1: a > b)) %}
+						{% set isDepExternal = (site.data.github.libimobiledevice[dep] is defined) ? false: true %}
+						<li class="list-inline-item">{% if not isDepExternal %}<a href="#download-{{ dep | slugify | e }}" class="text-reset">{% endif %}<span class="badge p-1{{ isDepExternal ? ' badge-dark': ' badge-info' }}">{{ dep }}</span>{% if not isDepExternal %}</a>{% endif %}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				{% else %}
+					<hr>
+				{% endif %}
+				{% if release.body is defined and release.body | trim | length %}
+				<div class="card-body">
+					{{ release.body | trim | replace({'# ': '#### '}) | markdown_to_html | raw }}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% endfor %}
+
+</div>
+{% endblock section_content %}

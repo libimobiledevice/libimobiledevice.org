@@ -1,0 +1,24 @@
+{%- set heading = heading is defined ? heading: 'h2' -%}
+{%- set section_title = section_title is defined ? section_title: page.title -%}
+{% block section %}
+<section {% if id is defined %}id="{{ id }}" {% endif %}class="{% block section_classes %}container-fluid{% endblock section_classes %}{% if attr is defined %}{{ attr }}{% endif %}"{% block section_attr %}{% endblock section_attr %}>
+	<div class="container py-4 p-lg-5 px-0">
+		{% block section_header %}
+		<div class="row section-heading mb-4">
+			<div class="col-12">
+				{{ '<%s class="section-title">%s</%s>' | format(heading, section_title, heading) | raw }}
+				<hr>
+			</div>
+		</div>
+		{% endblock section_header %}
+		{% block section_content %}
+		<div class="row">
+			<article class="col-12">
+				<div class="entry-content">{{ page.content }}</div>
+			</article>
+		</div>
+		{% endblock section_content %}
+		{% block section_footer %}{% endblock section_footer %}
+	</div>
+</section>
+{% endblock section %}

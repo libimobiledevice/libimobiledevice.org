@@ -1,0 +1,68 @@
+/** bootstrap core */
+@import "bootstrap/scss/_functions.scss";
+@import "bootstrap/scss/_variables.scss";
+@import "bootstrap/scss/_mixins.scss";
+
+/** configuration */
+@import "_variables.scss";
+
+/** bootstrap */
+@import "bootstrap/scss/_root.scss";
+@import "bootstrap/scss/_reboot.scss";
+@import "bootstrap/scss/_type.scss";
+@import "bootstrap/scss/_images.scss";
+//@import "bootstrap/scss/_code.scss";
+@import "bootstrap/scss/_grid.scss";
+@import "bootstrap/scss/_tables.scss";
+//@import "bootstrap/scss/_forms.scss";
+@import "bootstrap/scss/_buttons.scss";
+@import "bootstrap/scss/_transitions.scss";
+@import "bootstrap/scss/_dropdown.scss";
+@import "bootstrap/scss/_button-group.scss";
+//@import "bootstrap/scss/_input-group.scss";
+//@import "bootstrap/scss/_custom-forms.scss";
+@import "bootstrap/scss/_nav.scss";
+@import "bootstrap/scss/_navbar.scss";
+@import "bootstrap/scss/_card.scss";
+@import "bootstrap/scss/_breadcrumb.scss";
+@import "bootstrap/scss/_pagination.scss";
+@import "bootstrap/scss/_badge.scss";
+@import "bootstrap/scss/_jumbotron.scss";
+@import "bootstrap/scss/_alert.scss";
+//@import "bootstrap/scss/_progress.scss";
+//@import "bootstrap/scss/_media.scss";
+@import "bootstrap/scss/_list-group.scss";
+@import "bootstrap/scss/_close.scss";
+//@import "bootstrap/scss/_toasts.scss";
+//@import "bootstrap/scss/_modal.scss";
+//@import "bootstrap/scss/_tooltip.scss";
+//@import "bootstrap/scss/_popover.scss";
+//@import "bootstrap/scss/_carousel.scss";
+//@import "bootstrap/scss/_spinners.scss";
+@import "bootstrap/scss/_utilities.scss";
+//@import "bootstrap/scss/_print.scss";
+
+/** customization */
+@import "_custom.scss";
+
+/** fontawesome */
+@import "_fa-custom.scss";
+
+//@import "@fortawesome/fontawesome-free/scss/_variables.scss";
+@import "@fortawesome/fontawesome-free/scss/_mixins.scss";
+@import "@fortawesome/fontawesome-free/scss/_core.scss";
+@import "@fortawesome/fontawesome-free/scss/_larger.scss";
+@import "@fortawesome/fontawesome-free/scss/_fixed-width.scss";
+//@import "@fortawesome/fontawesome-free/scss/_icons.scss";
+@import "@fortawesome/fontawesome-free/scss/_screen-reader.scss";
+//@import "@fortawesome/fontawesome-free/scss/solid.scss";
+//@import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+//@import "_loading.scss";
+@import "_shadows-hover.scss";
+
+/** highlight.js theme */
+@import "_prism.scss";
+
+/** animate css */
+@import "animate-sass/_animate.scss";

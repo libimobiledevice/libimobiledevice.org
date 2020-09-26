@@ -1,0 +1,9 @@
+{% extends '_default/list.html.twig' %}
+
+{% block content %}
+
+{% include 'partials/section/cards.html.twig' with {"id": "news", "attr": " bg-white", "heading": "h1", "view_all": false, "items": pages} %}
+
+{% include 'partials/pagination.html.twig' with {"attr": " bg-white"} %}
+
+{% endblock content %}

@@ -1,0 +1,3 @@
+.shadow-hover:hover    { box-shadow: $box-shadow;    @include transition($transition-shadow); }
+.shadow-hover-sm:hover { box-shadow: $box-shadow-sm; @include transition($transition-shadow); }
+.shadow-hover-lg:hover { box-shadow: $box-shadow-lg; @include transition($transition-shadow); }

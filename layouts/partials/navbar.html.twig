@@ -1,0 +1,79 @@
+{% set anchor_base_url = (page.type == 'homepage' ? '': url('/', {canonical:true})) %}
+<nav class="navbar navbar-expand-lg navbar-light">
+	<a href="{{ anchor_base_url }}#" class="navbar-brand" title="Go Home">
+		<img class="d-inline-block align-top" src="{{ url('img/logo.svg') }}" alt="Brand for {{ site.title | e }}" height="48" onerror="this.onerror=null; this.src='{{ url('img/logo.png') | e }}'">
+	</a>
+
+	<div class="d-flex text-muted align-items-center d-lg-none ml-auto mr-2">
+		<a class="text-reset mx-2" href="{{ site.data.github.libimobiledevice.libimobiledevice.releases.latest.html_url }}" target="_blank" rel="noopener">v{{ site.data.github.libimobiledevice.libimobiledevice.releases.latest.tag_name }}</a>
+
+		{% if site.data.community.links is defined %}
+		{% for link in site.data.community.links | filter(v => 'development' in v.type or 'socialmedia' in v.type) | sort((a, b) => a.weight > b.weight) %}
+		<a class="text-reset mx-2" href="{{ link.url }}" target="_blank" rel="noopener"><i class="{{ link.icon ?? 'fas fa-external-link-alt' }} fa-fw" target="_blank" rel="noopener" title="{{ link.tagline }}"></i></a>
+		{% endfor %}
+		{% endif %}
+	</div>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent" data-toggle="collapse" data-target="#navbarSupportedContent.show">
+
+		<ul class="navbar-nav mr-auto">
+			{% if site.menus.main is defined %}
+			{% for entry in site.menus.main | sort_by_weight %}
+			<li class="nav-item{% if (url(page) == url(entry.url)) or (entry.url starts with page.section) %} active{% endif %}">
+				<a class="nav-link" href="{{ url(entry.url) }}">{{ entry.name }}{% if url(page) == url(entry.url) %} <span class="sr-only">(current)</span>{% endif %}</a>
+			</li>
+			{%- if not loop.last %}
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="{{ anchor_base_url }}#get-started">Get Started</a>
+					<a class="dropdown-item" href="{{ anchor_base_url }}#features">Features</a>
+					<a class="dropdown-item" href="{{ anchor_base_url }}#examples">Examples</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="https://docs.libimobiledevice.org/libimobiledevice/latest">libimobiledevice <span class="badge badge-info">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libideviceactivation <span class="badge badge-muted">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libusbmuxd <span class="badge badge-muted">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libplist <span class="badge badge-muted">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libirecovery <span class="badge badge-muted">API</span></a>
+				</div>
+			</li>
+			{% if false and (site.menus.resources is defined) and (site.menus.resources | length) %}
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle{{ page.menu.resources is defined ? ' active': '' }}" href="#" id="dropDownResources" role="button" data-toggle="dropdown" aris-haspopup="true" aria-expanded="false">Resources</a>
+				<div class="dropdown-menu" aria-labelledby="dropDownResources">
+					<a class="dropdown-item" href="{{ anchor_base_url }}#resources">Overview</a>
+					{% for item in site.menus.resources | sort_by_weight %}
+					<a class="dropdown-item{% if url(page) == url(item.url) %} active{% endif %}" href="{{ url(item.url) }}">{{ item.name }}{% if url(page) == url(item.url) %} <span class="sr-only">(current)</span>{% endif %}</a>
+					{% endfor %}
+				</div>
+			</li>
+			{% else %}
+			<li class="nav-item">
+				<a class="nav-link" href="{{ anchor_base_url }}#resources">Resources</a>
+			</li>
+			{% endif %}
+		</ul>
+
+		<ul class="navbar-nav ml-auto align-items-center d-none d-md-flex">
+			<li class="nav-item">
+				<a class="nav-link" href="{{ site.data.github.libimobiledevice.libimobiledevice.releases.latest.html_url }}" target="_blank" rel="noopener">v{{ site.data.github.libimobiledevice.libimobiledevice.releases.latest.tag_name }}</a>
+			</li>
+			{% if site.data.community.links is defined %}
+			{% for link in site.data.community.links | filter(v => 'development' in v.type or 'socialmedia' in v.type) | sort((a, b) => a.weight > b.weight) %}
+			<li class="nav-item">
+				<a class="nav-link" href="{{ link.url }}"><i class="{{ link.icon ?? 'fas fa-external-link-alt' }} fa-fw" target="_blank" rel="noopener" title="{{ link.tagline }}"></i></a>
+			</li>
+			{% endfor %}
+			{% endif %}
+		</ul>
+
+	</div>
+</nav>

@@ -1,0 +1,102 @@
+{%- set title = page.title ~ ' &middot; ' ~ site.title -%}
+{%- if page.type == 'homepage' -%}
+{%- set title = site.title ~ ' &middot; ' ~ site.baseline -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="{{ site.language | default('en') }}">
+<head>
+
+	{% block head %}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>{{ title }}</title>
+
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="{{ site.language | default('en') }}">
+
+	{% set main_css_url = asset('scss/main.scss', {'filename': 'css/main.css'}) | url %}
+	<link rel="preload" as="style" href="{{ main_css_url }}">
+
+	{% include 'partials/metatags.html.twig' %}
+
+	<meta name="theme-color" content="#0a9197">
+
+	<link rel="canonical" href="{{ url(page, {canonical:true}) }}">
+
+	<link rel="stylesheet" href="{{ main_css_url }}">
+
+	<link rel="shortcut icon" href="{{ url('favicon.ico') }}">
+	<link rel="icon" href="{{ url('favicon.ico') }}" type="image/x-icon">
+	{% endblock head %}
+
+</head>
+
+<body class="{% block body_classes %}template-{{ page.type }}{{ page.section != '' ? '-' ~ page.section: '' }}{% endblock body_classes %}">
+
+	{% block header %}
+	<header class="banner fixed-top bg-light shadow-sm">
+		<div class="container">
+			{% include 'partials/navbar.html.twig' %}
+		</div>
+
+		{% include 'partials/alert/outdated-browser.html.twig' %}
+	</header>
+	{% endblock header %}
+
+	<main class="content">
+
+		{% block breadcrumb %}
+		{% if page.type != 'homepage' %}
+			{% include 'partials/breadcrumb.html.twig' with {"attr": " bg-white"} %}
+		{% endif %}
+		{% endblock breadcrumb %}
+
+		{% block content %}
+
+		{% include 'partials/section/content.html.twig' with {"id": "content", "attr": " bg-white", "heading": "h1"} %}
+
+		{% endblock content %}
+
+		{% include 'partials/section/under-construction.html.twig' with {"id": "under-construction", "attr": " bg-white"} %}
+
+		{% include 'partials/section/community.html.twig' with {"id": "community", "attr": " bg-white"} %}
+
+		{% include 'partials/section/wave.html.twig' with {"start": "var(--white)", "end": "var(--info)", "height": "40"} %}
+
+		{% include 'partials/section/quote.html.twig' with {"id": "quote", "attr": " bg-info text-white"} %}
+
+	</main>
+
+	{% include 'partials/footer.html.twig' %}
+
+	<a href="#" class="d-none back-to-top animated shadow" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+
+	<script src="{{ asset([
+		site.node.dir ~ '/jquery/dist/jquery.slim.min.js',
+		site.node.dir ~ '/bootstrap/js/dist/util.js',
+		site.node.dir ~ '/bootstrap/js/dist/alert.js',
+		site.node.dir ~ '/bootstrap/js/dist/button.js',
+		site.node.dir ~ '/popper.js/dist/umd/popper.min.js',
+		site.node.dir ~ '/bootstrap/js/dist/collapse.js',
+		site.node.dir ~ '/bootstrap/js/dist/dropdown.js',
+		site.node.dir ~ '/bootstrap/js/dist/tab.js'
+	], {'filename': 'js/vendor.js'}) | url }}"></script>
+
+	<script src="{{ asset(['js/prism.js'], {'filename': 'js/prism.js'}) | url }}" async></script>
+
+	<script src="{{ asset([
+		site.node.dir ~ '/smoothscroll-polyfill/dist/smoothscroll.min.js',
+		site.node.dir ~ '/waypoints/lib/jquery.waypoints.min.js',
+		site.node.dir ~ '/waypoints/lib/shortcuts/inview.min.js',
+		'js/jquery.waypoints.extra.js',
+		'js/jquery.back-to-top.js'
+	], {'filename': 'js/waypoints.js'}) | url }}" async></script>
+
+	{% include 'partials/googleanalytics.js.twig' %}
+
+</body>
+</html>

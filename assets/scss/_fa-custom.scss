@@ -1,0 +1,696 @@
+@import "_fa-variables.scss";
+
+@font-face {
+  font-family: '#{$fac-font-family}';
+  src:  url('#{$fac-font-path}/#{$fac-font-family}.eot?ru68ef');
+  src:  url('#{$fac-font-path}/#{$fac-font-family}.eot?ru68ef#iefix') format('embedded-opentype'),
+    url('#{$fac-font-path}/#{$fac-font-family}.woff2?ru68ef') format('woff2'),
+    url('#{$fac-font-path}/#{$fac-font-family}.woff?ru68ef') format('woff'),
+    url('#{$fac-font-path}/#{$fac-font-family}.ttf?ru68ef') format('truetype'),
+    url('#{$fac-font-path}/#{$fac-font-family}.svg?ru68ef##{$fac-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: inline-block;
+  font-display: swap;
+}
+
+.fa, .far, .fas, .fab, .fal {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$fac-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-check {
+  &:before {
+    content: $fa-check;
+  }
+}
+.fa-close {
+  &:before {
+    content: $fa-close;
+  }
+}
+.fa-remove {
+  &:before {
+    content: $fa-remove;
+  }
+}
+.fa-times {
+  &:before {
+    content: $fa-times;
+  }
+}
+.fa-cog {
+  &:before {
+    content: $fa-cog;
+  }
+}
+.fa-gear {
+  &:before {
+    content: $fa-gear;
+  }
+}
+.fa-download {
+  &:before {
+    content: $fa-download;
+  }
+}
+.fa-external-link {
+  &:before {
+    content: $fa-external-link;
+  }
+}
+.fa-rocket {
+  &:before {
+    content: $fa-rocket;
+  }
+}
+.fa-android {
+  &:before {
+    content: $fa-android;
+  }
+}
+.fa-circle-o-notch {
+  &:before {
+    content: $fa-circle-o-notch;
+  }
+}
+.fa-paypal {
+  &:before {
+    content: $fa-paypal;
+  }
+}
+.fa-music {
+  &:before {
+    content: $fa-music;
+  }
+}
+.fa-heart {
+  &:before {
+    content: $fa-heart;
+  }
+}
+.fa-star {
+  &:before {
+    content: $fa-star;
+  }
+}
+.fa-user {
+  &:before {
+    content: $fa-user;
+  }
+}
+.fa-home {
+  &:before {
+    content: $fa-home;
+  }
+}
+.fa-redo {
+  &:before {
+    content: $fa-redo;
+  }
+}
+.fa-lock {
+  &:before {
+    content: $fa-lock;
+  }
+}
+.fa-tag {
+  &:before {
+    content: $fa-tag;
+  }
+}
+.fa-bookmark {
+  &:before {
+    content: $fa-bookmark;
+  }
+}
+.fa-chevron-left {
+  &:before {
+    content: $fa-chevron-left;
+  }
+}
+.fa-chevron-right {
+  &:before {
+    content: $fa-chevron-right;
+  }
+}
+.fa-asterisk {
+  &:before {
+    content: $fa-asterisk;
+  }
+}
+.fa-chevron-up {
+  &:before {
+    content: $fa-chevron-up;
+  }
+}
+.fa-chevron-down {
+  &:before {
+    content: $fa-chevron-down;
+  }
+}
+.fa-shopping-cart {
+  &:before {
+    content: $fa-shopping-cart;
+  }
+}
+.fa-chart-bar {
+  &:before {
+    content: $fa-chart-bar;
+  }
+}
+.fa-comments {
+  &:before {
+    content: $fa-comments;
+  }
+}
+.fa-upload {
+  &:before {
+    content: $fa-upload;
+  }
+}
+.fa-phone-square {
+  &:before {
+    content: $fa-phone-square;
+  }
+}
+.fa-rss {
+  &:before {
+    content: $fa-rss;
+  }
+}
+.fa-certificate {
+  &:before {
+    content: $fa-certificate;
+  }
+}
+.fa-link {
+  &:before {
+    content: $fa-link;
+  }
+}
+.fa-envelope {
+  &:before {
+    content: $fa-envelope;
+  }
+}
+.fa-sitemap {
+  &:before {
+    content: $fa-sitemap;
+  }
+}
+.fa-angle-double-left {
+  &:before {
+    content: $fa-angle-double-left;
+  }
+}
+.fa-angle-double-right {
+  &:before {
+    content: $fa-angle-double-right;
+  }
+}
+.fa-angle-left {
+  &:before {
+    content: $fa-angle-left;
+  }
+}
+.fa-angle-right {
+  &:before {
+    content: $fa-angle-right;
+  }
+}
+.fa-angle-up {
+  &:before {
+    content: $fa-angle-up;
+  }
+}
+.fa-angle-down {
+  &:before {
+    content: $fa-angle-down;
+  }
+}
+.fa-desktop {
+  &:before {
+    content: $fa-desktop;
+  }
+}
+.fa-laptop {
+  &:before {
+    content: $fa-laptop;
+  }
+}
+.fa-terminal {
+  &:before {
+    content: $fa-terminal;
+  }
+}
+.fa-code {
+  &:before {
+    content: $fa-code;
+  }
+}
+.fa-code-branch {
+  &:before {
+    content: $fa-code-branch;
+  }
+}
+.fa-puzzle-piece {
+  &:before {
+    content: $fa-puzzle-piece;
+  }
+}
+.fa-ellipsis-v {
+  &:before {
+    content: $fa-ellipsis-v;
+  }
+}
+.fa-euro-sign {
+  &:before {
+    content: $fa-euro-sign;
+  }
+}
+.fa-dollar-sign {
+  &:before {
+    content: $fa-dollar-sign;
+  }
+}
+.fa-paper-plane {
+  &:before {
+    content: $fa-paper-plane;
+  }
+}
+.fa-history {
+  &:before {
+    content: $fa-history;
+  }
+}
+.fa-bomb {
+  &:before {
+    content: $fa-bomb;
+  }
+}
+.fa-at {
+  &:before {
+    content: $fa-at;
+  }
+}
+.fa-chart-area {
+  &:before {
+    content: $fa-chart-area;
+  }
+}
+.fa-chart-line {
+  &:before {
+    content: $fa-chart-line;
+  }
+}
+.fa-balance-scale {
+  &:before {
+    content: $fa-balance-scale;
+  }
+}
+.fa-trademark {
+  &:before {
+    content: $fa-trademark;
+  }
+}
+.fa-tv {
+  &:before {
+    content: $fa-tv;
+  }
+}
+.fa-hashtag {
+  &:before {
+    content: $fa-hashtag;
+  }
+}
+.fa-microchip {
+  &:before {
+    content: $fa-microchip;
+  }
+}
+.fa-poo {
+  &:before {
+    content: $fa-poo;
+  }
+}
+.fa-external-link-alt {
+  &:before {
+    content: $fa-external-link-alt;
+  }
+}
+.fa-map-marker-alt {
+  &:before {
+    content: $fa-map-marker-alt;
+  }
+}
+.fa-mobile-alt {
+  &:before {
+    content: $fa-mobile-alt;
+  }
+}
+.fa-tablet-alt {
+  &:before {
+    content: $fa-tablet-alt;
+  }
+}
+.fa-tachometer-alt {
+  &:before {
+    content: $fa-tachometer-alt;
+  }
+}
+.fa-robot {
+  &:before {
+    content: $fa-robot;
+  }
+}
+.fa-scroll {
+  &:before {
+    content: $fa-scroll;
+  }
+}
+.fa-mug-hot {
+  &:before {
+    content: $fa-mug-hot;
+  }
+}
+.fa-twitter-square {
+  &:before {
+    content: $fa-twitter-square;
+  }
+}
+.fa-facebook-square {
+  &:before {
+    content: $fa-facebook-square;
+  }
+}
+.fa-linkedin {
+  &:before {
+    content: $fa-linkedin;
+  }
+}
+.fa-github-square {
+  &:before {
+    content: $fa-github-square;
+  }
+}
+.fa-twitter {
+  &:before {
+    content: $fa-twitter;
+  }
+}
+.fa-facebook {
+  &:before {
+    content: $fa-facebook;
+  }
+}
+.fa-github {
+  &:before {
+    content: $fa-github;
+  }
+}
+.fa-linkedin-in {
+  &:before {
+    content: $fa-linkedin-in;
+  }
+}
+.fa-github-alt {
+  &:before {
+    content: $fa-github-alt;
+  }
+}
+.fa-youtube {
+  &:before {
+    content: $fa-youtube;
+  }
+}
+.fa-xing {
+  &:before {
+    content: $fa-xing;
+  }
+}
+.fa-xing-square {
+  &:before {
+    content: $fa-xing-square;
+  }
+}
+.fa-stack-overflow {
+  &:before {
+    content: $fa-stack-overflow;
+  }
+}
+.fa-instagram {
+  &:before {
+    content: $fa-instagram;
+  }
+}
+.fa-adn {
+  &:before {
+    content: $fa-adn;
+  }
+}
+.fa-apple {
+  &:before {
+    content: $fa-apple;
+  }
+}
+.fa-windows {
+  &:before {
+    content: $fa-windows;
+  }
+}
+.fa-linux {
+  &:before {
+    content: $fa-linux;
+  }
+}
+.fa-skype {
+  &:before {
+    content: $fa-skype;
+  }
+}
+.fa-vimeo-square {
+  &:before {
+    content: $fa-vimeo-square;
+  }
+}
+.fa-slack {
+  &:before {
+    content: $fa-slack;
+  }
+}
+.fa-openid {
+  &:before {
+    content: $fa-openid;
+  }
+}
+.fa-google {
+  &:before {
+    content: $fa-google;
+  }
+}
+.fa-reddit {
+  &:before {
+    content: $fa-reddit;
+  }
+}
+.fa-reddit-square {
+  &:before {
+    content: $fa-reddit-square;
+  }
+}
+.fa-git-square {
+  &:before {
+    content: $fa-git-square;
+  }
+}
+.fa-git {
+  &:before {
+    content: $fa-git;
+  }
+}
+.fa-paypal1 {
+  &:before {
+    content: $fa-paypal1;
+  }
+}
+.fa-cc-visa {
+  &:before {
+    content: $fa-cc-visa;
+  }
+}
+.fa-cc-mastercard {
+  &:before {
+    content: $fa-cc-mastercard;
+  }
+}
+.fa-whatsapp {
+  &:before {
+    content: $fa-whatsapp;
+  }
+}
+.fa-creative-commons1 {
+  &:before {
+    content: $fa-creative-commons1;
+  }
+}
+.fa-amazon {
+  &:before {
+    content: $fa-amazon;
+  }
+}
+.fa-reddit-alien {
+  &:before {
+    content: $fa-reddit-alien;
+  }
+}
+.fa-bluetooth {
+  &:before {
+    content: $fa-bluetooth;
+  }
+}
+.fa-bluetooth-b {
+  &:before {
+    content: $fa-bluetooth-b;
+  }
+}
+.fa-telegram {
+  &:before {
+    content: $fa-telegram;
+  }
+}
+.fa-app-store {
+  &:before {
+    content: $fa-app-store;
+  }
+}
+.fa-app-store-ios {
+  &:before {
+    content: $fa-app-store-ios;
+  }
+}
+.fa-bitcoin {
+  &:before {
+    content: $fa-bitcoin;
+  }
+}
+.fa-docker {
+  &:before {
+    content: $fa-docker;
+  }
+}
+.fa-facebook-f {
+  &:before {
+    content: $fa-facebook-f;
+  }
+}
+.fa-facebook-messenger {
+  &:before {
+    content: $fa-facebook-messenger;
+  }
+}
+.fa-itunes {
+  &:before {
+    content: $fa-itunes;
+  }
+}
+.fa-itunes-note {
+  &:before {
+    content: $fa-itunes-note;
+  }
+}
+.fa-node-js {
+  &:before {
+    content: $fa-node-js;
+  }
+}
+.fa-python {
+  &:before {
+    content: $fa-python;
+  }
+}
+.fa-slack-hash {
+  &:before {
+    content: $fa-slack-hash;
+  }
+}
+.fa-telegram-plane {
+  &:before {
+    content: $fa-telegram-plane;
+  }
+}
+.fa-vimeo {
+  &:before {
+    content: $fa-vimeo;
+  }
+}
+.fa-whatsapp-square {
+  &:before {
+    content: $fa-whatsapp-square;
+  }
+}
+.fa-apple-pay {
+  &:before {
+    content: $fa-apple-pay;
+  }
+}
+.fa-cc-apple-pay {
+  &:before {
+    content: $fa-cc-apple-pay;
+  }
+}
+.fa-ethereum {
+  &:before {
+    content: $fa-ethereum;
+  }
+}
+.fa-ebay {
+  &:before {
+    content: $fa-ebay;
+  }
+}
+.fa-fedora {
+  &:before {
+    content: $fa-fedora;
+  }
+}
+.fa-raspberry-pi {
+  &:before {
+    content: $fa-raspberry-pi;
+  }
+}
+.fa-redhat {
+  &:before {
+    content: $fa-redhat;
+  }
+}
+.fa-suse {
+  &:before {
+    content: $fa-suse;
+  }
+}
+.fa-swift {
+  &:before {
+    content: $fa-swift;
+  }
+}
+.fa-instagram-square {
+  &:before {
+    content: $fa-instagram-square;
+  }
+}
+.fa-wifi {
+  &:before {
+    content: $fa-wifi;
+  }
+}

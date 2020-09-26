@@ -1,0 +1,9 @@
+{% extends '_default/page.html.twig' %}
+
+{% block body_classes %}{{ parent() }} template-status-table{% endblock body_classes %}
+
+{% block content %}
+
+{% include 'partials/section/status-table.html.twig' with {"id": "status-table", "attr": " bg-white", "heading": "h1"} %}
+
+{% endblock content %}

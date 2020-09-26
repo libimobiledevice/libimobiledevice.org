@@ -1,0 +1,50 @@
+{% extends 'partials/section.html.twig' %}
+
+{% block section_header %}
+<div class="row section-heading">
+	<div class="col-12">
+		<h2 class="section-title mb-5">Resources</h2>
+	</div>
+</div>
+<div class="row mb-4">
+	<div class="col-12">
+		<p class="lead">Our growing community created a wide variety of applications, language bindings, binary builds, integrations and other resources that can be helpful. Below is a collection of links to some of the most popular resources and related people.</p>
+	</div>
+</div>
+{% endblock section_header %}
+
+{% block section_content %}
+<div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3">
+
+	<div class="col mb-4 h-100">
+		<h5 class="">Projects&nbsp;<div class="badge text-muted align-top"><i class="fas fa-external-link-alt fa-fw"></i></div></h5>
+		<hr class="border-warning">
+		<div class="list-group">
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="https://ios-driver.github.io/ios-driver/">Automate any native, hybrid or mobile web application on iOS with Selenium using libimobiledevice.</a>
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="https://cgit.sukimashita.com/python-idevicesync.git/">PIM sync using libimobiledevice. Provides a Conduit module.</a>
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="https://github.com/bryanforbes/imobilesync/">Another PIM Python sync &quot;imobilesync&quot; library. Provides a Conduit module.</a>
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="https://gitlab.gnome.org/GNOME/nautilus-ideviceinfo/">Show device information details in a Nautilus property page on Gdesktops.</a>
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="https://cgit.libimobiledevice.org/sbmanager.git/">Manage SpringBoard Icons using libimobiledevice.</a>
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="https://github.com/JonathanBeck/kio_afc">KDE KIO Slave filesystem access using libimobiledevice.</a>
+		</div>
+	</div>
+
+	<div class="col mb-4 h-100">
+		<h5 class="">People&nbsp;<div class="badge text-muted align-top"><i class="fas fa-external-link-alt fa-fw"></i></div></h5>
+		<hr class="border-warning">
+		<div class="list-group">
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="http://matt.colyer.name/">&quot;Inventor&quot; Matt Colyer</a>
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="https://marcan.st/posts/">Hector Martin, creator of a custom usbmuxd implementation</a>
+		</div>
+	</div>
+
+	<div class="col mb-4 h-100">
+		<h5 class="">Trusted Partners&nbsp;<div class="badge text-muted align-top"><i class="fas fa-external-link-alt fa-fw"></i></div></h5>
+		<hr class="border-warning">
+		<div class="list-group">
+			<a class="list-group-item list-group-item-action" target="_blank" rel="noreferrer" href="https://mirell.com">Mirell Development provides solutions, software services, support and training around libimobiledevice.</a>
+		</div>
+	</div>
+
+</div>
+{% endblock section_content %}

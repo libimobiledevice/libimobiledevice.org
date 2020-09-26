@@ -1,0 +1,64 @@
+{
+	"links": [
+		{
+			"id": "github",
+			"type": ["development"],
+			"icon": "fab fa-github",
+			"title": "Our GitHub Project",
+			"tagline": "Contribute on GitHub",
+			"description": "Warm welcome for pull requests and technical stuff.",
+			"url": "https://github.com/libimobiledevice",
+			"weight": 1
+		},
+		{
+			"id": "mailing-list",
+			"type": ["mailing-list"],
+			"icon": "fas fa-envelope",
+			"title": "Our Mailing List",
+			"tagline": "Discuss on Mailing List",
+			"description": "The classic way by E-Mail.",
+			"url": "https://lists.libimobiledevice.org/mailman/listinfo/libimobiledevice-devel",
+			"weight": 2
+		},
+		{
+			"id": "stackoverflow",
+			"type": ["support"],
+			"icon": "fab fa-stack-overflow",
+			"title": "Questions about libimobiledevice on Stackoverflow",
+			"tagline": "Ask on Stackoverflow",
+			"description": "Best for general questions and support.",
+			"url": "https://stackoverflow.com/questions/tagged/libimobiledevice",
+			"weight": 3
+		},
+		{
+			"id": "twitter",
+			"type": ["socialmedia"],
+			"icon": "fab fa-twitter",
+			"title": "Our Twitter Profile",
+			"tagline": "Follow on Twitter",
+			"description": "For latest updates in a birdly manner.",
+			"url": "https://twitter.com/intent/user?screen_name=libimobiledev",
+			"weight": 4
+		},
+		{
+			"id": "telegram",
+			"type": ["socialmedia"],
+			"icon": "fab fa-telegram",
+			"title": "Our Telegram Group",
+			"tagline": "Chat on Telegram",
+			"description": "Get hands on with developers.",
+			"url": "https://t.me/libimobiledevice",
+			"weight": 5
+		},
+		{
+			"id": "irc",
+			"type": ["chat"],
+			"icon": "fas fa-hashtag",
+			"title": "Our IRC Channel",
+			"tagline": "Chat on IRC",
+			"description": "Get hands on in ASCII style.",
+			"url": "irc://chat.freenode.net#libimobiledevice",
+			"weight": 6
+		}
+	]
+}

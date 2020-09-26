@@ -1,0 +1,37 @@
+{% extends 'partials/section.html.twig' %}
+
+{% block section_header %}
+<div class="row section-heading">
+	<div class="col-12">
+		<h2 class="section-title mb-5">Join the Community</h2>
+	</div>
+</div>
+<div class="row mb-4">
+	<div class="col-12">
+		<p class="lead">We are thrilled that you would like to contribute to this project. Your help is essential for keeping it great.</p>
+	</div>
+</div>
+{% endblock section_header %}
+
+{% block section_content %}
+<div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
+
+	{% if site.data.community.links is defined %}
+	{% for link in site.data.community.links | sort((a, b) => a.weight > b.weight) %}
+	<div class="col mb-4 h-100">
+		<div class="card justify-content-center mb-1 border-0">
+			<div class="row no-gutters align-items-center">
+				<div class="card-body">
+					<div class="card-img-top"><i class="{{ link.icon ?? 'fas fa-external-link-alt' }} fa-2x" title="{{ link.title }}"></i></div>
+					<hr class="border-warning">
+					<a target="_blank" rel="noopener" href="{{ link.url }}" class="card-link text-dark stretched-link"><h5 class="my-2">{{ link.tagline }}</h5></a>
+					<p class="card-text">{{ link.description }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+	{% endif %}
+
+</div>
+{% endblock section_content %}

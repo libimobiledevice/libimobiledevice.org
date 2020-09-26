@@ -1,0 +1,47 @@
+{% extends '_default/page.html.twig' %}
+
+{% block body_classes %}{{ parent() }} template-landing has-jumbotron{% endblock body_classes %}
+
+{% block content %}
+
+	{% include 'partials/section/jumbotron.html.twig' %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--jumbotron-bg)","end":"var(--info)"} %}
+
+	{% include 'partials/section/bullets.html.twig' with {"id": "features", "attr": " bg-info text-white"} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--info)","end":"var(--light)"} %}
+
+	{% include 'partials/section/examples.html.twig' with {"id": "examples", "attr": " bg-light"} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--light)","end":"var(--secondary)"} %}
+
+	{% include 'partials/section/downloads.html.twig' with {"id": "downloads", "attr": " bg-secondary"} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--secondary)","end":"var(--light)"} %}
+
+	{% include 'partials/section/get-started.html.twig' with {"id": "get-started", "attr": " bg-light"} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--light)","end":"var(--warning)"} %}
+
+	{% include 'partials/section/cta.html.twig' with {"id": "donate", "attr": " bg-warning"} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--warning)","end":"var(--white)"} %}
+
+	{% include 'partials/section/cards.html.twig' with {"id": "news", "attr": " bg-white", "section_title": "Latest News", "view_all": true, "items": site.pages | filter_by('section', 'news') | sort_by_date | slice(0, 3)} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--white)","end":"var(--light)"} %}
+
+	{% include 'partials/section/accordion.html.twig' with {"id": "faq", "attr": " bg-light"} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--light)","end":"var(--white)"} %}
+
+	{% include 'partials/section/team.html.twig' with {"id": "team", "attr": " bg-white", "section_title": "Team"} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--white)","end":"var(--light)"} %}
+
+	{% include 'partials/section/links.html.twig' with {"id": "resources", "attr": " bg-light"} %}
+
+	{% include 'partials/section/wave.html.twig' with {"start":"var(--light)","end":"var(--white)"} %}
+
+{% endblock content %}

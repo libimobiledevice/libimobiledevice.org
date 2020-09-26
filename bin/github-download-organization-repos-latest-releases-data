@@ -1,0 +1,250 @@
+#!/bin/bash
+
+# Copyright (c) 2020 Martin Szulecki <martin.szulecki@libimobiledevice.org>
+
+ECHO_BIN=echo
+CAT_BIN=cat
+MKDIR_BIN=mkdir
+RM_BIN=rm
+MV_BIN=mv
+WGET_BIN=wget
+CURL_BIN=curl
+GREP_BIN=grep
+WC_BIN=wc
+JQ_BIN=jq
+
+if [[ $# -lt 1 ]];
+then
+	$ECHO_BIN "Usage: `basename $0` ORGANIZATION [PATH]"
+	$ECHO_BIN ""
+	$ECHO_BIN "Downloads latest release JSON data for all repositories of ORGANIZATION to working directory or PATH if supplied."
+	exit 1
+fi
+
+GITHUB_API_URL="https://api.github.com"
+GITHUB_RAW_CONTENT_URL="https://raw.githubusercontent.com"
+
+ORGANIZATION="${1}"
+DATA_PATH="${2:-data/github}/${ORGANIZATION}"
+
+# Ensure path exists
+if [[ ! -d "${DATA_PATH}" ]];
+then
+	$MKDIR_BIN \
+		-p \
+		"${DATA_PATH}"
+fi
+
+# Check for API rate limit
+RESULT=$(\
+	$CURL_BIN \
+	-L \
+	-s \
+	"${GITHUB_API_URL}/rate_limit" \
+	| \
+	$JQ_BIN \
+		-r \
+		'.rate | (.limit | tostring) + " " + (.remaining | tostring) + " " + (.reset | tostring)' \
+)
+
+LIMITS=( ${RESULT} )
+
+# Check rate limits
+if [[ "${LIMITS[1]}" -lt 1 ]];
+then
+	DATE_TS="@${LIMITS[2]}"
+	$ECHO_BIN "ERROR: Hit rate limit (${LIMITS[1]}/${LIMITS[0]}) of API. Next requests possible at $(date --date="${DATE_TS}")."
+	exit 1
+fi
+
+$ECHO_BIN "Downloading github data..."
+
+# Retrieve all repos of organization
+DATA_FILENAME="${DATA_PATH}/repos.json"
+
+RESULT=$(\
+	$CURL_BIN \
+		-L \
+		-s \
+		"${GITHUB_API_URL}/orgs/${ORGANIZATION}/repos" \
+)
+
+# Only process non-empty results
+if [[ -z "${RESULT// }" ]];
+then
+	$ECHO_BIN "ERROR: Empty result when trying to get repositories for \"${ORGANIZATION}\""
+	exit 1
+fi
+
+# FIXME: Ensure we do not use an error result
+$ECHO_BIN "${RESULT}" > "${DATA_FILENAME}"
+$ECHO_BIN "${DATA_FILENAME}"
+
+# Retrieve all members of organization
+DATA_FILENAME="${DATA_PATH}/members.json"
+
+RESULT=$(\
+	$CURL_BIN \
+		-L \
+		-s \
+		"${GITHUB_API_URL}/orgs/${ORGANIZATION}/members" \
+)
+
+# Only process non-empty results
+if [[ -z "${RESULT// }" ]];
+then
+	$ECHO_BIN "ERROR: Empty result when trying to get members ofr \"${ORGANIZATION}\""
+	exit 1
+fi
+
+# FIXME: Ensure we do not use an error result
+$ECHO_BIN "${RESULT}" > "${DATA_FILENAME}"
+
+# Get list of user URLs
+# Assemble list of repo releases URLs
+USER_API_URLS=$(\
+	$ECHO_BIN \
+		"${RESULT}" \
+		| \
+	$JQ_BIN \
+		-r \
+		'.[] | .url' \
+)
+
+# Count number of users
+USER_API_URLS_COUNT=$($ECHO_BIN "$USER_API_URLS" | $WC_BIN -l)
+
+# Check rate limits
+if [[ "${LIMITS[1]}" -lt "${USER_API_URLS_COUNT}" ]];
+then
+	DATE_TS="@""${LIMITS[2]}"
+	$ECHO_BIN "ERROR: Hit rate limit (${LIMITS[1]}/${LIMITS[0]}) of API. Next requests possible at `date --date=\"${DATE_TS}\"`."
+	exit 1
+fi
+
+# Retrieve data for each user
+for USER_API in ${USER_API_URLS};
+do
+	RESULT=$(\
+		$CURL_BIN \
+			-s \
+			-f \
+			"${USER_API}" \
+	)
+
+	# Only process non-empty results
+	if [[ -n "${RESULT// }" ]];
+	then
+		# FIXME: Ensure we do not use an error result
+
+		# Merge user object into member array
+		$ECHO_BIN \
+			"${RESULT}" \
+			| \
+		$JQ_BIN \
+			--slurpfile members "${DATA_FILENAME}" \
+			'[[(. ,  $members[][])] | group_by(.id)[] | add]' \
+		> "${DATA_FILENAME}.tmp"
+
+		# Rename temporary file as new data file
+		$MV_BIN \
+			"${DATA_FILENAME}.tmp" \
+			"${DATA_FILENAME}"
+	fi
+done
+
+$ECHO_BIN "${DATA_FILENAME}"
+
+# Assemble list of repo releases URLs
+REPOS=$(\
+	$CAT_BIN \
+		"${DATA_PATH}/repos.json" \
+		| \
+	$JQ_BIN \
+		-r \
+		'.[] | .name + "," + .releases_url' \
+)
+
+# Count number of repos
+REPOS_COUNT=$($ECHO_BIN "$REPOS" | $WC_BIN -l)
+
+# Check rate limits
+if [[ "${LIMITS[1]}" -lt "${REPOS_COUNT}" ]];
+then
+	DATE_TS="@""${LIMITS[2]}"
+	$ECHO_BIN "ERROR: Hit rate limit (${LIMITS[1]}/${LIMITS[0]}) of API. Next requests possible at `date --date=\"${DATE_TS}\"`."
+	exit 1
+fi
+
+# Retrieve latest release for each repo
+for RELEASE in ${REPOS};
+do
+	REPO_NAME="${RELEASE//,*}"
+	RELEASE_URL="${RELEASE##*,}"
+
+	DATA_FILENAME="${DATA_PATH}/${REPO_NAME}/releases/latest.json"
+
+	RESULT=$(\
+		$CURL_BIN \
+			-s \
+			-f \
+			"${DATA_FILENAME}" \
+			"${RELEASE_URL//\{\/id\}/\/latest}" \
+	)
+
+	# Only process non-empty results
+	if [[ -n "${RESULT// }" ]];
+	then
+		# FIXME: Ensure we do not use an error result
+
+		# Ensure path exists
+		if [[ ! -d "${DATA_FILENAME%/*}" ]];
+		then
+			$MKDIR_BIN \
+				-p \
+				"${DATA_FILENAME%/*}"
+		fi
+
+		# Remove homepage link from release notes
+		$ECHO_BIN "${RESULT//\[Homepage\]\(https:\/\/libimobiledevice.org\/\)/}" > "${DATA_FILENAME}"
+		RELEASE_NAME=$($JQ_BIN -r '.name' "${DATA_FILENAME}")
+
+		DEPENDENCIES_FILENAME="${DATA_PATH}/${REPO_NAME}/dependencies.json"
+
+		# Scrape dependencies
+		RESULT=$(\
+			$CURL_BIN \
+				-s \
+				-f \
+				"${GITHUB_RAW_CONTENT_URL}/${ORGANIZATION}/${REPO_NAME}/${RELEASE_NAME}/configure.ac" \
+			| \
+			$GREP_BIN \
+				 -Po \
+				'(?<=PKG_CHECK_MODULES\()([^, ]*)' \
+		)
+
+		if [[ -n "${RESULT}" ]];
+		then
+			DEPENDENCIES=$($ECHO_BIN "$RESULT" | xargs)
+			$ECHO_BIN \
+				"${RESULT}" \
+			| \
+			$JQ_BIN \
+				--raw-input \
+				--slurp \
+				'split("\n") | map(select(. != ""))' \
+			> "${DEPENDENCIES_FILENAME}"
+		else
+			DEPENDENCIES=
+			$ECHO_BIN "[]" > "${DEPENDENCIES_FILENAME}"
+		fi
+
+		$ECHO_BIN "${DEPENDENCIES_FILENAME}"
+
+		$ECHO_BIN "${DATA_FILENAME} ${REPO_NAME} ${RELEASE_NAME} ${DEPENDENCIES}"
+	else
+		RELEASE_NAME=
+	fi
+done
+
+$ECHO_BIN "Done!"

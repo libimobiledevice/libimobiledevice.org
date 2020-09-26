@@ -1,0 +1,29 @@
+{% extends 'partials/section.html.twig' %}
+
+{%- set heading = heading is defined ? heading: 'h2' -%}
+
+{% block section_header %}{% endblock section_header %}
+
+{% block section_content %}
+<div class="row">
+	<div class="col">
+		<article>
+			<header class="mb-4">
+				{{ '<%s class="section-title">%s</%s>' | format(heading, page.title, heading) | raw }}
+				<p class="text-muted">Posted on <time>{{ page.date | localizeddate('long', 'short') }}</time>{% if page.author is defined %} by {% if page.author starts with 'http' %}<a href="{{ url(page.author) }}" target="_blank" rel="noreferrer">{{ '@' ~ (page.author | split('/') | last) }}</a>{% else %}{{ page.author }}{% endif %}{% endif %}</p>
+			</header>
+			<hr class="bg-info">
+			<div class="row mt-4">
+				{% if page.image is defined %}
+				<div class="col-12 col-md-4 order-md-last">
+					<div class="entry-image border mb-4"><img src="{{ url(page.image) }}" class="img-fluid" alt="{{ page.title }}"></div>
+				</div>
+				{% endif %}
+				<div class="col">
+					<div class="entry-content">{{ page.content }}</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>
+{% endblock section_content %}

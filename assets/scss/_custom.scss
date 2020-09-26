@@ -1,0 +1,283 @@
+/** custom manual styles */
+
+:root {
+	--animate-duration: 4s;
+	--jumbotron-bg: #{$jumbotron-bg};
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin-top: $navbar-height;
+	scroll-behavior: smooth;
+}
+
+.entry-content img {
+	max-width: 100%;
+}
+
+/* weired CSS3 non IE11 fix for anchors, TODO: clean the section padding/margin hell */
+main > section[id]:not([id='']):target::before {
+	content: '';
+	display: block;
+	height:	$navbar-height;
+	margin-top: -($navbar-height * 2);
+}
+
+.jumbotron {
+	/* --animate-duration: 3s; */
+}
+
+.nav-tabs .nav-link {
+	border-top: 3px solid transparent;
+	border-radius: 3px 3px 0 0;
+}
+
+.nav-tabs .nav-link.active {
+	border-color: theme-color('warning') #e1e4e8 transparent;
+}
+
+.tab-pane {
+	padding-top: 1rem;
+}
+
+.card-tag {
+	border-top: 3px solid transparent;
+	border-radius: 3px 3px 0 0;
+}
+
+.card-tag-warning {
+	border-color: theme-color('warning') #e1e4e8 transparent;
+}
+
+.fa-1-5x {
+	font-size: 1.5rem;
+}
+
+pre {
+}
+
+pre > code {
+	display: block;
+	overflow-x: auto;
+	/* padding: 1em !important; */
+	color: #333;
+	background: #f8f8f8;
+}
+
+.card-download .card-body {
+	code {
+		color: theme-color('info');
+		background: #f8f8f8;
+		font-size: $font-size-base;
+	}
+}
+
+svg#brand-logo {
+	animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+	animation-duration: 2s; /* don't forget to set a duration! */
+	overflow: visible;
+}
+
+svg#brand-logo #glogo {
+	overflow: visible;
+}
+
+:root {
+	--hueshift-speed: 0.1;
+	--hueshift-delay: 2s;
+}
+
+svg#brand-logo #glogo path {
+	animation-name: hueshift;
+	animation-delay: var(--hueshift-delay);
+	animation-duration: calc(12s * var(--hueshift-speed));
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+}
+
+svg#brand-logo #glogo {
+	animation-name: hover;
+	animation-delay: var(--hueshift-delay) !important;
+	animation-duration: calc(12s * var(--hueshift-speed));
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+}
+
+svg#brand-logo #shadow {
+	animation-name: hover-scale;
+	animation-delay: var(--hueshift-delay) !important;
+	animation-duration: calc(12s * var(--hueshift-speed));
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+}
+
+svg#brand-logo #glogo #gt1	{ animation-delay: calc(var(--hueshift-delay) + (1s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt2	{ animation-delay: calc(var(--hueshift-delay) + (2s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt3	{ animation-delay: calc(var(--hueshift-delay) + (3s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt4	{ animation-delay: calc(var(--hueshift-delay) + (4s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt5	{ animation-delay: calc(var(--hueshift-delay) + (5s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt6	{ animation-delay: calc(var(--hueshift-delay) + (6s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt7	{ animation-delay: calc(var(--hueshift-delay) + (7s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt8	{ animation-delay: calc(var(--hueshift-delay) + (8s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt9	{ animation-delay: calc(var(--hueshift-delay) + (9s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt10 { animation-delay: calc(var(--hueshift-delay) + (10s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt11 { animation-delay: calc(var(--hueshift-delay) + (11s * var(--hueshift-speed))); }
+svg#brand-logo #glogo #gt12 { animation-delay: calc(var(--hueshift-delay) + (12s * var(--hueshift-speed))); }
+
+svg#brand-logo #glogo #gt7 { opacity: 0.5; }
+
+@keyframes hueshift {
+	0%	{ fill: theme-color('warning'); }
+	10%	{ fill: #e45e25; }
+	20%	{ fill: #d2343e; }
+	35%	{ fill: #ab2333; }
+	60%	{ fill: #005082; }
+	70%	{ fill: #21376d; }
+	85%	{ fill: #023e49; }
+	90%	{ fill: #023e49; }
+	100% { fill: #0a9197; }
+}
+
+@keyframes hover {
+	0%	 { transform: translateY(0); }
+	100% { transform: translateY(10px); }
+}
+
+@keyframes hover-scale {
+	0%	 { transform: scale3d(1, 1, 1) translate(0, 0); }
+	100% { transform: scale3d(0.95, 0.95, 1) translate(1.5px, 15px); }
+}
+
+.btn {
+	margin-bottom: $spacer;
+}
+
+.back-to-top {
+	position: fixed;
+	z-index: $zindex-fixed + 40;
+
+	background-color: transparentize($white, 10%);
+	border-radius: 2px;
+
+	bottom: $spacer;
+	right: $spacer;
+
+	padding: $spacer / 2;
+	line-height: 1;
+	text-align: center;
+
+	&:hover,
+	&:active,
+	&:visited {
+	}
+
+	i {
+	}
+}
+
+.card-image {
+	img {
+		max-height: 2rem;
+	}
+}
+
+.filter-grayscale-hover {
+	filter: grayscale(100%);
+	opacity: .5;
+
+	@include transition($transition-filter);
+
+	&-trigger:hover &,
+	&:hover {
+		filter: grayscale(0%);
+		opacity: 1;
+	}
+}
+
+.accordion {
+	.accordion-header {
+		cursor: pointer;
+		-webkit-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+
+		i {
+			transform: rotate(90deg);
+			-webkit-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+			margin-right: $spacer / 2;
+		}
+
+		&.collapsed i {
+			transform: rotate(0deg);
+		}
+
+		&:hover {
+			color: theme-color(secondary);
+		}
+	}
+}
+
+.card-download {
+	.list-inline-item {
+		line-height: 2;
+	}
+}
+
+.table-block {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				caption,
+				thead,
+				tbody,
+				th,
+				td,
+				tr {
+					display: block;
+				}
+
+				th {
+					color: $table-head-color;
+					background-color: $table-head-bg;
+					border-color: $table-border-color;
+				}
+
+				&.table-bordered,
+				> .table-bordered {
+					border: 0;
+
+					th, td {
+						border-top: 0;
+					}
+				}
+
+				&.table-striped {
+					tbody tr:nth-of-type(#{$table-striped-order}) {
+						background-color: inherit;
+					}
+				}
+
+				&.table-striped.table-hover {
+					tbody tr:nth-of-type(#{$table-striped-order}) {
+						@include hover() {
+							color: $table-hover-color;
+							background-color: $table-hover-bg;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{% extends 'partials/container.html.twig' %}
+
+{% block container_content %}
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+	{% if page.section is not empty %}
+	{% set section = site.pages | filter(v => (v.type == 'section' and v.section is defined and v.id == page.section)) | first %}
+	<li class="breadcrumb-item" aria-current="page"><a href="{{ url(section) }}">{{ section.title }}</a></li>
+	{% endif %}
+	{% if page.type == 'page' %}
+	<li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+	{% endif %}
+	{% if page.type == 'section' %}
+	<li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+	{% endif %}
+</ol>
+</nav>
+{% endblock %}

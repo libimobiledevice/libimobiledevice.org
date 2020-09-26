@@ -1,0 +1,28 @@
+{% set pages = site.pages.all %}
+{% if page.pages is defined %}
+{% set pages = page.pages %}
+{% endif %}
+{% if page.pagination.pages is defined %}
+{% set pages = page.pagination.pages %}
+{% endif %}
+
+{% extends '_default/page.html.twig' %}
+
+{% block content %}
+{% if page.title != 'index' %}
+    <header>
+      <h1>{{ page.title }}</h1>
+    </header>
+{% endif %}
+    <main>
+      {{ page.content }}
+{% for p in pages.all %}
+      <article>
+        <h2><a href="{{ url(p) }}">{{ p.title|e }}</a></h2>
+        <time>{{ p.date|date("j M Y") }}</time>
+        A {{ p.content|excerpt_html }}
+      </article>
+{% endfor %}
+    </main>
+{% include 'partials/pagination.html.twig' %}
+{% endblock content %}

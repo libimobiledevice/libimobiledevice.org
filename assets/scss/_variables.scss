@@ -1,0 +1,62 @@
+// website options
+
+$navbar-height:                74px;
+
+// bootstrap colors
+
+$theme-colors: map-merge($theme-colors, (
+  "primary":                   #005082,
+  "secondary":                 #023e49,
+  "success":                   $green,
+  "info":                      #0a9197,
+  "warning":                   #f7ae1a,
+  "danger":                    #ab2333,
+  "light":                     lighten(#2e3436, 75%),
+  "dark":                      #2e3436
+));
+
+// bootstrap options
+
+$enable-shadows:               false;
+$enable-gradients:             false;
+$enable-responsive-font-sizes: false;
+$enable-print-styles:          false;
+$enable-validation-icons:      false;
+$enable-deprecation-messages:  false;
+
+$font-size-base:               1rem;
+$headings-margin-bottom:       $spacer;
+
+$breadcrumb-bg:                transparent;
+$breadcrumb-margin-bottom:     0;
+
+$jumbotron-bg:                 $gray-200;
+
+$transition-shadow:            box-shadow .5s ease-in-out !default;
+$transition-filter:            filter .5s, opacity .5s !default;
+
+// animate-sass options
+
+$use-fade:                     true;
+$base-duration:                4s;
+
+// fontawesome options
+
+$fa-font-path:                 "../fonts";
+$fac-font-path:                $fa-font-path;
+
+$fa-font-size-base:            16px;
+$fa-font-display:              block;
+$fa-css-prefix:                fa;
+$fa-version:                   "5.13.1";
+$fa-border-color:              #eee;
+$fa-inverse:                   #fff;
+$fa-li-width:                  2em;
+$fa-fw-width:                  (20em / 16);
+$fa-primary-opacity:           1;
+$fa-secondary-opacity:         .4;
+
+// Convenience function used to set content property
+@function fa-content($fa-var) {
+  @return unquote("\"#{ $fa-var }\"");
+}
