@@ -1,6 +1,6 @@
 title: "libimobiledevice"
 baseline: "A cross-platform FOSS library written in C to communicate with iOS devices natively."
-baseurl: https://libimobiledevice.github.io/
+baseurl: https://libimobiledevice.org/
 description: "libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking."
 keywords: "Linux, iOS, iPhone, iPod Touch, iPad, iPad mini, Apple TV, iTunes, development, library, afc, lockdownd, libplist, installation_proxy, usbmux, plist, libirecovery, idevicerestore, iTunesCDB, tethering, backup, restore, C/C++, instruments, MDM, mobileconfig, provisioning, FOSS"
 image: img/brand/brand-ontop-gradient-alpha.png
