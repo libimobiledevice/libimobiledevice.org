@@ -1,0 +1,8 @@
+.cache
+.cecil
+.env*
+*.lock
+*.swp
+public*
+node_modules
+vendor
