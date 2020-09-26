@@ -44,8 +44,8 @@ jobs:
 
       - name: Install php intl extension  🏗
         run: |
-          apt-get update
-          apt-get install php-intl
+          sudo apt-get update
+          sudo apt-get install php-intl
 
       - name: Install composer dependencies 🏗
         shell: bash
