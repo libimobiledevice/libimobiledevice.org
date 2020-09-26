@@ -5,7 +5,7 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.github.io/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-09-26T00:51:06+02:00</updated>
+  <updated>2020-09-26T15:02:44+02:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
@@ -18,8 +18,8 @@
 This project is an independent software solution and has not been authorized, sponsored or otherwise approved by Apple Inc. The library has not been sponsored by and is not affilated with <a href="https://ubuntu.com">Ubuntu</a> or <a href="https://canonical.com">Canonical Ltd</a>.</p>]]>
     </content>
     <link href="https://libimobiledevice.github.io/footer/" rel="alternate" type="text/html" />
-    <published>2020-09-26T00:51:06+02:00</published>
-    <updated>2020-09-26T00:51:06+02:00</updated>
+    <published>2020-09-26T15:02:44+02:00</published>
+    <updated>2020-09-26T15:02:44+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.github.io/status/</id>
@@ -28,8 +28,8 @@ This project is an independent software solution and has not been authorized, sp
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.github.io/status/" rel="alternate" type="text/html" />
-    <published>2020-09-26T00:51:06+02:00</published>
-    <updated>2020-09-26T00:51:06+02:00</updated>
+    <published>2020-09-26T15:02:44+02:00</published>
+    <updated>2020-09-26T15:02:44+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</id>
