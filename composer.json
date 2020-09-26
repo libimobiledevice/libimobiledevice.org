@@ -1,6 +1,7 @@
 {
   "name": "libimobiledevice/libimobiledevice.github.io",
   "description": "Official libimobiledevice website sources",
+  "version": "1.0",
   "keywords": [
     "libimobiledevice",
     "website",
