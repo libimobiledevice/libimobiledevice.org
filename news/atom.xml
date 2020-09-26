@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <id>https://libimobiledevice.github.io/news/</id>
+  <id>https://libimobiledevice.org/news/</id>
   <title>libimobiledevice - News</title>
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
-  <link href="https://libimobiledevice.github.io/news/atom.xml" rel="self" type="application/atom+xml" />
-  <link href="https://libimobiledevice.github.io/news/" rel="alternate" type="text/html" />
+  <link href="https://libimobiledevice.org/news/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="https://libimobiledevice.org/news/" rel="alternate" type="text/html" />
   <updated>2020-06-26T00:10:00+02:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
   </author>
   <entry xml:lang="en">
-    <id>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</id>
+    <id>https://libimobiledevice.org/news/2020/06/26/new-logo-and-website/</id>
     <title>New Logo and Website</title>
     <content type="html">
       <![CDATA[<p>Welcome to our new project website! Finally the old paint is gone and a new state of art modern look is here.</p>
@@ -26,23 +26,23 @@ Looks like we arrived in the <em>&quot;static website generator era&quot;</em>.<
 <p>I really hope you guys enjoy the effort and there is much more coming in the next weeks!</p>
 <p><small>P.S.: Just want to congratulate <a href="https://inkscape.org">Inkscape to their fantastic 1.0 release</a>. That helped all the way in our process so, &quot;All your base are belong to us&quot;!</small></p>]]>
     </content>
-    <link href="https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/" rel="alternate" type="text/html" />
+    <link href="https://libimobiledevice.org/news/2020/06/26/new-logo-and-website/" rel="alternate" type="text/html" />
     <published>2020-06-26T00:10:00+02:00</published>
     <updated>2020-06-26T00:10:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
-    <id>https://libimobiledevice.github.io/news/2020/06/16/fresh-documentation/</id>
+    <id>https://libimobiledevice.org/news/2020/06/16/fresh-documentation/</id>
     <title>Fresh Documentation</title>
     <content type="html">
       <![CDATA[<p>The <a href="https://libimobiledevice.org/docs/libimobiledevice/latest">API Documentation</a> for libimobiledevice has been updated.
 A refresh of this website is planned next.</p>]]>
     </content>
-    <link href="https://libimobiledevice.github.io/news/2020/06/16/fresh-documentation/" rel="alternate" type="text/html" />
+    <link href="https://libimobiledevice.org/news/2020/06/16/fresh-documentation/" rel="alternate" type="text/html" />
     <published>2020-06-16T20:00:00+02:00</published>
     <updated>2020-06-16T20:00:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
-    <id>https://libimobiledevice.github.io/news/2020/06/15/release-galore/</id>
+    <id>https://libimobiledevice.org/news/2020/06/15/release-galore/</id>
     <title>Release Galore</title>
     <content type="html">
       <![CDATA[<p>Proud to announce long standing releases with first time releases of <a href="/#download-libirecovery">libirecovery</a> and <a href="/#download-libirecovery">idevicerestore</a>.
@@ -62,22 +62,22 @@ Bear with us for some cool stuff coming up next.</p>
 <li><strong>ifuse</strong> 1.1.4.</li>
 </ul>]]>
     </content>
-    <link href="https://libimobiledevice.github.io/news/2020/06/15/release-galore/" rel="alternate" type="text/html" />
+    <link href="https://libimobiledevice.org/news/2020/06/15/release-galore/" rel="alternate" type="text/html" />
     <published>2020-06-15T20:00:00+02:00</published>
     <updated>2020-06-15T20:00:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
-    <id>https://libimobiledevice.github.io/news/2020/06/14/ios-13-support/</id>
+    <id>https://libimobiledevice.org/news/2020/06/14/ios-13-support/</id>
     <title>iOS 13 Support</title>
     <content type="html">
       <![CDATA[<p>Yep, libimobiledevice works with iOS 13.</p>]]>
     </content>
-    <link href="https://libimobiledevice.github.io/news/2020/06/14/ios-13-support/" rel="alternate" type="text/html" />
+    <link href="https://libimobiledevice.org/news/2020/06/14/ios-13-support/" rel="alternate" type="text/html" />
     <published>2020-06-14T20:00:00+02:00</published>
     <updated>2020-06-14T20:00:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
-    <id>https://libimobiledevice.github.io/news/2017/04/26/libplist-release/</id>
+    <id>https://libimobiledevice.org/news/2017/04/26/libplist-release/</id>
     <title>libplist 2.0.0</title>
     <content type="html">
       <![CDATA[<p><a href="/#download-libplist">libplist 2.0.0</a> has been released.</p>
@@ -85,7 +85,7 @@ Bear with us for some cool stuff coming up next.</p>
 <p>The release features a completely new parser, dropped libxml2 dependency, various improvements, bugfixes and many security fixes.
 More releases coming up.</p>]]>
     </content>
-    <link href="https://libimobiledevice.github.io/news/2017/04/26/libplist-release/" rel="alternate" type="text/html" />
+    <link href="https://libimobiledevice.org/news/2017/04/26/libplist-release/" rel="alternate" type="text/html" />
     <published>2017-04-26T20:00:00+02:00</published>
     <updated>2017-04-26T20:00:00+02:00</updated>
   </entry>

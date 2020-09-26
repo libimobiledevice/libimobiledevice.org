@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://libimobiledevice.github.io/footer/</loc>
+    <loc>https://libimobiledevice.org/footer/</loc>
     <lastmod>2020-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/</loc>
+    <loc>https://libimobiledevice.org/</loc>
     <lastmod>2020-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/status/</loc>
+    <loc>https://libimobiledevice.org/status/</loc>
     <lastmod>2020-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/news/</loc>
+    <loc>https://libimobiledevice.org/news/</loc>
     <lastmod>2020-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</loc>
+    <loc>https://libimobiledevice.org/news/2020/06/26/new-logo-and-website/</loc>
     <lastmod>2020-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/news/2020/06/16/fresh-documentation/</loc>
+    <loc>https://libimobiledevice.org/news/2020/06/16/fresh-documentation/</loc>
     <lastmod>2020-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/news/2020/06/15/release-galore/</loc>
+    <loc>https://libimobiledevice.org/news/2020/06/15/release-galore/</loc>
     <lastmod>2020-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/news/2020/06/14/ios-13-support/</loc>
+    <loc>https://libimobiledevice.org/news/2020/06/14/ios-13-support/</loc>
     <lastmod>2020-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://libimobiledevice.github.io/news/2017/04/26/libplist-release/</loc>
+    <loc>https://libimobiledevice.org/news/2017/04/26/libplist-release/</loc>
     <lastmod>2017-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

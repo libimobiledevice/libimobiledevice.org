@@ -4,9 +4,9 @@
     <title>libimobiledevice - News</title>
     <description><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></description>
     <lastBuildDate>2020-06-26T00:10:00+02:00</lastBuildDate>
-    <link>https://libimobiledevice.github.io/news/</link>
+    <link>https://libimobiledevice.org/news/</link>
     <item>
-      <guid>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</guid>
+      <guid>https://libimobiledevice.org/news/2020/06/26/new-logo-and-website/</guid>
       <title>New Logo and Website</title>
       <description><![CDATA[<p>Welcome to our new project website! Finally the old paint is gone and a new state of art modern look is here.</p>
 <!-- excerpt -->
@@ -20,18 +20,18 @@ Looks like we arrived in the <em>&quot;static website generator era&quot;</em>.<
 <p>I really hope you guys enjoy the effort and there is much more coming in the next weeks!</p>
 <p><small>P.S.: Just want to congratulate <a href="https://inkscape.org">Inkscape to their fantastic 1.0 release</a>. That helped all the way in our process so, &quot;All your base are belong to us&quot;!</small></p>]]></description>
       <pubDate>2020-06-26T00:10:00+02:00</pubDate>
-      <link>https://libimobiledevice.github.io/news/2020/06/26/new-logo-and-website/</link>
+      <link>https://libimobiledevice.org/news/2020/06/26/new-logo-and-website/</link>
     </item>
     <item>
-      <guid>https://libimobiledevice.github.io/news/2020/06/16/fresh-documentation/</guid>
+      <guid>https://libimobiledevice.org/news/2020/06/16/fresh-documentation/</guid>
       <title>Fresh Documentation</title>
       <description><![CDATA[<p>The <a href="https://libimobiledevice.org/docs/libimobiledevice/latest">API Documentation</a> for libimobiledevice has been updated.
 A refresh of this website is planned next.</p>]]></description>
       <pubDate>2020-06-16T20:00:00+02:00</pubDate>
-      <link>https://libimobiledevice.github.io/news/2020/06/16/fresh-documentation/</link>
+      <link>https://libimobiledevice.org/news/2020/06/16/fresh-documentation/</link>
     </item>
     <item>
-      <guid>https://libimobiledevice.github.io/news/2020/06/15/release-galore/</guid>
+      <guid>https://libimobiledevice.org/news/2020/06/15/release-galore/</guid>
       <title>Release Galore</title>
       <description><![CDATA[<p>Proud to announce long standing releases with first time releases of <a href="/#download-libirecovery">libirecovery</a> and <a href="/#download-libirecovery">idevicerestore</a>.
 Bear with us for some cool stuff coming up next.</p>
@@ -50,24 +50,24 @@ Bear with us for some cool stuff coming up next.</p>
 <li><strong>ifuse</strong> 1.1.4.</li>
 </ul>]]></description>
       <pubDate>2020-06-15T20:00:00+02:00</pubDate>
-      <link>https://libimobiledevice.github.io/news/2020/06/15/release-galore/</link>
+      <link>https://libimobiledevice.org/news/2020/06/15/release-galore/</link>
     </item>
     <item>
-      <guid>https://libimobiledevice.github.io/news/2020/06/14/ios-13-support/</guid>
+      <guid>https://libimobiledevice.org/news/2020/06/14/ios-13-support/</guid>
       <title>iOS 13 Support</title>
       <description><![CDATA[<p>Yep, libimobiledevice works with iOS 13.</p>]]></description>
       <pubDate>2020-06-14T20:00:00+02:00</pubDate>
-      <link>https://libimobiledevice.github.io/news/2020/06/14/ios-13-support/</link>
+      <link>https://libimobiledevice.org/news/2020/06/14/ios-13-support/</link>
     </item>
     <item>
-      <guid>https://libimobiledevice.github.io/news/2017/04/26/libplist-release/</guid>
+      <guid>https://libimobiledevice.org/news/2017/04/26/libplist-release/</guid>
       <title>libplist 2.0.0</title>
       <description><![CDATA[<p><a href="/#download-libplist">libplist 2.0.0</a> has been released.</p>
 <!-- excerpt -->
 <p>The release features a completely new parser, dropped libxml2 dependency, various improvements, bugfixes and many security fixes.
 More releases coming up.</p>]]></description>
       <pubDate>2017-04-26T20:00:00+02:00</pubDate>
-      <link>https://libimobiledevice.github.io/news/2017/04/26/libplist-release/</link>
+      <link>https://libimobiledevice.org/news/2017/04/26/libplist-release/</link>
     </item>
   </channel>
 </rss>
