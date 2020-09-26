@@ -66,6 +66,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_CONFIG_NAME: github-actions[bot]
+          GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           BRANCH: gh-pages
           FOLDER: public
           CLEAN: true
