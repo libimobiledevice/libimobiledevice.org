@@ -36,7 +36,7 @@
 
 			<div class="tab-pane p-1 border-left border-right border-bottom show active" id="example-content-connecting" role="tabpanel" aria-labelledby="example-content-connecting-tab">
 				<pre class="border border-muted rounded-lg mb-0"><code class="language-c c">{{ '...
-#include "libimobiledevice/libimobiledevice.h"
+#include <libimobiledevice/libimobiledevice.h>
 
 /* Unique Device Identifier */
 static char *udid = NULL;
@@ -45,13 +45,13 @@ static char *udid = NULL;
 idevice_t device = NULL;
 
 /* Try to connect to first USB device */
-if (idevice_new_with_options(*device, NULL, IDEVICE_LOOKUP_USBMUX) != IDEVICE_E_SUCCESS) {
+if (idevice_new_with_options(&device, NULL, IDEVICE_LOOKUP_USBMUX) != IDEVICE_E_SUCCESS) {
   printf("ERROR: No device found!\\n");
   return -1;
 }
 
 /* Retrieve the udid of the connected device */
-if (idevice_get_udid(device, *udid) != IDEVICE_E_SUCCESS) {
+if (idevice_get_udid(device, &udid) != IDEVICE_E_SUCCESS) {
   printf("ERROR: Unable to get the device UDID.\\n");
   idevice_free(device);
   return -1;
@@ -68,13 +68,13 @@ free(udid);
 
 			<div class="tab-pane p-1 border-left border-right border-bottom" id="example-content-info" role="tabpanel" aria-labelledby="example-content-info-tab">
 				<pre class="border border-muted rounded-lg mb-0"><code class="language-c c">{{ '...
-#include "libimobiledevice/lockdown.h"
+#include <libimobiledevice/lockdown.h>
 
 /* Lockdown Service Handle */
 lockdownd_client_t lockdown = NULL;
 
 /* Handshake with lockdownd */
-lockdownd_client_new_with_handshake(device, *lockdown, "myapp");
+lockdownd_client_new_with_handshake(device, &lockdown, "myapp");
 
 /* Use the plist format */
 plist_t node = NULL;
@@ -83,7 +83,7 @@ plist_t node = NULL;
 char *value = NULL;
 
 /* Retrieve "DeviceColor" setting value from device */
-if(lockdownd_get_value(lockdown, NULL, "DeviceColor", *node) != LOCKDOWN_E_SUCCESS) {
+if(lockdownd_get_value(lockdown, NULL, "DeviceColor", &node) != LOCKDOWN_E_SUCCESS) {
   lockdownd_client_free(lockdown);
   idevice_free(device);
   printf("ERROR: Unable to retrieve setting key DeviceColor from device.\\n");
@@ -91,12 +91,13 @@ if(lockdownd_get_value(lockdown, NULL, "DeviceColor", *node) != LOCKDOWN_E_SUCCE
 }
 
 /* Get string value from node */
-plist_get_string_val(node, *value);
+plist_get_string_val(node, &value);
 
 /* Output device color value */
 printf("%s value is: %s\\n", "DeviceColor", value);
 
 /* Cleanup */
+plist_free(node);
 free(value);
 lockdownd_client_free(lockdown);
 ...' | e('html') }}</code></pre>
