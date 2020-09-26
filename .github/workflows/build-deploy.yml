@@ -14,6 +14,7 @@ on:
       - 'package.json'
 
 jobs:
+
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
@@ -27,7 +28,7 @@ jobs:
         run: |
           echo "::set-output name=dir::$(composer config cache-files-dir)"
 
-      - name: Cache composer downloads 🗄
+      - name: Cache composer downloads 💾
         uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
@@ -35,7 +36,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
-      - name: Cache PHP dependencies 🗄
+      - name: Cache PHP dependencies 💾
         uses: actions/cache@v2
         with:
           path: vendor
