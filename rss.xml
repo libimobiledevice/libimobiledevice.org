@@ -3,21 +3,21 @@
   <channel>
     <title>libimobiledevice</title>
     <description><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></description>
-    <lastBuildDate>2020-09-27T00:34:44+02:00</lastBuildDate>
+    <lastBuildDate>2020-09-27T00:39:33+02:00</lastBuildDate>
     <link>https://libimobiledevice.org/</link>
     <item>
       <guid>https://libimobiledevice.org/footer/</guid>
       <title>footer</title>
       <description><![CDATA[<p>Apple, iPhone, iPad, iPod, iPod Touch, Apple TV, Apple Watch, Mac, iOS, iPadOS, tvOS, watchOS, and macOS are trademarks of <a href="https://apple.com">Apple Inc</a>.
 This project is an independent software solution and has not been authorized, sponsored or otherwise approved by Apple Inc. The library has not been sponsored by and is not affilated with <a href="https://ubuntu.com">Ubuntu</a> or <a href="https://canonical.com">Canonical Ltd</a>.</p>]]></description>
-      <pubDate>2020-09-27T00:34:44+02:00</pubDate>
+      <pubDate>2020-09-27T00:39:33+02:00</pubDate>
       <link>https://libimobiledevice.org/footer/</link>
     </item>
     <item>
       <guid>https://libimobiledevice.org/status/</guid>
       <title>Status</title>
       <description><![CDATA[]]></description>
-      <pubDate>2020-09-27T00:34:44+02:00</pubDate>
+      <pubDate>2020-09-27T00:39:33+02:00</pubDate>
       <link>https://libimobiledevice.org/status/</link>
     </item>
     <item>
