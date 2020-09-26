@@ -69,6 +69,7 @@ free(udid);
 			<div class="tab-pane p-1 border-left border-right border-bottom" id="example-content-info" role="tabpanel" aria-labelledby="example-content-info-tab">
 				<pre class="border border-muted rounded-lg mb-0"><code class="language-c c">{{ '...
 #include <libimobiledevice/lockdown.h>
+#include <plist/plist.h>
 
 /* Lockdown Service Handle */
 lockdownd_client_t lockdown = NULL;
