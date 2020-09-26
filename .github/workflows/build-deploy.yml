@@ -12,6 +12,7 @@ on:
       - 'config.*.yml'
       - 'composer.json'
       - 'package.json'
+      - '.github/workflows/build-deploy.yml'
 
 jobs:
 
