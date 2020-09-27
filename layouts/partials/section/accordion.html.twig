@@ -14,49 +14,18 @@
 
 		<div id="accordion" class="accordion bg-transparent">
 
-			<div class="card active mb-5 border-bottom shadow-sm">
+			{% for item in items %}
+			<div class="card mb-5 border-bottom shadow-sm{{ loop.first ? ' active': '' }}">
 				<div class="card-header">
 					<h5 class="mb-0">
-					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true">Just installed the library, now what? Nothing happens!</a>
+					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ loop.index }}" aria-expanded="true">{{- item.title -}}</a>
 					</h5>
 				</div>
-				<div id="collapse1" class="collapse show" data-parent="#accordion" style="">
-					<div class="card-body">To test if you installed everything correctly plug in your device and run "ideviceinfo" within a terminal. Congratulations if it prints a lot of details about your device. Feel free to checkout <a href="/docs/libimobiledevice/latest/" target="_blank" rel="noopener">the documentation</a> or dive into <a href="https://github.com/libimobiledevice/libimobiledevice/" target="_blank" rel="noopener">the source code</a>.</div>
+				<div id="collapse-{{ loop.index }}" class="collapse{{ loop.first ? ' show': '' }}" data-parent="#accordion" style="">
+					<div class="card-body">{{- include(template_from_string(item.body), {'page': item}) | trim | replace({'# ': '#### '}) | markdown_to_html | raw | replace({'href=': 'rel="noopener" target="_blank" href='}) | slice(3) | slice(0,-4) -}}</div>
 				</div>
 			</div>
-
-			<div class="card mb-5 border-bottom shadow-sm">
-				<div class="card-header">
-					<h5 class="mb-0">
-					<a class="text-dark collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false">How do I copy music to my device?</a>
-					</h5>
-				</div>
-				<div id="collapse2" class="collapse" data-parent="#accordion" style="">
-					<div class="card-body">Sorry, music synchronization with newer devices is currently not supported but if you are a keen developer why not contribute a new service implementation for the <em>ATC Service</em>?</div>
-				</div>
-			</div>
-
-			<div class="card mb-5 border-bottom shadow-sm">
-				<div class="card-header">
-					<h5 class="mb-0">
-					<a class="text-dark collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false">Do I need to use ifuse to access files on my device?</a>
-					</h5>
-				</div>
-				<div id="collapse3" class="collapse" data-parent="#accordion">
-					<div class="card-body">iFuse is only useful if you want to mount the device manually and if you do not have GNOME and GVFS installed. Otherwise it is useless since GNOME's GVFS supports accessing the device directly and creates a fuse mount in "$XDG_RUNTIME_DIR/.gvfs", too.</div>
-				</div>
-			</div>
-
-			<div class="card mb-5 border-bottom shadow-sm">
-				<div class="card-header">
-					<h5 class="mb-0">
-					<a class="text-dark collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false">Does the library to device communication break everytime a new iOS<sup>&reg;</sup> is out?</a>
-					</h5>
-				</div>
-				<div id="collapse4" class="collapse" data-parent="#accordion">
-					<div class="card-body">The library has shown to be compatible with firmware releases going back to the 1.x series up to todays without issues. At rare times, bugs introduced by the firmware had to be worked around with simple fixes but nothing major prevented it from working. Thus in effect, the implementation proves very stable and compatible among firmware releases.</div>
-				</div>
-			</div>
+			{% endfor %}
 
 		</div>
 	</div>

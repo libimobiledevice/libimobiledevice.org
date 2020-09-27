@@ -32,7 +32,7 @@
 
 	{% include 'partials/section/wave.html.twig' with {"start":"var(--white)","end":"var(--light)"} %}
 
-	{% include 'partials/section/accordion.html.twig' with {"id": "faq", "attr": " bg-light"} %}
+	{% include 'partials/section/accordion.html.twig' with {"id": "faq", "attr": " bg-light", "items": (site.pages | filter_by('section', 'faq'))} %}
 
 	{% include 'partials/section/wave.html.twig' with {"start":"var(--light)","end":"var(--white)"} %}
 
