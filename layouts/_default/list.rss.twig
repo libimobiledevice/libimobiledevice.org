@@ -8,7 +8,7 @@
     <description><![CDATA[{{ site.description }}]]></description>
     <lastBuildDate>{{ date|date('c') }}</lastBuildDate>
     <link>{{ url(page, {canonical:true}) }}</link>
-{% for p in pages|sort_by_date %}
+{% for p in pages|filter(p => p.exclude is not defined or p.exclude == false)|sort_by_date %}
     <item>
       <guid>{{ url(p, {canonical:true}) }}</guid>
       <title>{{ p.title | e }}</title>
