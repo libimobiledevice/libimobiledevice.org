@@ -1,6 +1,6 @@
 .PHONY: development production watch watch-production
 
-all:
+all: production
 
 composer.lock:
 	@composer update
