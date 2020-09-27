@@ -5,13 +5,7 @@
 {% block section_content %}
 <div class="row">
 	<div class="col-12">
-		<div class="alert alert-warning alert-dismissible fade show m-0 text-center" role="alert">
-			<h4 class="alert-heading"><i class="fas fa-hard-hat fa-fw"></i>&nbsp;Under Construction</h4>
-			<strong>Ay caramba!</strong> This website is not complete yet! Please bear with us as we work on making it available using Github Pages for everyone to contribute!
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
+		{% include 'partials/alert/edit.html.twig' %}
 	</div>
 </div>
 {% endblock section_content %}
