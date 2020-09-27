@@ -6,7 +6,7 @@ composer.lock:
 	@composer update
 
 yarn.lock:
-	@yarn upgrade
+	@if [ ! -f ./yarn.lock ]; then yarn --silent install; else yarn --silent upgrade; fi
 
 data/github:
 	@./bin/github-download-organization-repos-latest-releases-data libimobiledevice
