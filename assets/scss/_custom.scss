@@ -41,6 +41,10 @@ main > section[id]:not([id='']):target::before {
 
 .tab-pane {
 	padding-top: 1rem;
+	h4 {
+		padding-bottom: $spacer / 2;
+		@extend .border-bottom;
+	}
 }
 
 .card-tag {

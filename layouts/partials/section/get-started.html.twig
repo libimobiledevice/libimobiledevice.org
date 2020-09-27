@@ -1,249 +1,83 @@
 {% extends 'partials/section.html.twig' %}
 
+{% set section = site.pages['get-started'] %}
+
 {% block section_header %}
 <div class="row section-heading">
 	<div class="col-12">
-		<h2 class="section-title mb-5">Get Started</h2>
+		<h2 class="section-title mb-5">{{ section.title }}</h2>
+		<div></div>
 	</div>
 </div>
 <div class="row">
 	<div class="col-12">
-		<p class="lead">Please choose your platform of choice below to see instructions on how to get started.</p>
+		{{ section.content }}
 	</div>
 </div>
 {% endblock section_header %}
 
 {% block section_content %}
+{% set platforms = site.pages | filter_by('section', section.slug) | sort_by_weight %}
 <div class="row">
 	<div class="col-12">
+
 		{# Tabs #}
 		{% apply spaceless %}
 		<ul class="nav nav-tabs" role="tablist">
+			{% for platform in platforms %}
 			<li class="nav-item">
-				<a class="nav-link active" id="linux-tab" data-toggle="tab" href="#getstarted-linux" role="tab" aria-controls="getstarted-linux" aria-selected="true" title="Linux"><i class="fab fa-linux fa-fw"></i>&nbsp;Linux</a>
+				<a class="nav-link{{ loop.first ? ' active': '' }}" id="{{ platform.slug }}-tab" data-toggle="tab" href="#{{ section.slug }}-{{ platform.slug }}" role="tab" aria-controls="{{ section.slug }}-{{ platform.slug }}" aria-selected="true" title="{{ platform.title | e }}"><i class="{{ platform.icon }} fa-fw"></i>&nbsp;{{ platform.title }}</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="macos-tab" data-toggle="tab" href="#getstarted-macos" role="tab" aria-controls="getstarted-macos" aria-selected="true" title="Mac"><i class="fab fa-apple fa-fw"></i>&nbsp;Mac</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="windows-tab" data-toggle="tab" href="#getstarted-windows" role="tab" aria-controls="getstarted-windows" aria-selected="true" title="Windows"><i class="fab fa-windows fa-fw"></i>&nbsp;Windows</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="raspberry-pi-tab" data-toggle="tab" href="#getstarted-raspberry-pi" role="tab" aria-controls="getstarted-raspberry-pi" aria-selected="true" title="Raspberry Pi"><i class="fab fa-raspberry-pi fa-fw"></i>&nbsp;Pi</a>
-			</li>
+			{% endfor %}
 		</ul>
 		{% endapply %}
 
+
 		{# Tabs Content #}
-		<div class="tab-content bg-white" id="gestarted-tabs-content">
+		<div class="tab-content bg-white" id="{{ section.slug }}-tabs-content">
 
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade show active" id="getstarted-linux" role="tabpanel" aria-labelledby="linux-tab">
+			{% for platform in platforms %}
+			<div class="tab-pane pt-4 border-left border-right border-bottom fade{{ loop.first ? ' show active': '' }}" id="{{ section.slug }}-{{ platform.slug }}" role="tabpanel" aria-labelledby="{{ platform.slug }}-tab">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12 mb-2">
+							{% set guides = site.pages | filter_by('section', section.slug ~ '/' ~ platform.slug) | sort_by_weight %}
 
+							{% if platform.content | trim | length -%}
+							{{- include(template_from_string(platform.content), {'page': platform}) | replace({'href=': 'class="text-reset" rel="noreferrer" target="_blank" href='}) -}}
+							{%- endif %}
+
+							{% if guides | length %}
 							{#- Platform Options -#}
 							<div class="row">
 								<div class="col-12 col-md-3 mb-2">
 									{#- List group -#}
-									<div class="list-group" id="getstarted-linux-tablist" role="tablist">
-										<a class="list-group-item list-group-item-action active" data-toggle="list" href="#getstarted-linux-source" role="tab">From Source <em>(Debian)</em></a>
-										<a class="list-group-item list-group-item-action" data-toggle="list" href="#getstarted-linux-ubuntu" role="tab">Using Ubuntu</a>
-										<a class="list-group-item list-group-item-action" data-toggle="list" href="#getstarted-linux-opensuse" role="tab">Using openSUSE</a>
+									<div class="list-group" id="{{ section.slug }}-{{ platform.slug }}-tablist" role="tablist">
+										{% for guide in guides %}
+										<a class="list-group-item list-group-item-action{{ loop.first ? ' active': '' }}" data-toggle="list" href="#{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tab">{{ guide.title }}</a>
+										{% endfor %}
 									</div>
 								</div>
 								<div class="col-12 col-md-9 mb-2">
 									{#- Tab panes -#}
 									<div class="tab-content">
-										<div class="tab-pane active" id="getstarted-linux-source" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Install Dependencies</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install \
-	build-essential \
-	checkinstall \
-	git \
-	autoconf \
-	automake \
-	libtool-bin \
-	libplist-dev \
-	libusbmuxd-dev \
-	libssl-dev \
-	usbmuxd</code></pre>
-											<h4 class="border-bottom pb-2">Build</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ ./autogen.sh \
-	--prefix=/opt/local \
-	--enable-debug
-$ make</code></pre>
-											<h4 class="border-bottom pb-2">Install</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo make install</code></pre>
+										{% for guide in guides %}
+										<div class="tab-pane{{ loop.first ? ' active': '' }}" id="{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tabpanel">
+											{{- guide.body | trim | replace({'# ': '#### '}) | markdown_to_html | raw | replace({'href=': 'class="text-reset" rel="noreferrer" target="_blank" href='}) -}}
 										</div>
-
-										<div class="tab-pane" id="getstarted-linux-ubuntu" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Installation</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install libimobiledevice usbmuxd</code></pre>
-										</div>
-
-										<div class="tab-pane" id="getstarted-linux-opensuse" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Installation</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo zypper install libimobiledevice6 usbmuxd</code></pre>
-										</div>
+										{% endfor %}
 									</div>
 								</div>
 							</div>
-
+							{% endif %}
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="getstarted-macos" role="tabpanel" aria-labelledby="macos-tab">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-12">
-							{#- Platform Options -#}
-							<div class="row">
-								<div class="col-12 col-md-3 mb-2">
-									{#- List group -#}
-									<div class="list-group" id="getstarted-macos-tablist" role="tablist">
-										{#- <a class="list-group-item list-group-item-action active" data-toggle="list" href="#getstarted-macos-source" role="tab">From Source</a> -#}
-										<a class="list-group-item list-group-item-action active" data-toggle="list" href="#getstarted-macos-macports" role="tab">Using Macports</a>
-										<a class="list-group-item list-group-item-action" data-toggle="list" href="#getstarted-macos-homebrew" role="tab">Using Homebrew</a>
-									</div>
-								</div>
-								<div class="col-12 col-md-9 mb-2">
-									{#- Tab panes -#}
-									<div class="tab-content">
-										{#-
-										<div class="tab-pane active" id="getstarted-macos-source" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Install Dependencies</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install \
-	build-essential \
-	checkinstall \
-	git \
-	autoconf \
-	automake \
-	libtool-bin \
-	libplist-dev \
-	libusbmuxd-dev \
-	libssl-dev \
-	usbmuxd</code></pre>
-											<h4 class="border-bottom pb-2">Build</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ ./autogen.sh \
-	--prefix=/opt/local \
-	--enable-debug
-$ make
-$ sudo make install</code></pre>
-										</div>
-										-#}
-
-										<div class="tab-pane active" id="getstarted-macos-macports" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Installation</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo port install libimobiledevice</code></pre>
-										</div>
-
-										<div class="tab-pane" id="getstarted-macos-homebrew" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Installation</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ brew install libimobiledevice</code></pre>
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="getstarted-windows" role="tabpanel" aria-labelledby="windows-tab">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-12 mb-2">
-							{#- Template: Alert -#}
-							<div class="alert alert-warning" role="alert">
-								<h5 class="alert-heading">Sorry, we&apos;re incomplete here.</h5>
-								<strong>Ay caramba!</strong> The website is not complete yet at this place! Please bear with us or take a lead and <a class="alert-link" href="https://github.com/libimobiledevice/libimobiledevice/" target="_blank" rel="noopener">contribute</a>.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="getstarted-raspberry-pi" role="tabpanel" aria-labelledby="raspberry-pi-tab">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-12">
-							<div class="row">
-								<div class="col-12 col-md-3 mb-2">
-									{#- List group -#}
-									<div class="list-group" id="getstarted-raspberry-pi-tablist" role="tablist">
-										<a class="list-group-item list-group-item-action active" data-toggle="list" href="#getstarted-raspberry-pi-source" role="tab">From Source <em>(Pi OS)</em></a>
-										<a class="list-group-item list-group-item-action" data-toggle="list" href="#getstarted-raspberry-pi-raspberry-pi-os" role="tab">Using Raspberry Pi OS</a>
-									</div>
-								</div>
-								<div class="col-12 col-md-9 mb-2">
-									{#- Tab panes -#}
-									<div class="tab-content">
-										<div class="tab-pane active" id="getstarted-raspberry-pi-source" role="tabpanel">
-										<h4 class="border-bottom pb-2">Open Terminal</h4>
-										<p>Open a command-line terminal on your machine.</p>
-										<h4 class="border-bottom pb-2">Install Dependencies</h4>
-										<p>Enter the commands provided below.</p>
-										<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install \
-	build-essential \
-	checkinstall \
-	git \
-	autoconf \
-	automake \
-	libtool-bin \
-	libplist-dev \
-	libusbmuxd-dev \
-	libssl-dev \
-	usbmuxd</code></pre>
-										<h4 class="border-bottom pb-2">Build</h4>
-										<p>Enter the commands provided below.</p>
-										<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ ./autogen.sh \
-	--prefix=/opt/local \
-	--enable-debug
-$ make
-$ sudo make install</code></pre>
-										</div>
-										<div class="tab-pane" id="getstarted-raspberry-pi-raspberry-pi-os" role="tabpanel">
-										<h4 class="border-bottom pb-2">Open Terminal</h4>
-										<p>Open a command-line terminal on your machine.</p>
-										<h4 class="border-bottom pb-2">Installation</h4>
-										<p>Enter the commands provided below.</p>
-										<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install libimobiledevice usbmuxd</code></pre>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 
 		</div>
+
 	</div>
 </div>
 {% endblock section_content %}
