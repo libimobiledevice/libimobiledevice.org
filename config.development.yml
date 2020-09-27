@@ -8,6 +8,8 @@ canonicalurl: false
 googleanalytics: false
 twitter:
   username: libimobiledev
+urls:
+  docs: https://docs.libimobiledevice.org
 language: en
 languages:
   - code: en
