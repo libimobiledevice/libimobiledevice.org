@@ -3,8 +3,43 @@
   <channel>
     <title>libimobiledevice - News</title>
     <description><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></description>
-    <lastBuildDate>2020-06-26T00:10:00+02:00</lastBuildDate>
+    <lastBuildDate>2020-09-27T21:42:00+02:00</lastBuildDate>
     <link>https://libimobiledevice.org/news/</link>
+    <item>
+      <guid>https://libimobiledevice.org/news/2020/09/27/website-up-on-github/</guid>
+      <title>Website up on GitHub</title>
+      <description><![CDATA[<p>This website is now up on GitHub! As announced before we have made the move to allow public contributions from the community.</p>
+<!-- excerpt -->
+<p>This milestone switches hosting to use <a href="https://pages.github.com">Github Pages</a>.</p>
+<p>If you want to contribute <a href="https://github.com/libimobiledevice/libimobiledevice.org">head over to the repository</a>.
+It contains all the sources to generate this website and any changes are deployed upon pushing it to the master branch.</p>
+<p><em>Fork it</em>, <em>change it</em> and send a <em>pull request</em>.</p>
+<p>A brief technology outline:</p>
+<ul>
+<li>Static website generated using <a href="https://cecil.app/">Cecil</a></li>
+<li><a href="https://twig.symfony.com/">Twig</a> HTML templates using <a href="https://getbootstrap.com/">Bootstrap</a></li>
+<li>Responsive design optimized for mobile, tablet and desktop</li>
+<li>SASS based styles and optimized assets pipeline</li>
+<li>Icons by <a href="https://fontawesome.com/">Font Awesome</a></li>
+<li>Syntax highlighting by <a href="https://github.com/PrismJS/prism/">Prism</a></li>
+<li>Dynamic content based on GitHub API data</li>
+<li>Automatically deployed using a <a href="https://github.com/features/actions">GitHub Actions</a> workflow for <a href="https://pages.github.com">GitHub Pages</a></li>
+<li>Hero animation using CSS and SVG image</li>
+<li>Various CSS animations by <a href="https://github.com/tgdev/animate-sass/">animate-sass</a></li>
+</ul>
+<p>Some areas that need work:</p>
+<ul>
+<li>Migrate more content from templates into markdown files</li>
+<li>Provide more examples and usage guides</li>
+<li>Improve frequently asked questions and other sections</li>
+<li>Automate generation of status page from external data</li>
+</ul>
+<p>... and much more, looking forward to see great improvements from the community!</p>
+<p>I really hope you guys enjoy the effort.</p>
+<p>Next up are some releases and refactoring.</p>]]></description>
+      <pubDate>2020-09-27T21:42:00+02:00</pubDate>
+      <link>https://libimobiledevice.org/news/2020/09/27/website-up-on-github/</link>
+    </item>
     <item>
       <guid>https://libimobiledevice.org/news/2020/06/26/new-logo-and-website/</guid>
       <title>New Logo and Website</title>
