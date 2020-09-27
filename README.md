@@ -28,8 +28,8 @@ Brief technology outline:
 
 Clone the actual project repository:
 ```shell
-git clone https://github.com/libimobiledevice/libimobiledevice.github.io.git
-cd libimobiledevice.github.io
+git clone https://github.com/libimobiledevice/libimobiledevice.org.git
+cd libimobiledevice.org
 ```
 
 Build the development version:
@@ -73,8 +73,8 @@ We are still working on the guidelines so bear with us!
 ## Links
 
 * Homepage: https://libimobiledevice.org/
-* Repository: https://github.com/libimobiledevice/libimobiledevice.github.io.git
-* Issue Tracker: https://github.com/libimobiledevice/libimobiledevice.github.io/issues
+* Repository: https://github.com/libimobiledevice/libimobiledevice.org.git
+* Issue Tracker: https://github.com/libimobiledevice/libimobiledevice.org/issues
 * Mailing List: https://lists.libimobiledevice.org/mailman/listinfo/libimobiledevice-devel
 * Twitter: https://twitter.com/libimobiledev
 
@@ -93,4 +93,4 @@ Logo, Artwork & UI by [Martin Szulecki](https://github.com/FunkyM/).
 This project is an independent software and has not been authorized, sponsored,
 or otherwise approved by Apple Inc.
 
-README Updated on: 2020-09-25
+README Updated on: 2020-09-27
