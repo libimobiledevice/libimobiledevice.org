@@ -930,6 +930,7 @@ Restarting device.</code></pre>
 		<div class="row section-heading">
 	<div class="col-12">
 		<h2 class="section-title mb-5">Get Started</h2>
+		<div></div>
 	</div>
 </div>
 <div class="row">
@@ -939,167 +940,161 @@ Restarting device.</code></pre>
 </div>
 		<div class="row">
 	<div class="col-12">
-				<ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active" id="linux-tab" data-toggle="tab" href="#getstarted-linux" role="tab" aria-controls="getstarted-linux" aria-selected="true" title="Linux"><i class="fab fa-linux fa-fw"></i>&nbsp;Linux</a></li><li class="nav-item"><a class="nav-link" id="macos-tab" data-toggle="tab" href="#getstarted-macos" role="tab" aria-controls="getstarted-macos" aria-selected="true" title="Mac"><i class="fab fa-apple fa-fw"></i>&nbsp;Mac</a></li><li class="nav-item"><a class="nav-link" id="windows-tab" data-toggle="tab" href="#getstarted-windows" role="tab" aria-controls="getstarted-windows" aria-selected="true" title="Windows"><i class="fab fa-windows fa-fw"></i>&nbsp;Windows</a></li><li class="nav-item"><a class="nav-link" id="raspberry-pi-tab" data-toggle="tab" href="#getstarted-raspberry-pi" role="tab" aria-controls="getstarted-raspberry-pi" aria-selected="true" title="Raspberry Pi"><i class="fab fa-raspberry-pi fa-fw"></i>&nbsp;Pi</a></li></ul>
-				<div class="tab-content bg-white" id="gestarted-tabs-content">
 
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade show active" id="getstarted-linux" role="tabpanel" aria-labelledby="linux-tab">
+				<ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active" id="linux-tab" data-toggle="tab" href="#get-started-linux" role="tab" aria-controls="get-started-linux" aria-selected="true" title="Linux"><i class="fab fa-linux fa-fw"></i>&nbsp;Linux</a></li><li class="nav-item"><a class="nav-link" id="macos-tab" data-toggle="tab" href="#get-started-macos" role="tab" aria-controls="get-started-macos" aria-selected="true" title="Mac"><i class="fab fa-apple fa-fw"></i>&nbsp;Mac</a></li><li class="nav-item"><a class="nav-link" id="windows-tab" data-toggle="tab" href="#get-started-windows" role="tab" aria-controls="get-started-windows" aria-selected="true" title="Windows"><i class="fab fa-windows fa-fw"></i>&nbsp;Windows</a></li><li class="nav-item"><a class="nav-link" id="raspberry-pi-tab" data-toggle="tab" href="#get-started-raspberry-pi" role="tab" aria-controls="get-started-raspberry-pi" aria-selected="true" title="Pi"><i class="fab fa-raspberry-pi fa-fw"></i>&nbsp;Pi</a></li></ul>
+
+				<div class="tab-content bg-white" id="get-started-tabs-content">
+
+						<div class="tab-pane pt-4 border-left border-right border-bottom fade show active" id="get-started-linux" role="tabpanel" aria-labelledby="linux-tab">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-12 mb-2"><div class="row">
-								<div class="col-12 col-md-3 mb-2"><div class="list-group" id="getstarted-linux-tablist" role="tablist">
-										<a class="list-group-item list-group-item-action active" data-toggle="list" href="#getstarted-linux-source" role="tab">From Source <em>(Debian)</em></a>
-										<a class="list-group-item list-group-item-action" data-toggle="list" href="#getstarted-linux-ubuntu" role="tab">Using Ubuntu</a>
-										<a class="list-group-item list-group-item-action" data-toggle="list" href="#getstarted-linux-opensuse" role="tab">Using openSUSE</a>
-									</div>
-								</div>
-								<div class="col-12 col-md-9 mb-2"><div class="tab-content">
-										<div class="tab-pane active" id="getstarted-linux-source" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Install Dependencies</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install \
-	build-essential \
-	checkinstall \
-	git \
-	autoconf \
-	automake \
-	libtool-bin \
-	libplist-dev \
-	libusbmuxd-dev \
-	libssl-dev \
-	usbmuxd</code></pre>
-											<h4 class="border-bottom pb-2">Build</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ ./autogen.sh \
-	--prefix=/opt/local \
-	--enable-debug
-$ make</code></pre>
-											<h4 class="border-bottom pb-2">Install</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo make install</code></pre>
-										</div>
-
-										<div class="tab-pane" id="getstarted-linux-ubuntu" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Installation</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install libimobiledevice usbmuxd</code></pre>
-										</div>
-
-										<div class="tab-pane" id="getstarted-linux-opensuse" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Installation</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo zypper install libimobiledevice6 usbmuxd</code></pre>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="getstarted-macos" role="tabpanel" aria-labelledby="macos-tab">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-12"><div class="row">
-								<div class="col-12 col-md-3 mb-2"><div class="list-group" id="getstarted-macos-tablist" role="tablist"><a class="list-group-item list-group-item-action active" data-toggle="list" href="#getstarted-macos-macports" role="tab">Using Macports</a>
-										<a class="list-group-item list-group-item-action" data-toggle="list" href="#getstarted-macos-homebrew" role="tab">Using Homebrew</a>
-									</div>
-								</div>
-								<div class="col-12 col-md-9 mb-2"><div class="tab-content"><div class="tab-pane active" id="getstarted-macos-macports" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Installation</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo port install libimobiledevice</code></pre>
-										</div>
-
-										<div class="tab-pane" id="getstarted-macos-homebrew" role="tabpanel">
-											<h4 class="border-bottom pb-2">Open Terminal</h4>
-											<p>Open a command-line terminal on your machine.</p>
-											<h4 class="border-bottom pb-2">Installation</h4>
-											<p>Enter the commands provided below.</p>
-											<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ brew install libimobiledevice</code></pre>
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="getstarted-windows" role="tabpanel" aria-labelledby="windows-tab">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-12 mb-2"><div class="alert alert-warning" role="alert">
-								<h5 class="alert-heading">Sorry, we&apos;re incomplete here.</h5>
-								<strong>Ay caramba!</strong> The website is not complete yet at this place! Please bear with us or take a lead and <a class="alert-link" href="https://github.com/libimobiledevice/libimobiledevice/" target="_blank" rel="noopener">contribute</a>.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="getstarted-raspberry-pi" role="tabpanel" aria-labelledby="raspberry-pi-tab">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-12">
+						<div class="col-12 mb-2">
+							
+							
 							<div class="row">
-								<div class="col-12 col-md-3 mb-2"><div class="list-group" id="getstarted-raspberry-pi-tablist" role="tablist">
-										<a class="list-group-item list-group-item-action active" data-toggle="list" href="#getstarted-raspberry-pi-source" role="tab">From Source <em>(Pi OS)</em></a>
-										<a class="list-group-item list-group-item-action" data-toggle="list" href="#getstarted-raspberry-pi-raspberry-pi-os" role="tab">Using Raspberry Pi OS</a>
-									</div>
+								<div class="col-12 col-md-3 mb-2"><div class="list-group" id="get-started-linux-tablist" role="tablist">
+																				<a class="list-group-item list-group-item-action active" data-toggle="list" href="#get-started-linux-source" role="tab">From Source <em>(Debian)</em></a>
+																				<a class="list-group-item list-group-item-action" data-toggle="list" href="#get-started-linux-ubuntu" role="tab">Using Ubuntu</a>
+																				<a class="list-group-item list-group-item-action" data-toggle="list" href="#get-started-linux-opensuse" role="tab">Using openSUSE</a>
+																			</div>
 								</div>
 								<div class="col-12 col-md-9 mb-2"><div class="tab-content">
-										<div class="tab-pane active" id="getstarted-raspberry-pi-source" role="tabpanel">
-										<h4 class="border-bottom pb-2">Open Terminal</h4>
-										<p>Open a command-line terminal on your machine.</p>
-										<h4 class="border-bottom pb-2">Install Dependencies</h4>
-										<p>Enter the commands provided below.</p>
-										<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install \
-	build-essential \
-	checkinstall \
-	git \
-	autoconf \
-	automake \
-	libtool-bin \
-	libplist-dev \
-	libusbmuxd-dev \
-	libssl-dev \
-	usbmuxd</code></pre>
-										<h4 class="border-bottom pb-2">Build</h4>
-										<p>Enter the commands provided below.</p>
-										<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ ./autogen.sh \
-	--prefix=/opt/local \
-	--enable-debug
-$ make
-$ sudo make install</code></pre>
-										</div>
-										<div class="tab-pane" id="getstarted-raspberry-pi-raspberry-pi-os" role="tabpanel">
-										<h4 class="border-bottom pb-2">Open Terminal</h4>
-										<p>Open a command-line terminal on your machine.</p>
-										<h4 class="border-bottom pb-2">Installation</h4>
-										<p>Enter the commands provided below.</p>
-										<pre class="border border-muted rounded-lg"><code class="language-shell-session shell">$ sudo apt-get install libimobiledevice usbmuxd</code></pre>
-										</div>
-									</div>
+																				<div class="tab-pane active" id="get-started-linux-source" role="tabpanel"><h4>Open Terminal</h4>
+<p>Open a command-line terminal on your machine.</p>
+<h4>Install Dependencies</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ sudo apt-get install \
+    build-essential \
+    checkinstall \
+    git \
+    autoconf \
+    automake \
+    libtool-bin \
+    libplist-dev \
+    libusbmuxd-dev \
+    libssl-dev \
+    usbmuxd</code></pre>
+<h4>Build</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ ./autogen.sh \
+    --prefix=/opt/local \
+    --enable-debug
+$ make</code></pre>
+<h4>Install</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ sudo make install</code></pre></div>
+																				<div class="tab-pane" id="get-started-linux-ubuntu" role="tabpanel"><h4>Open Terminal</h4>
+<p>Open a command-line terminal on your machine.</p>
+<h4>Installation</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ sudo apt-get install libimobiledevice usbmuxd</code></pre></div>
+																				<div class="tab-pane" id="get-started-linux-opensuse" role="tabpanel"><h4>Open Terminal</h4>
+<p>Open a command-line terminal on your machine.</p>
+<h4>Installation</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ sudo zypper install libimobiledevice6 usbmuxd</code></pre></div>
+																			</div>
 								</div>
 							</div>
-						</div>
+													</div>
 					</div>
 				</div>
 			</div>
-
+						<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="get-started-macos" role="tabpanel" aria-labelledby="macos-tab">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 mb-2">
+							
+							
+							<div class="row">
+								<div class="col-12 col-md-3 mb-2"><div class="list-group" id="get-started-macos-tablist" role="tablist">
+																				<a class="list-group-item list-group-item-action active" data-toggle="list" href="#get-started-macos-macports" role="tab">Using Macports</a>
+																				<a class="list-group-item list-group-item-action" data-toggle="list" href="#get-started-macos-homebrew" role="tab">Using Homebrew</a>
+																			</div>
+								</div>
+								<div class="col-12 col-md-9 mb-2"><div class="tab-content">
+																				<div class="tab-pane active" id="get-started-macos-macports" role="tabpanel"><h4>Open Terminal</h4>
+<p>Open a command-line terminal on your machine.</p>
+<h4>Installation</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ sudo port install libimobiledevice</code></pre></div>
+																				<div class="tab-pane" id="get-started-macos-homebrew" role="tabpanel"><h4>Open Terminal</h4>
+<p>Open a command-line terminal on your machine.</p>
+<h4>Installation</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ brew install libimobiledevice</code></pre></div>
+																			</div>
+								</div>
+							</div>
+													</div>
+					</div>
+				</div>
+			</div>
+						<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="get-started-windows" role="tabpanel" aria-labelledby="windows-tab">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 mb-2">
+							
+							<p><div class="alert alert-warning" role="alert">
+	<h5 class="alert-heading">Sorry, we&apos;re incomplete here.</h5>
+	<strong>Ay caramba!</strong> The website is not complete yet at this place! Please bear with us or take a lead and <a class="alert-link" class="text-reset" rel="noreferrer" target="_blank" href="https://github.com/libimobiledevice/libimobiledevice.github.io/edit/master/content/get-started/windows.md" target="_blank" rel="noopener">edit this content</a>.
+</div></p>
+													</div>
+					</div>
+				</div>
+			</div>
+						<div class="tab-pane pt-4 border-left border-right border-bottom fade" id="get-started-raspberry-pi" role="tabpanel" aria-labelledby="raspberry-pi-tab">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 mb-2">
+							
+							
+							<div class="row">
+								<div class="col-12 col-md-3 mb-2"><div class="list-group" id="get-started-raspberry-pi-tablist" role="tablist">
+																				<a class="list-group-item list-group-item-action active" data-toggle="list" href="#get-started-raspberry-pi-source" role="tab">From Source <em>(Pi OS)</em></a>
+																				<a class="list-group-item list-group-item-action" data-toggle="list" href="#get-started-raspberry-pi-pi-os" role="tab">Using Raspberry Pi OS</a>
+																			</div>
+								</div>
+								<div class="col-12 col-md-9 mb-2"><div class="tab-content">
+																				<div class="tab-pane active" id="get-started-raspberry-pi-source" role="tabpanel"><h4>Open Terminal</h4>
+<p>Open a command-line terminal on your machine.</p>
+<h4>Install Dependencies</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ sudo apt-get install \
+    build-essential \
+    checkinstall \
+    git \
+    autoconf \
+    automake \
+    libtool-bin \
+    libplist-dev \
+    libusbmuxd-dev \
+    libssl-dev \
+    usbmuxd</code></pre>
+<h4>Build</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ ./autogen.sh \
+    --prefix=/opt/local \
+    --enable-debug
+$ make</code></pre>
+<h4>Install</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ sudo make install</code></pre></div>
+																				<div class="tab-pane" id="get-started-raspberry-pi-pi-os" role="tabpanel"><h4>Open Terminal</h4>
+<p>Open a command-line terminal on your machine.</p>
+<h4>Installation</h4>
+<p>Enter the commands provided below.</p>
+<pre><code class="language-shell-session">$ sudo apt-get install libimobiledevice usbmuxd</code></pre></div>
+																			</div>
+								</div>
+							</div>
+													</div>
+					</div>
+				</div>
+			</div>
+			
 		</div>
+
 	</div>
 </div>
 			</div>
@@ -1168,7 +1163,7 @@ $ sudo make install</code></pre>
 			</div>
 						<div class="card-body">
 				<h5 class="card-title"><a href="https://libimobiledevice.org/news/2020/06/16/fresh-documentation/" class="text-reset">Fresh Documentation</a></h5>
-				<p class="card-text"><p>The <a href="https://libimobiledevice.org/docs/libimobiledevice/latest">API Documentation</a> for libimobiledevice has been updated.
+				<p class="card-text"><p>The <a href="https://docs.libimobiledevice.org/libimobiledevice/latest">API Documentation</a> for libimobiledevice has been updated.
 A refresh of this website is planned next.</p></p>
 			</div>
 			<div class="card-footer">
@@ -1215,50 +1210,47 @@ Bear with us for some cool stuff coming up next.</p></p>
 
 		<div id="accordion" class="accordion bg-transparent">
 
-			<div class="card active mb-5 border-bottom shadow-sm">
+						<div class="card mb-5 border-bottom shadow-sm active">
 				<div class="card-header">
 					<h5 class="mb-0">
-					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true">Just installed the library, now what? Nothing happens!</a>
+					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true">Just installed the library, now what? Nothing happens!</a>
 					</h5>
 				</div>
-				<div id="collapse1" class="collapse show" data-parent="#accordion" style="">
-					<div class="card-body">To test if you installed everything correctly plug in your device and run "ideviceinfo" within a terminal. Congratulations if it prints a lot of details about your device. Feel free to checkout <a href="/docs/libimobiledevice/latest/" target="_blank" rel="noopener">the documentation</a> or dive into <a href="https://github.com/libimobiledevice/libimobiledevice/" target="_blank" rel="noopener">the source code</a>.</div>
+				<div id="collapse-1" class="collapse show" data-parent="#accordion" style="">
+					<div class="card-body">To test if you installed everything correctly plug in your device and run &quot;ideviceinfo&quot; within a terminal. Congratulations if it prints a lot of details about your device. Feel free to checkout <a rel="noopener" target="_blank" href="https://docs.libimobiledevice.org/libimobiledevice/latest/">the documentation</a> or dive into <a rel="noopener" target="_blank" href="https://github.com/libimobiledevice/libimobiledevice/">the source code</a>.</div>
 				</div>
 			</div>
-
-			<div class="card mb-5 border-bottom shadow-sm">
+						<div class="card mb-5 border-bottom shadow-sm">
 				<div class="card-header">
 					<h5 class="mb-0">
-					<a class="text-dark collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false">How do I copy music to my device?</a>
+					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="true">How do I copy music to my device?</a>
 					</h5>
 				</div>
-				<div id="collapse2" class="collapse" data-parent="#accordion" style="">
+				<div id="collapse-2" class="collapse" data-parent="#accordion" style="">
 					<div class="card-body">Sorry, music synchronization with newer devices is currently not supported but if you are a keen developer why not contribute a new service implementation for the <em>ATC Service</em>?</div>
 				</div>
 			</div>
-
-			<div class="card mb-5 border-bottom shadow-sm">
+						<div class="card mb-5 border-bottom shadow-sm">
 				<div class="card-header">
 					<h5 class="mb-0">
-					<a class="text-dark collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false">Do I need to use ifuse to access files on my device?</a>
+					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="true">Does the library to device communication break everytime a new iOS<sup>&reg;</sup> is out?</a>
 					</h5>
 				</div>
-				<div id="collapse3" class="collapse" data-parent="#accordion">
-					<div class="card-body">iFuse is only useful if you want to mount the device manually and if you do not have GNOME and GVFS installed. Otherwise it is useless since GNOME's GVFS supports accessing the device directly and creates a fuse mount in "$XDG_RUNTIME_DIR/.gvfs", too.</div>
-				</div>
-			</div>
-
-			<div class="card mb-5 border-bottom shadow-sm">
-				<div class="card-header">
-					<h5 class="mb-0">
-					<a class="text-dark collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false">Does the library to device communication break everytime a new iOS<sup>&reg;</sup> is out?</a>
-					</h5>
-				</div>
-				<div id="collapse4" class="collapse" data-parent="#accordion">
+				<div id="collapse-3" class="collapse" data-parent="#accordion" style="">
 					<div class="card-body">The library has shown to be compatible with firmware releases going back to the 1.x series up to todays without issues. At rare times, bugs introduced by the firmware had to be worked around with simple fixes but nothing major prevented it from working. Thus in effect, the implementation proves very stable and compatible among firmware releases.</div>
 				</div>
 			</div>
-
+						<div class="card mb-5 border-bottom shadow-sm">
+				<div class="card-header">
+					<h5 class="mb-0">
+					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="true">Do I need to use ifuse to access files on my device?</a>
+					</h5>
+				</div>
+				<div id="collapse-4" class="collapse" data-parent="#accordion" style="">
+					<div class="card-body">iFuse is only useful if you want to mount the device manually and if you do not have GNOME and GVFS installed. Otherwise it is useless since GNOME's GVFS supports accessing the device directly and creates a fuse mount in &quot;$XDG_RUNTIME_DIR/.gvfs&quot;, too.</div>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </div>
@@ -1353,22 +1345,6 @@ Bear with us for some cool stuff coming up next.</p></p>
 </section>
 
 	<div class="shape-1 bottom" style="background-color: var(--light); overflow: hidden; width: 100%; height: 200px;"><svg viewBox="0 0 600 200" preserveAspectRatio="none" style="width: 100%; height: 100%; -webkit-transform: scale(1); transform: scale(1);"><path d="M 0,100 C 200,200 400,-100 600,100 V 200 H 0 Z" style="stroke: none; fill: var(--white);"></path></svg></div>
-
-		<section id="under-construction" class="container-fluid bg-white">
-	<div class="container py-4 p-lg-5 px-0">
-				<div class="row">
-	<div class="col-12">
-		<div class="alert alert-warning alert-dismissible fade show m-0 text-center" role="alert">
-			<h4 class="alert-heading"><i class="fas fa-hard-hat fa-fw"></i>&nbsp;Under Construction</h4>
-			<strong>Ay caramba!</strong> This website is not complete yet! Please bear with us as we work on making it available using Github Pages for everyone to contribute!
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-	</div>
-</div>
-			</div>
-</section>
 
 		<section id="community" class="container-fluid bg-white">
 	<div class="container py-4 p-lg-5 px-0">
@@ -1527,7 +1503,7 @@ This project is an independent software solution and has not been authorized, sp
 		</div>
 				<div class="row">
 			<div class="col-12 text-center text-md-left">
-				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.33.0" class="text-reset" target="_blank" rel="noopener">Cecil v5.33.0</a> on Sun, 27 Sep 2020 00:40:20 +0200</small>
+				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.33.0" class="text-reset" target="_blank" rel="noopener">Cecil v5.33.0</a> on Sun, 27 Sep 2020 19:25:36 +0200</small>
 			</div>
 		</div>
 	</div>
