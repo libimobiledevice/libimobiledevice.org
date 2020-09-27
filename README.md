@@ -20,7 +20,7 @@ Brief technology outline:
 * Icons by [Font Awesome](https://fontawesome.com/)
 * Syntax highlighting by [Prism](https://github.com/PrismJS/prism/)
 * Dynamic content based on GitHub API data
-* Automatically deployed using a [GitHub Actions]() workflow for [GitHub Pages]()
+* Automatically deployed using a [GitHub Actions](https://github.com/features/actions) workflow for [GitHub Pages](https://pages.github.com)
 * Hero animation using CSS and SVG image
 * Various CSS animations by [animate-sass](https://github.com/tgdev/animate-sass/)
 
