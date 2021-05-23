@@ -49,25 +49,16 @@ jobs:
           sudo apt-get install php-intl
 
       - name: Install composer dependencies 🏗
-        uses: php-actions/composer@v5
-        with:
-          php_version: 7.4
         shell: bash
         run: |
           composer install
 
       - name: Install node dependencies 🏗
-        uses: php-actions/composer@v5
-        with:
-          php_version: 7.4
         shell: bash
         run: |
           yarn install
 
       - name: Build 🔧
-        uses: php-actions/composer@v5
-        with:
-          php_version: 7.4
         shell: bash
         run: |
           make production
