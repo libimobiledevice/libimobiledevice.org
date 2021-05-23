@@ -43,15 +43,11 @@ jobs:
           path: vendor
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.*') }}
 
-      - name: Set php version 🏗
-        uses: php-actions/composer@v5
+      - name: Setup PHP with intl 🏗
+        uses: shivammathur/setup-php@v2
         with:
-          php_version: 7.4
-
-      - name: Install php intl extension  🏗
-        run: |
-          sudo apt-get update
-          sudo apt-get install php-intl
+          php_version: '7.4'
+          extensions: intl-69.1
 
       - name: Install composer dependencies 🏗
         shell: bash
