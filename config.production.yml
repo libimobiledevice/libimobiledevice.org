@@ -53,7 +53,7 @@ assets:
     enabled: true
   compile:
     enabled: true
-    style: crunched
+    style: compressed
     import:
       0: ../node_modules
       1: scss
