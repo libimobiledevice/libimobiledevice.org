@@ -46,7 +46,7 @@ jobs:
       - name: Setup PHP with intl 🏗
         uses: shivammathur/setup-php@v2
         with:
-          php_version: '7.4'
+          php-version: '7.4'
           extensions: intl-69.1
 
       - name: Install composer dependencies 🏗
