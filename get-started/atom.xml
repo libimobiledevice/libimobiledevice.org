@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <id>https://libimobiledevice.org/</id>
+  <id>https://libimobiledevice.org/get-started/</id>
   <title>libimobiledevice</title>
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
-  <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
-  <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2021-07-07T13:26:46+02:00</updated>
+  <link href="https://libimobiledevice.org/get-started/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="https://libimobiledevice.org/get-started/" rel="alternate" type="text/html" />
+  <updated>2020-09-27T21:42:00+02:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
   </author>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/</id>
+    <title>Home</title>
+    <content type="html">
+      <![CDATA[]]>
+    </content>
+    <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
+    <published>2021-07-07T13:26:46+02:00</published>
+    <updated>2021-07-07T13:26:46+02:00</updated>
+  </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/status/</id>
     <title>Status</title>
@@ -19,6 +29,16 @@
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
     <published>2021-07-07T13:26:46+02:00</published>
     <updated>2021-07-07T13:26:46+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/</id>
+    <title>News</title>
+    <content type="html">
+      <![CDATA[]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/" rel="alternate" type="text/html" />
+    <published>2020-09-27T21:42:00+02:00</published>
+    <updated>2020-09-27T21:42:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2020/09/27/website-up-on-github/</id>
