@@ -57,7 +57,7 @@
 			"title": "Our IRC Channel",
 			"tagline": "Chat on IRC",
 			"description": "Get hands on in ASCII style.",
-			"url": "irc://chat.freenode.net#libimobiledevice",
+			"url": "irc://libera.chat#libimobiledevice",
 			"weight": 6
 		}
 	]
