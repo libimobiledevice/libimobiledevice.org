@@ -77,12 +77,14 @@
 		site.node.dir ~ '/jquery/dist/jquery.slim.min.js',
 		site.node.dir ~ '/bootstrap/js/dist/util.js',
 		site.node.dir ~ '/bootstrap/js/dist/alert.js',
-		site.node.dir ~ '/bootstrap/js/dist/button.js',
+		site.node.dir ~ '/bootstrap/js/dist/button.js'
+	], {'filename': 'js/vendor.js'}) | url }}"></script>
+	<script src="{{ asset([
 		site.node.dir ~ '/popper.js/dist/umd/popper.min.js',
 		site.node.dir ~ '/bootstrap/js/dist/collapse.js',
 		site.node.dir ~ '/bootstrap/js/dist/dropdown.js',
 		site.node.dir ~ '/bootstrap/js/dist/tab.js'
-	], {'filename': 'js/vendor.js'}) | url }}"></script>
+	], {'filename': 'js/vendor2.js'}) | url }}"></script>
 
 	<script src="{{ asset(['js/prism.js'], {'filename': 'js/prism.js'}) | url }}" async></script>
 
