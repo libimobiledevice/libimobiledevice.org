@@ -423,7 +423,7 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-libimobiledevice" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libimobiledevice" href="#download-details-libimobiledevice" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libimobiledevice</a>&nbsp;<a href="https://github.com/libimobiledevice/libimobiledevice/releases/tag/1.3.0"><small class="font-weight-light text-muted">1.3.0</small></a></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libimobiledevice" href="#download-details-libimobiledevice" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libimobiledevice</a>&nbsp;<a href="https://github.com/libimobiledevice/libimobiledevice/releases/tag/1.3.0"><small class="font-weight-light text-muted">1.3.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libimobiledevice/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-libimobiledevice" data-parent="#download-libimobiledevice">
 				<div class="card-body">
@@ -443,14 +443,14 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4>1.3.0 (2020-06-15)</h4>
+					<h4 id="1-3-0-2020-06-15">1.3.0 (2020-06-15)</h4>
 <p>Development release.</p>
-<h5>Breaking</h5>
+<h5 id="breaking">Breaking</h5>
 <ul>
 <li>Rename <code>--enable-debug-code</code> configure option to <code>--enable-debug</code></li>
 <li>Rename library and all related files by adding an API version resulting in <code>libimobiledevice-1.0</code></li>
 </ul>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>Add more lockdown error codes</li>
 <li>Add new <code>lockdownd_pair_with_options()</code> function</li>
@@ -491,7 +491,7 @@ Restarting device.</code></pre>
 <li>Bump soname version</li>
 <li>Update man pages</li>
 </ul>
-<h5>Bug Fixes</h5>
+<h5 id="bug-fixes">Bug Fixes</h5>
 <ul>
 <li>Fix Python 3 support</li>
 <li>Cython: Fix and improve debugserver and diagnostics service bindings</li>
@@ -522,13 +522,14 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-usbmuxd" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-usbmuxd" href="#download-details-usbmuxd" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;usbmuxd</a>&nbsp;<a href="https://github.com/libimobiledevice/usbmuxd/releases/tag/1.1.1"><small class="font-weight-light text-muted">1.1.1</small></a></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-usbmuxd" href="#download-details-usbmuxd" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;usbmuxd</a>&nbsp;<a href="https://github.com/libimobiledevice/usbmuxd/releases/tag/1.1.1"><small class="font-weight-light text-muted">1.1.1</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/usbmuxd/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-usbmuxd" data-parent="#download-usbmuxd">
 				<div class="card-body">
 					<p class="card-text">A socket daemon to multiplex connections from and to iOS devices</p>
 										<a href="https://github.com/libimobiledevice/usbmuxd/releases/download/1.1.1/usbmuxd-1.1.1.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
 					
+															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/gpl-2.0" target="_blank" rel="noreferrer" class="text-reset" title="View GNU General Public License v2.0">GPL-2.0 License</a></span>
 									</div>
 												<div class="card-header border-top">
 					<small class="text-muted">Depends on:</small>
@@ -539,9 +540,9 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4>1.1.1 (2020-06-15)</h4>
+					<h4 id="1-1-1-2020-06-15">1.1.1 (2020-06-15)</h4>
 <p>Maintenance release.</p>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>Make use of libusb hotplug events for device discovery</li>
 <li>Get correct USB device speed instead of hardcoded value</li>
@@ -566,7 +567,7 @@ Restarting device.</code></pre>
 <li>Unify and improve log message output</li>
 <li>Improve README.md with project description, installation, contributing and usage sections</li>
 </ul>
-<h5>Bug Fixes</h5>
+<h5 id="bug-fixes">Bug Fixes</h5>
 <ul>
 <li>Use <code>clock_gettime()</code> instead of <code>gettimeofday()</code> to avoid timing issues when calculating packet timeouts</li>
 <li>Fix wrong timeout value in debug messages</li>
@@ -584,7 +585,7 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-ideviceinstaller" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ideviceinstaller" href="#download-details-ideviceinstaller" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ideviceinstaller</a>&nbsp;<a href="https://github.com/libimobiledevice/ideviceinstaller/releases/tag/1.1.1"><small class="font-weight-light text-muted">1.1.1</small></a></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ideviceinstaller" href="#download-details-ideviceinstaller" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ideviceinstaller</a>&nbsp;<a href="https://github.com/libimobiledevice/ideviceinstaller/releases/tag/1.1.1"><small class="font-weight-light text-muted">1.1.1</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ideviceinstaller/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-ideviceinstaller" data-parent="#download-ideviceinstaller">
 				<div class="card-body">
@@ -602,9 +603,9 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4>1.1.1 (2020-06-15)</h4>
+					<h4 id="1-1-1-2020-06-15">1.1.1 (2020-06-15)</h4>
 <p>Maintenance release.</p>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>Bump autoconf requirement to 2.64</li>
 <li>Bump libzip dependency to 0.10</li>
@@ -618,7 +619,7 @@ Restarting device.</code></pre>
 <li>Bump libplist dependency to 2.2.0</li>
 <li>Improve README.md with project description, installation, contributing and usage sections</li>
 </ul>
-<h5>Bug Fixes</h5>
+<h5 id="bug-fixes">Bug Fixes</h5>
 <ul>
 <li>Fix device removal detection triggering on any device unplug</li>
 <li>Fix win32 build</li>
@@ -632,7 +633,7 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-idevicerestore" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-idevicerestore" href="#download-details-idevicerestore" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;idevicerestore</a>&nbsp;<a href="https://github.com/libimobiledevice/idevicerestore/releases/tag/1.0.0"><small class="font-weight-light text-muted">1.0.0</small></a></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-idevicerestore" href="#download-details-idevicerestore" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;idevicerestore</a>&nbsp;<a href="https://github.com/libimobiledevice/idevicerestore/releases/tag/1.0.0"><small class="font-weight-light text-muted">1.0.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/idevicerestore/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-idevicerestore" data-parent="#download-idevicerestore">
 				<div class="card-body">
@@ -654,9 +655,9 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4>1.0.0 (2020-06-15)</h4>
+					<h4 id="1-0-0-2020-06-15">1.0.0 (2020-06-15)</h4>
 <p>First official public release!</p>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>Restore firmware files to iOS devices</li>
 <li>Use official IPSW firmware archive file or directory</li>
@@ -678,7 +679,7 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-ifuse" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ifuse" href="#download-details-ifuse" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ifuse</a>&nbsp;<a href="https://github.com/libimobiledevice/ifuse/releases/tag/1.1.4"><small class="font-weight-light text-muted">1.1.4</small></a></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ifuse" href="#download-details-ifuse" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ifuse</a>&nbsp;<a href="https://github.com/libimobiledevice/ifuse/releases/tag/1.1.4"><small class="font-weight-light text-muted">1.1.4</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ifuse/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-ifuse" data-parent="#download-ifuse">
 				<div class="card-body">
@@ -696,9 +697,9 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4>1.1.4 (2020-06-15)</h4>
+					<h4 id="1-1-4-2020-06-15">1.1.4 (2020-06-15)</h4>
 <p>Maintenance release.</p>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>Use automake silent rules if available</li>
 <li>Add helpful message when mounting an app document folder fails</li>
@@ -719,7 +720,7 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-libusbmuxd" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libusbmuxd" href="#download-details-libusbmuxd" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libusbmuxd</a>&nbsp;<a href="https://github.com/libimobiledevice/libusbmuxd/releases/tag/2.0.2"><small class="font-weight-light text-muted">2.0.2</small></a></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libusbmuxd" href="#download-details-libusbmuxd" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libusbmuxd</a>&nbsp;<a href="https://github.com/libimobiledevice/libusbmuxd/releases/tag/2.0.2"><small class="font-weight-light text-muted">2.0.2</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libusbmuxd/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-libusbmuxd" data-parent="#download-libusbmuxd">
 				<div class="card-body">
@@ -735,13 +736,13 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4>2.0.2 (2020-06-15)</h4>
+					<h4 id="2-0-2-2020-06-15">2.0.2 (2020-06-15)</h4>
 <p>Maintenance release.</p>
-<h5>Breaking</h5>
+<h5 id="breaking">Breaking</h5>
 <ul>
 <li>Rename library and all related files by adding an API version resulting in <code>libusbmuxd-2.0</code></li>
 </ul>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>Handle USB and network devices with new options in tools</li>
 <li>Make connecting sockets non-blocking</li>
@@ -755,7 +756,7 @@ Restarting device.</code></pre>
 <li>Add new <code>--version</code> argument to output version information to tools</li>
 <li>Improve README.md with project description, installation, contributing and usage sections</li>
 </ul>
-<h5>Bug Fixes</h5>
+<h5 id="bug-fixes">Bug Fixes</h5>
 <ul>
 <li>Fix compiler warnings</li>
 <li>Fix win32 build</li>
@@ -769,7 +770,7 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-libplist" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libplist" href="#download-details-libplist" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libplist</a>&nbsp;<a href="https://github.com/libimobiledevice/libplist/releases/tag/2.2.0"><small class="font-weight-light text-muted">2.2.0</small></a> <div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/workflow/status/libimobiledevice/libplist/build"></div></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libplist" href="#download-details-libplist" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libplist</a>&nbsp;<a href="https://github.com/libimobiledevice/libplist/releases/tag/2.2.0"><small class="font-weight-light text-muted">2.2.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libplist/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-libplist" data-parent="#download-libplist">
 				<div class="card-body">
@@ -780,13 +781,13 @@ Restarting device.</code></pre>
 									</div>
 													<hr>
 												<div class="card-body">
-					<h4>2.2.0 (2020-06-15)</h4>
+					<h4 id="2-2-0-2020-06-15">2.2.0 (2020-06-15)</h4>
 <p>Maintenance release.</p>
-<h5>Breaking</h5>
+<h5 id="breaking">Breaking</h5>
 <ul>
 <li>Rename library and all related files by adding an API version resulting in <code>libplist-2.0</code> and <code>libplist++-2.0</code></li>
 </ul>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>bplist: Improve recursion check performance by at least 30% for large files</li>
 <li>Add new plist_<em>_val<em>compare(), plist</em></em>_val_contains() helper functions</li>
@@ -796,7 +797,7 @@ Restarting device.</code></pre>
 <li>plistutil: Add manual page and usage output</li>
 <li>Improve README.md with project description, installation, contributing and usage sections</li>
 </ul>
-<h5>Bug Fixes</h5>
+<h5 id="bug-fixes">Bug Fixes</h5>
 <ul>
 <li>test: Fix test suite on Windows</li>
 <li>cython: Fix handling of Date nodes (MACH_EPOCH)</li>
@@ -812,7 +813,7 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-libirecovery" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libirecovery" href="#download-details-libirecovery" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libirecovery</a>&nbsp;<a href="https://github.com/libimobiledevice/libirecovery/releases/tag/1.0.0"><small class="font-weight-light text-muted">1.0.0</small></a></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libirecovery" href="#download-details-libirecovery" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libirecovery</a>&nbsp;<a href="https://github.com/libimobiledevice/libirecovery/releases/tag/1.0.0"><small class="font-weight-light text-muted">1.0.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libirecovery/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-libirecovery" data-parent="#download-libirecovery">
 				<div class="card-body">
@@ -828,13 +829,13 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4>1.0.0 (2020-06-15)</h4>
+					<h4 id="1-0-0-2020-06-15">1.0.0 (2020-06-15)</h4>
 <p>First public release.</p>
-<h5>Breaking</h5>
+<h5 id="breaking">Breaking</h5>
 <ul>
 <li>Rename library and all related files by adding an API version resulting in <code>libirecovery-1.0</code></li>
 </ul>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>Output basic device information after connecting</li>
 <li>Remove obsolete &quot;in-tree&quot; copy of libusb-1.0</li>
@@ -862,7 +863,7 @@ Restarting device.</code></pre>
 <li>Add support for missing iPad4,3 model</li>
 <li>Improve README.md with project description, installation, contributing and usage sections</li>
 </ul>
-<h5>Bug Fixes</h5>
+<h5 id="bug-fixes">Bug Fixes</h5>
 <ul>
 <li>Fix wrong device information iPad7 variants</li>
 <li>Various improvements/fixes for win32 build</li>
@@ -877,7 +878,7 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-libideviceactivation" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libideviceactivation" href="#download-details-libideviceactivation" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libideviceactivation</a>&nbsp;<a href="https://github.com/libimobiledevice/libideviceactivation/releases/tag/1.1.1"><small class="font-weight-light text-muted">1.1.1</small></a></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libideviceactivation" href="#download-details-libideviceactivation" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libideviceactivation</a>&nbsp;<a href="https://github.com/libimobiledevice/libideviceactivation/releases/tag/1.1.1"><small class="font-weight-light text-muted">1.1.1</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libideviceactivation/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-libideviceactivation" data-parent="#download-libideviceactivation">
 				<div class="card-body">
@@ -896,20 +897,20 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4>1.1.1 (2020-06-15)</h4>
+					<h4 id="1-1-1-2020-06-15">1.1.1 (2020-06-15)</h4>
 <p>Maintenance release.</p>
-<h5>Breaking</h5>
+<h5 id="breaking">Breaking</h5>
 <ul>
 <li>Rename library and all related files by adding an API version resulting in <code>libideviceactivation-1.0</code></li>
 </ul>
-<h5>Features</h5>
+<h5 id="features">Features</h5>
 <ul>
 <li>Add <code>--network</code> and <code>--version</code> options to ideviceactivation tool</li>
 <li>Bump libimobiledevice dependency to 1.3.0</li>
 <li>Bump libplist dependency to 2.2.0</li>
 <li>Improve README.md with project description, installation, contributing and usage sections</li>
 </ul>
-<h5>Bug Fixes</h5>
+<h5 id="bug-fixes">Bug Fixes</h5>
 <ul>
 <li>Ignore <code>SIGPIPE</code> signal</li>
 </ul>
@@ -958,9 +959,9 @@ Restarting device.</code></pre>
 																			</div>
 								</div>
 								<div class="col-12 col-md-9 mb-2"><div class="tab-content">
-																				<div class="tab-pane active" id="get-started-linux-source" role="tabpanel"><h4>Open Terminal</h4>
+																				<div class="tab-pane active" id="get-started-linux-source" role="tabpanel"><h4 id="open-terminal">Open Terminal</h4>
 <p>Open a command-line terminal on your machine.</p>
-<h4>Install Dependencies</h4>
+<h4 id="install-dependencies">Install Dependencies</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ sudo apt-get install \
     build-essential \
@@ -973,23 +974,23 @@ Restarting device.</code></pre>
     libusbmuxd-dev \
     libssl-dev \
     usbmuxd</code></pre>
-<h4>Build</h4>
+<h4 id="build">Build</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ ./autogen.sh \
     --prefix=/opt/local \
     --enable-debug
 $ make</code></pre>
-<h4>Install</h4>
+<h4 id="install">Install</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ sudo make install</code></pre></div>
-																				<div class="tab-pane" id="get-started-linux-ubuntu" role="tabpanel"><h4>Open Terminal</h4>
+																				<div class="tab-pane" id="get-started-linux-ubuntu" role="tabpanel"><h4 id="open-terminal">Open Terminal</h4>
 <p>Open a command-line terminal on your machine.</p>
-<h4>Installation</h4>
+<h4 id="installation">Installation</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ sudo apt-get install usbmuxd libimobiledevice6 libimobiledevice-utils</code></pre></div>
-																				<div class="tab-pane" id="get-started-linux-opensuse" role="tabpanel"><h4>Open Terminal</h4>
+																				<div class="tab-pane" id="get-started-linux-opensuse" role="tabpanel"><h4 id="open-terminal">Open Terminal</h4>
 <p>Open a command-line terminal on your machine.</p>
-<h4>Installation</h4>
+<h4 id="installation">Installation</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ sudo zypper install libimobiledevice6 usbmuxd</code></pre></div>
 																			</div>
@@ -1012,14 +1013,14 @@ $ make</code></pre>
 																			</div>
 								</div>
 								<div class="col-12 col-md-9 mb-2"><div class="tab-content">
-																				<div class="tab-pane active" id="get-started-macos-macports" role="tabpanel"><h4>Open Terminal</h4>
+																				<div class="tab-pane active" id="get-started-macos-macports" role="tabpanel"><h4 id="open-terminal">Open Terminal</h4>
 <p>Open a command-line terminal on your machine.</p>
-<h4>Installation</h4>
+<h4 id="installation">Installation</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ sudo port install libimobiledevice</code></pre></div>
-																				<div class="tab-pane" id="get-started-macos-homebrew" role="tabpanel"><h4>Open Terminal</h4>
+																				<div class="tab-pane" id="get-started-macos-homebrew" role="tabpanel"><h4 id="open-terminal">Open Terminal</h4>
 <p>Open a command-line terminal on your machine.</p>
-<h4>Installation</h4>
+<h4 id="installation">Installation</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ brew install libimobiledevice</code></pre></div>
 																			</div>
@@ -1055,9 +1056,9 @@ $ make</code></pre>
 																			</div>
 								</div>
 								<div class="col-12 col-md-9 mb-2"><div class="tab-content">
-																				<div class="tab-pane active" id="get-started-raspberry-pi-source" role="tabpanel"><h4>Open Terminal</h4>
+																				<div class="tab-pane active" id="get-started-raspberry-pi-source" role="tabpanel"><h4 id="open-terminal">Open Terminal</h4>
 <p>Open a command-line terminal on your machine.</p>
-<h4>Install Dependencies</h4>
+<h4 id="install-dependencies">Install Dependencies</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ sudo apt-get install \
     build-essential \
@@ -1070,18 +1071,18 @@ $ make</code></pre>
     libusbmuxd-dev \
     libssl-dev \
     usbmuxd</code></pre>
-<h4>Build</h4>
+<h4 id="build">Build</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ ./autogen.sh \
     --prefix=/opt/local \
     --enable-debug
 $ make</code></pre>
-<h4>Install</h4>
+<h4 id="install">Install</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ sudo make install</code></pre></div>
-																				<div class="tab-pane" id="get-started-raspberry-pi-pi-os" role="tabpanel"><h4>Open Terminal</h4>
+																				<div class="tab-pane" id="get-started-raspberry-pi-pi-os" role="tabpanel"><h4 id="open-terminal">Open Terminal</h4>
 <p>Open a command-line terminal on your machine.</p>
-<h4>Installation</h4>
+<h4 id="installation">Installation</h4>
 <p>Enter the commands provided below.</p>
 <pre><code class="language-shell-session">$ sudo apt-get install usbmuxd libimobiledevice6 libimobiledevice-utils</code></pre></div>
 																			</div>
@@ -1141,7 +1142,7 @@ $ make</code></pre>
 		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
 						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
 				<a href="https://libimobiledevice.org/news/2020/09/27/website-up-on-github/">
-					<img data-src="https://libimobiledevice.org/images/thumbs/384/img/news/website-edit-markdown.png" class="img-fluid filter-grayscale-hover" alt="Website up on GitHub Picture">
+					<img data-src="https://libimobiledevice.org/assets/thumbnails/384/img/news/website-edit-markdown.a04192938ff78e7f36823583625e7141.png" class="img-fluid filter-grayscale-hover" alt="Website up on GitHub Picture">
 				</a>
 			</div>
 						<div class="card-body">
@@ -1157,7 +1158,7 @@ $ make</code></pre>
 		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
 						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
 				<a href="https://libimobiledevice.org/news/2020/06/26/new-logo-and-website/">
-					<img data-src="https://libimobiledevice.org/images/thumbs/384/img/news/new-website-launch.png" class="img-fluid filter-grayscale-hover" alt="New Logo and Website Picture">
+					<img data-src="https://libimobiledevice.org/assets/thumbnails/384/img/news/new-website-launch.bf2dc256c31bf40ec871225b54c11dd9.png" class="img-fluid filter-grayscale-hover" alt="New Logo and Website Picture">
 				</a>
 			</div>
 						<div class="card-body">
@@ -1173,7 +1174,7 @@ $ make</code></pre>
 		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
 						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
 				<a href="https://libimobiledevice.org/news/2020/06/16/fresh-documentation/">
-					<img data-src="https://libimobiledevice.org/images/thumbs/384/img/news/new-api-css.png" class="img-fluid filter-grayscale-hover" alt="Fresh Documentation Picture">
+					<img data-src="https://libimobiledevice.org/assets/thumbnails/384/img/news/new-api-css.6038e0905bf9b766bade52bc6845abdd.png" class="img-fluid filter-grayscale-hover" alt="Fresh Documentation Picture">
 				</a>
 			</div>
 						<div class="card-body">
@@ -1231,21 +1232,21 @@ A refresh of this website is planned next.</p></p>
 						<div class="card mb-5 border-bottom shadow-sm">
 				<div class="card-header">
 					<h5 class="mb-0">
-					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="true">Does the library to device communication break everytime a new iOS<sup>&reg;</sup> is out?</a>
+					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="true">Do I need to use ifuse to access files on my device?</a>
 					</h5>
 				</div>
 				<div id="collapse-3" class="collapse" data-parent="#accordion" style="">
-					<div class="card-body">The library has shown to be compatible with firmware releases going back to the 1.x series up to todays without issues. At rare times, bugs introduced by the firmware had to be worked around with simple fixes but nothing major prevented it from working. Thus in effect, the implementation proves very stable and compatible among firmware releases.</div>
+					<div class="card-body">iFuse is only useful if you want to mount the device manually and if you do not have GNOME and GVFS installed. Otherwise it is useless since GNOME's GVFS supports accessing the device directly and creates a fuse mount in &quot;$XDG_RUNTIME_DIR/.gvfs&quot;, too.</div>
 				</div>
 			</div>
 						<div class="card mb-5 border-bottom shadow-sm">
 				<div class="card-header">
 					<h5 class="mb-0">
-					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="true">Do I need to use ifuse to access files on my device?</a>
+					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="true">Does the library to device communication break everytime a new iOS<sup>&reg;</sup> is out?</a>
 					</h5>
 				</div>
 				<div id="collapse-4" class="collapse" data-parent="#accordion" style="">
-					<div class="card-body">iFuse is only useful if you want to mount the device manually and if you do not have GNOME and GVFS installed. Otherwise it is useless since GNOME's GVFS supports accessing the device directly and creates a fuse mount in &quot;$XDG_RUNTIME_DIR/.gvfs&quot;, too.</div>
+					<div class="card-body">The library has shown to be compatible with firmware releases going back to the 1.x series up to todays without issues. At rare times, bugs introduced by the firmware had to be worked around with simple fixes but nothing major prevented it from working. Thus in effect, the implementation proves very stable and compatible among firmware releases.</div>
 				</div>
 			</div>
 			
@@ -1269,7 +1270,7 @@ A refresh of this website is planned next.</p></p>
 		<div class="col mb-4">
 		<div class="card h-100 shadow-sm text-center">
 									<div class="overflow-hidden card-img-top p-5" style="">
-				<img data-src="https://libimobiledevice.org/images/thumbs/256/img/members/nikias.jpg" class="img-fluid border border-light rounded-circle" alt="nikias">
+				<img data-src="https://libimobiledevice.org/assets/thumbnails/256/img/members/nikias.4c079ebf75121fa11a9913bffff57976.jpg" class="img-fluid border border-light rounded-circle" alt="nikias">
 			</div>
 			<div class="card-body pt-0">
 				<h6 class="card-title">Nikias Bassen</h6>
@@ -1280,7 +1281,7 @@ A refresh of this website is planned next.</p></p>
 		<div class="col mb-4">
 		<div class="card h-100 shadow-sm text-center">
 									<div class="overflow-hidden card-img-top p-5" style="">
-				<img data-src="https://libimobiledevice.org/img/members/FunkyM.jpg" class="img-fluid border border-light rounded-circle" alt="FunkyM">
+				<img data-src="https://libimobiledevice.org/img/members/FunkyM.1b4f11927f756819d01837da42e13292.jpg" class="img-fluid border border-light rounded-circle" alt="FunkyM">
 			</div>
 			<div class="card-body pt-0">
 				<h6 class="card-title">Martin Szulecki</h6>
@@ -1462,7 +1463,7 @@ A refresh of this website is planned next.</p></p>
 		</div>
 		<div class="row">
 			<div class="col-12 col-lg-6 text-center text-md-left">
-				<span class="navbar-text">&copy; 2021 <strong>libimobiledevice</strong>. All rights reserved.</span>
+				<span class="navbar-text">&copy; 2023 <strong>libimobiledevice</strong>. All rights reserved.</span>
 			</div>
 			<div class="col d-flex align-items-center justify-content-center justify-content-md-end">
 				<ul class="nav justify-content-center justify-content-md-end">
@@ -1495,15 +1496,15 @@ A refresh of this website is planned next.</p></p>
 		<hr>
 								<div class="row">
 			<div class="col-12 text-center text-md-left">
-				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.54.0" class="text-reset" target="_blank" rel="noopener">Cecil v5.54.0</a> on Sat, 10 Jul 2021 18:11:43 +0200</small>
+				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Fri, 06 Jan 2023 19:04:36 +0100</small>
 			</div>
 		</div>
 	</div>
 </footer>
 	<a href="#" class="d-none back-to-top animated shadow" title="Back to top"><i class="fas fa-chevron-up"></i></a>
 
-	<script src="https://libimobiledevice.org/js/vendor.15331b4305e6cc991cb3ab77ac584e37.min.js"></script>
-	<script src="https://libimobiledevice.org/js/vendor2.156bd81cc4025e161ea105cce7931271.min.js"></script>
+	<script src="https://libimobiledevice.org/js/vendor.f444ae34922f1f1030e2f87df788f8cd.min.js"></script>
+	<script src="https://libimobiledevice.org/js/vendor2.9325883cc35d519ef9c449b5a57d8bfc.min.js"></script>
 
 	<script src="https://libimobiledevice.org/js/prism.de789170a16e0f1c97bb0b53fda365ea.min.js" async></script>
 

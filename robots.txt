@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /page/1/
+Disallow: /news/page/1/
 Disallow: /404.html
+Disallow: /de/404.html
 Sitemap: https://libimobiledevice.org/sitemap.xml

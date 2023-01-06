@@ -5,7 +5,7 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2021-07-10T18:11:25+02:00</updated>
+  <updated>2023-01-06T19:04:05+01:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
@@ -17,8 +17,8 @@
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
-    <published>2021-07-10T18:11:25+02:00</published>
-    <updated>2021-07-10T18:11:25+02:00</updated>
+    <published>2023-01-06T19:04:05+01:00</published>
+    <updated>2023-01-06T19:04:05+01:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2020/09/27/website-up-on-github/</id>
@@ -67,7 +67,7 @@ It contains all the sources to generate this website and any changes are deploye
 <p>The website has been overhauled due to popular demand. <strong>We really needed a refresh.</strong>
 In that process upfront I decided to go for a <em>full rebranding of the project</em>, too.</p>
 <p>Looking at the results I think it was worth the wait. The new colorful isometric logo that relates to the letters <em>&quot;L&quot;</em> and <em>&quot;i&quot;</em> alongside the flow of colors which symbolizes the &quot;flow of communication and related components&quot; should hopefully hit the spot of what the project stands for.</p>
-<p><img src="/images/thumbs/512/img/brand/brand-ontop-gradient-alpha.png" alt="libimobiledevice logo" title="The new logo and font" width="512" loading="lazy" /></p>
+<p><img src="/img/brand/brand-ontop-gradient-alpha.8df3bca327d42611d69d063f4c5a53ed.png" alt="libimobiledevice logo" title="The new logo and font" loading="lazy" width="2480" height="1875" /></p>
 <p>The next milestone is to integrate this page to be hosted using <a href="https://pages.github.com">Github Pages</a>.
 This should allow contributions for all content by the community!
 Looks like we arrived in the <em>&quot;static website generator era&quot;</em>.</p>
