@@ -27,10 +27,10 @@ jobs:
       - name: Get composer cache directory
         id: composer-cache
         run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "{dir}={$(composer config cache-files-dir)}" >> $GITHUB_OUTPUT
 
       - name: Cache composer downloads 💾
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.*') }}
@@ -38,7 +38,7 @@ jobs:
             ${{ runner.os }}-composer-
 
       - name: Cache PHP dependencies 💾
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: vendor
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.*') }}
