@@ -169,7 +169,7 @@ svg#brand-logo #glogo #gt7 { opacity: 0.5; }
 	position: fixed;
 	z-index: $zindex-fixed + 40;
 
-	background-color: transparentize($white, 10%);
+	background-color: transparentize($white, 0.1);
 	border-radius: 2px;
 
 	bottom: $spacer;
