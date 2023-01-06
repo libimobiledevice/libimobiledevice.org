@@ -49,7 +49,7 @@
     <meta property="og:type" content="{{ opengraph.type }}" />
     <meta property="og:title" content="{{ block('title') }}" />
     <meta property="og:description" content="{{ block('description') }}" />
-    <meta property="og:url" content="{{ url(page.url, {canonical:true}) }}" />
+    <meta property="og:url" content="{{ url(page.path, {canonical:true}) }}" />
 {% if opengraph.image is not empty %}
     <meta property="og:image" content="{{ url(opengraph.image, {canonical:true}) }}" />
 {% endif %}
