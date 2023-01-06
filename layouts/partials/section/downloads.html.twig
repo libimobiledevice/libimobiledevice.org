@@ -23,7 +23,7 @@
 	<div class="col mb-4">
 		<div id="download-{{ repo.name | slugify | e }}" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-{{ repo.name | slugify | e }}" href="#download-details-{{ repo.name | slugify | e }}" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;{{ repo.name }}</a>&nbsp;<a href="{{ release.html_url }}"><small class="font-weight-light text-muted">{{ release.tag_name }}</small></a>{% if repo.name == 'libplist' %} <div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/workflow/status/libimobiledevice/{{ repo.name }}/build"></div>{% endif %}</h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-{{ repo.name | slugify | e }}" href="#download-details-{{ repo.name | slugify | e }}" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;{{ repo.name }}</a>&nbsp;<a href="{{ release.html_url }}"><small class="font-weight-light text-muted">{{ release.tag_name }}</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/{{ repo.name }}/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-{{ repo.name | slugify | e }}" data-parent="#download-{{ repo.name | slugify | e }}">
 				<div class="card-body">
