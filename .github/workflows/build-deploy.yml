@@ -18,8 +18,6 @@ jobs:
 
   build-and-deploy:
     runs-on: ubuntu-latest
-    outputs:
-      cache_dir: ${{ steps.composer-cache.outputs.cache_dir }}
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
@@ -29,7 +27,7 @@ jobs:
       - name: Get composer cache directory
         id: composer-cache
         run: |
-          echo "{cache_dir}={$(composer config cache-files-dir)}" >> $GITHUB_OUTPUT
+          echo cache_dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: Cache composer downloads 💾
         uses: actions/cache@v3
