@@ -20,6 +20,7 @@ $ sudo apt-get install \
 	automake \
 	libtool-bin \
 	libplist-dev \
+	libimobiledevice-glue-dev \
 	libusbmuxd-dev \
 	libssl-dev \
 	usbmuxd
