@@ -21,7 +21,7 @@ watch-production: composer.lock yarn.lock data/github
 
 development: export CECIL_DEBUG=true
 development: composer.lock yarn.lock data/github
-	@rm -rf .cache && ln -sf config.$@.yml config.yml && ./vendor/bin/cecil build
+	@rm -rf .cache && ln -sf config.$@.yml config.yml && ./vendor/bin/cecil -vvv build
 
 production: composer.lock yarn.lock data/github
-	@rm -rf .cache && ln -sf config.$@.yml config.yml && ./vendor/bin/cecil build
+	@rm -rf .cache && ln -sf config.$@.yml config.yml && ./vendor/bin/cecil -vvv build
