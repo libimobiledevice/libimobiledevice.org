@@ -8,31 +8,31 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>libplist 2.7.0 &middot; libimobiledevice</title>
+	<title>NEW libtatsu &middot; libimobiledevice</title>
 
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="en">
 
 		<link rel="preload" as="style" href="https://libimobiledevice.org/css/main.min.css">
 
-	    <title>libplist 2.7.0 &middot; libimobiledevice</title>
+	    <title>NEW libtatsu &middot; libimobiledevice</title>
     <meta name="description" content="libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking." />
     <meta name="keywords" content="Linux, iOS, iPhone, iPod Touch, iPad, iPad mini, Apple TV, iTunes, development, library, afc, lockdownd, libplist, installation_proxy, usbmux, plist, libirecovery, idevicerestore, iTunesCDB, tethering, backup, restore, C/C++, instruments, MDM, mobileconfig, provisioning, FOSS" />
     <meta name="author" content="https://github.com/nikias">
 
-    <link rel="canonical" type="text/html" title="libplist 2.7.0 &middot; libimobiledevice" href="https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/" />    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" type="text/html" title="NEW libtatsu &middot; libimobiledevice" href="https://libimobiledevice.org/news/2024/05/23/libtatsu-new/" />    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="libimobiledevice" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="libplist 2.7.0 &middot; libimobiledevice" />
+    <meta property="og:title" content="NEW libtatsu &middot; libimobiledevice" />
     <meta property="og:description" content="libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking." />
-    <meta property="og:url" content="https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release" />
+    <meta property="og:url" content="https://libimobiledevice.org/news/2024/05/23/libtatsu-new" />
     <meta property="og:image" content="https://libimobiledevice.org/img/brand/brand-ontop-gradient-alpha.png" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@libimobiledev">
 
 	<meta name="theme-color" content="#0a9197">
 
-	<link rel="canonical" href="https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/">
+	<link rel="canonical" href="https://libimobiledevice.org/news/2024/05/23/libtatsu-new/">
 
 	<link rel="stylesheet" href="https://libimobiledevice.org/css/main.min.css">
 
@@ -135,7 +135,7 @@
 <ol class="breadcrumb">
 	<li class="breadcrumb-item"><a href="https://libimobiledevice.org/">Home</a></li>
 			<li class="breadcrumb-item" aria-current="page"><a href="https://libimobiledevice.org/news/">News</a></li>
-			<li class="breadcrumb-item active" aria-current="page">libplist 2.7.0</li>
+			<li class="breadcrumb-item active" aria-current="page">NEW libtatsu</li>
 		</ol>
 </nav>
 	</div>
@@ -148,35 +148,18 @@
 	<div class="col">
 		<article>
 			<header class="mb-4">
-				<h1 class="section-title">libplist 2.7.0</h1>
-				<p class="text-muted">Posted on <time>May 14, 2025 at 8:36 PM</time> by <a href="https://github.com/nikias" target="_blank" rel="noreferrer">@nikias</a></p>
+				<h1 class="section-title">NEW libtatsu</h1>
+				<p class="text-muted">Posted on <time>May 23, 2024 at 11:15 PM</time> by <a href="https://github.com/nikias" target="_blank" rel="noreferrer">@nikias</a></p>
 			</header>
 			<hr class="bg-info">
 			<div class="row mt-4">
 								<div class="col">
-					<div class="entry-content"><p><a href="/#download-libplist">libplist 2.7.0</a> has been released.</p>
+					<div class="entry-content"><p>A new library was added to the project portfolio: <a href="/#download-libtatsu">libtatsu</a>.
+The main purpose of this library is to allow creating TSS request payloads,
+sending them to Apple's TSS server, and retrieving and processing the response.</p>
 <span id="more"></span>
-<h2 id="Changes" name="Changes">Changes</h2>
-<ul>
-<li>Add <code>plist_new_unix_date</code>, <code>plist_get_unix_date_val</code>, <code>plist_set_unix_date_val</code> functions
-that work with <code>int64_t</code> values representing a UNIX timestamp instead of
-using the 'MAC epoch'.
-These new functions should be used instead of <code>plist_new_date</code>,
-<code>plist_get_date_val</code>, and <code>plist_set_date_val</code>, which are now marked deprecated
-and might be removed in a future version of libplist.</li>
-<li>Allow building the library without tool(s)</li>
-<li>Switch to more generic global initializer method</li>
-<li>json: Allow e+/E+ in exponent as per RFC 8259</li>
-<li>C++: Add more convenience functions to the interface</li>
-<li>C++: Add more type variants to different constructors and operators</li>
-</ul>
-<h2 id="Bugfixes" name="Bugfixes">Bugfixes</h2>
-<ul>
-<li>Fix segmentation fault when calling <code>plist_sort()</code> on an empty dictionary</li>
-<li>Fix compilation on MSVC</li>
-<li>C++: Fix bug in internal helper function of Array class</li>
-<li>C++: Fix String::GetValue memory leaking and support assignment of <code>const char*</code></li>
-</ul></div>
+<p>The code was originally part of <strong>idevicerestore</strong> and has been split out to its own library,
+while obviously idevicerestore will remain the main consumer.</p></div>
 				</div>
 			</div>
 		</article>

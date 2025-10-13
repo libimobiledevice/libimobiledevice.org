@@ -5,7 +5,7 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2025-10-13T17:24:05+02:00</updated>
+  <updated>2025-10-14T00:50:42+02:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
@@ -17,8 +17,140 @@
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
-    <published>2025-10-13T17:24:05+02:00</published>
-    <updated>2025-10-13T17:24:05+02:00</updated>
+    <published>2025-10-14T00:50:42+02:00</published>
+    <updated>2025-10-14T00:50:42+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2025/10/10/libimobiledevice-1.4.0-release/</id>
+    <title>libimobiledevice-glue 1.3.2</title>
+    <content type="html">
+      <![CDATA[<p><a href="/#download-libimobiledevice">libimobiledevice 1.4.0</a> has been released.
+Finally a new official release!</p>
+<h2 id="Changes" name="Changes">Changes</h2>
+<ul>
+<li>Add support for MbedTLS</li>
+<li>Add Reverse Proxy implementation</li>
+<li>Add support for wireless pairing (AppleTV)</li>
+<li>Embed 3rd party libraries for <em>ed25519</em> and <em>SRP6a</em></li>
+<li>Fixes in idevicedebug
+<!-- excerpt --></li>
+<li>idevicecrashreport: Allow filtering crash reports by filename</li>
+<li>Add <code>idevicedevmodectl</code> tool</li>
+<li>Fixes for <code>idevicebackup2</code></li>
+<li>Add <code>property_list_client_get_service_client()</code> and <code>service_get_connection()</code> functions</li>
+<li>Add <code>idevicebtlogger</code> tool</li>
+<li>Add new <code>idevice_events_subscribe</code>/<code>unsubscribe</code> API</li>
+<li>Move <code>LIBIMOBILEDEVICE_API</code> to public headers</li>
+<li>Add <code>afc_strerror</code> function</li>
+<li>Add <code>libimobiledevice_version()</code> function</li>
+<li>Use libimobiledevice-glue's SHA1 implementation</li>
+<li>Add support for iOS 17+ Personalized Developer Disk image mounting</li>
+<li>Fix compilation on MSVC</li>
+<li>Add <code>idevice_strerror()</code> to interface</li>
+<li>Add new <code>idevice_get_device_version()</code> to interface</li>
+<li>Add <code>os_trace_relay</code> service implementation</li>
+<li>Fixes for <code>idevicesyslog</code></li>
+<li>afc: Add <code>afc_get_file_info_plist</code> and <code>afc_get_device_info_plist</code> functions
+... and several other internal changes</li>
+</ul>
+<h2 id="Bug+fixes" name="Bug+fixes">Bug fixes</h2>
+<ul>
+<li>definitely some, it has been to long to go through everything</li>
+</ul>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2025/10/10/libimobiledevice-1.4.0-release/" rel="alternate" type="text/html" />
+    <published>2025-10-10T18:08:00+02:00</published>
+    <updated>2025-10-10T18:08:00+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2025/09/12/libirecovery-1.3.0-release/</id>
+    <title>libirecovery 1.3.0</title>
+    <content type="html">
+      <![CDATA[<p><a href="/#download-libirecovery">libirecovery 1.3.0</a> has been released.</p>
+<h2 id="Changes" name="Changes">Changes</h2>
+<ul>
+<li>Switch to better initializer strategy</li>
+<li>Allow building without readline support for the irecovery tool</li>
+<li>Added support for iOS 1 and iOS 2 recovery mode (Linux, macOS)
+<!-- excerpt --></li>
+</ul>
+<h2 id="Device+database+changes" name="Device+database+changes">Device database changes</h2>
+<ul>
+<li>Support iPhone 17 family devices</li>
+<li>Support Watch 11 / SE3 / Ultra3 models</li>
+<li>Support March 2025 iPad and Mac models</li>
+<li>Support iPhone 16e</li>
+<li>Support November 2024 Mac models</li>
+<li>Support iPad mini (A17 Pro)</li>
+</ul>
+<h2 id="Bug+Fixes" name="Bug+Fixes">Bug Fixes</h2>
+<ul>
+<li>IOKit: Fix race condition when trying to delete runloop before it even started</li>
+</ul>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2025/09/12/libirecovery-1.3.0-release/" rel="alternate" type="text/html" />
+    <published>2025-09-12T11:28:00+02:00</published>
+    <updated>2025-09-12T11:28:00+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2025/06/04/libusbmuxd-2.1.1-release/</id>
+    <title>libusbmuxd 2.1.1</title>
+    <content type="html">
+      <![CDATA[<p><a href="/#download-libusbmuxd">libusbmuxd 2.1.1</a> has been released.</p>
+<!-- excerpt -->
+<h2 id="Changes" name="Changes">Changes</h2>
+<ul>
+<li>tools: Fix potential issue with <code>select()</code> in case the network fd is higher than the usbmux fd</li>
+<li>Switch to better initializer strategy</li>
+<li>Fix compilation on MSVC</li>
+<li>iproxy: Make sure to print correct socket error messages</li>
+<li>inetcat: Make sure to report correct error messages</li>
+</ul>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2025/06/04/libusbmuxd-2.1.1-release/" rel="alternate" type="text/html" />
+    <published>2025-06-04T15:26:00+02:00</published>
+    <updated>2025-06-04T15:26:00+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2025/06/04/libtatsu-1.0.5-release/</id>
+    <title>libtatsu 1.0.5</title>
+    <content type="html">
+      <![CDATA[<p><a href="/#download-libtatsu">libtatsu 1.0.5</a> has been released.</p>
+<!-- excerpt -->
+<h2 id="Changes%3A" name="Changes%3A">Changes:</h2>
+<ul>
+<li>Fix compilation on MSVC</li>
+<li>Add <code>extern "C"</code> guards to public headers</li>
+<li>Update auth client version</li>
+</ul>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2025/06/04/libtatsu-1.0.5-release/" rel="alternate" type="text/html" />
+    <published>2025-06-04T12:49:00+02:00</published>
+    <updated>2025-06-04T12:49:00+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2025/06/04/libimobiledevice-glue-1.3.2-release/</id>
+    <title>libimobiledevice-glue 1.3.2</title>
+    <content type="html">
+      <![CDATA[<p><a href="/#download-libimobiledevice-glue">libimobiledevice-glue 1.3.2</a> has been released.</p>
+<!-- excerpt -->
+<h2 id="Changes" name="Changes">Changes</h2>
+<ul>
+<li>socket: [macOS] Fix build on older macOS</li>
+<li>socket: [Windows] Prevent crash by properly initializing memory buffers</li>
+<li>Switch to better initializer strategy</li>
+<li>Fix compilation on MSVC</li>
+<li>Add <code>extern "C"</code> guards to public headers</li>
+<li>socket: Improve error message output/verbose logging</li>
+<li>socket: [Windows] Make sure errno is set in error conditions</li>
+<li>socket: Allow setting debug level via environment variable</li>
+<li>socket: [Windows] Use <code>WSAAddressToStringA</code> (ANSI version)</li>
+<li>socket: [Windows] Use <code>inet_ntop</code> instead of <code>WSAAddressToStringA</code> for &gt;= Vista</li>
+</ul>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2025/06/04/libimobiledevice-glue-1.3.2-release/" rel="alternate" type="text/html" />
+    <published>2025-06-04T12:07:00+02:00</published>
+    <updated>2025-06-04T12:07:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/</id>
@@ -51,6 +183,21 @@ and might be removed in a future version of libplist.</li>
     <link href="https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/" rel="alternate" type="text/html" />
     <published>2025-05-14T20:36:00+02:00</published>
     <updated>2025-05-14T20:36:00+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2024/05/23/libtatsu-new/</id>
+    <title>NEW libtatsu</title>
+    <content type="html">
+      <![CDATA[<p>A new library was added to the project portfolio: <a href="/#download-libtatsu">libtatsu</a>.
+The main purpose of this library is to allow creating TSS request payloads,
+sending them to Apple's TSS server, and retrieving and processing the response.</p>
+<!-- excerpt -->
+<p>The code was originally part of <strong>idevicerestore</strong> and has been split out to its own library,
+while obviously idevicerestore will remain the main consumer.</p>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2024/05/23/libtatsu-new/" rel="alternate" type="text/html" />
+    <published>2024-05-23T23:15:00+02:00</published>
+    <updated>2024-05-23T23:15:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2020/09/27/website-up-on-github/</id>

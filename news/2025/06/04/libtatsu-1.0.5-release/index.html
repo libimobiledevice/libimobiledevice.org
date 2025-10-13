@@ -8,31 +8,31 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>libplist 2.7.0 &middot; libimobiledevice</title>
+	<title>libtatsu 1.0.5 &middot; libimobiledevice</title>
 
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="en">
 
 		<link rel="preload" as="style" href="https://libimobiledevice.org/css/main.min.css">
 
-	    <title>libplist 2.7.0 &middot; libimobiledevice</title>
+	    <title>libtatsu 1.0.5 &middot; libimobiledevice</title>
     <meta name="description" content="libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking." />
     <meta name="keywords" content="Linux, iOS, iPhone, iPod Touch, iPad, iPad mini, Apple TV, iTunes, development, library, afc, lockdownd, libplist, installation_proxy, usbmux, plist, libirecovery, idevicerestore, iTunesCDB, tethering, backup, restore, C/C++, instruments, MDM, mobileconfig, provisioning, FOSS" />
     <meta name="author" content="https://github.com/nikias">
 
-    <link rel="canonical" type="text/html" title="libplist 2.7.0 &middot; libimobiledevice" href="https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/" />    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" type="text/html" title="libtatsu 1.0.5 &middot; libimobiledevice" href="https://libimobiledevice.org/news/2025/06/04/libtatsu-1.0.5-release/" />    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="libimobiledevice" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="libplist 2.7.0 &middot; libimobiledevice" />
+    <meta property="og:title" content="libtatsu 1.0.5 &middot; libimobiledevice" />
     <meta property="og:description" content="libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking." />
-    <meta property="og:url" content="https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release" />
+    <meta property="og:url" content="https://libimobiledevice.org/news/2025/06/04/libtatsu-1.0.5-release" />
     <meta property="og:image" content="https://libimobiledevice.org/img/brand/brand-ontop-gradient-alpha.png" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@libimobiledev">
 
 	<meta name="theme-color" content="#0a9197">
 
-	<link rel="canonical" href="https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/">
+	<link rel="canonical" href="https://libimobiledevice.org/news/2025/06/04/libtatsu-1.0.5-release/">
 
 	<link rel="stylesheet" href="https://libimobiledevice.org/css/main.min.css">
 
@@ -135,7 +135,7 @@
 <ol class="breadcrumb">
 	<li class="breadcrumb-item"><a href="https://libimobiledevice.org/">Home</a></li>
 			<li class="breadcrumb-item" aria-current="page"><a href="https://libimobiledevice.org/news/">News</a></li>
-			<li class="breadcrumb-item active" aria-current="page">libplist 2.7.0</li>
+			<li class="breadcrumb-item active" aria-current="page">libtatsu 1.0.5</li>
 		</ol>
 </nav>
 	</div>
@@ -148,34 +148,19 @@
 	<div class="col">
 		<article>
 			<header class="mb-4">
-				<h1 class="section-title">libplist 2.7.0</h1>
-				<p class="text-muted">Posted on <time>May 14, 2025 at 8:36 PM</time> by <a href="https://github.com/nikias" target="_blank" rel="noreferrer">@nikias</a></p>
+				<h1 class="section-title">libtatsu 1.0.5</h1>
+				<p class="text-muted">Posted on <time>June 4, 2025 at 12:49 PM</time> by <a href="https://github.com/nikias" target="_blank" rel="noreferrer">@nikias</a></p>
 			</header>
 			<hr class="bg-info">
 			<div class="row mt-4">
 								<div class="col">
-					<div class="entry-content"><p><a href="/#download-libplist">libplist 2.7.0</a> has been released.</p>
+					<div class="entry-content"><p><a href="/#download-libtatsu">libtatsu 1.0.5</a> has been released.</p>
 <span id="more"></span>
-<h2 id="Changes" name="Changes">Changes</h2>
+<h2 id="Changes%3A" name="Changes%3A">Changes:</h2>
 <ul>
-<li>Add <code>plist_new_unix_date</code>, <code>plist_get_unix_date_val</code>, <code>plist_set_unix_date_val</code> functions
-that work with <code>int64_t</code> values representing a UNIX timestamp instead of
-using the 'MAC epoch'.
-These new functions should be used instead of <code>plist_new_date</code>,
-<code>plist_get_date_val</code>, and <code>plist_set_date_val</code>, which are now marked deprecated
-and might be removed in a future version of libplist.</li>
-<li>Allow building the library without tool(s)</li>
-<li>Switch to more generic global initializer method</li>
-<li>json: Allow e+/E+ in exponent as per RFC 8259</li>
-<li>C++: Add more convenience functions to the interface</li>
-<li>C++: Add more type variants to different constructors and operators</li>
-</ul>
-<h2 id="Bugfixes" name="Bugfixes">Bugfixes</h2>
-<ul>
-<li>Fix segmentation fault when calling <code>plist_sort()</code> on an empty dictionary</li>
 <li>Fix compilation on MSVC</li>
-<li>C++: Fix bug in internal helper function of Array class</li>
-<li>C++: Fix String::GetValue memory leaking and support assignment of <code>const char*</code></li>
+<li>Add <code>extern "C"</code> guards to public headers</li>
+<li>Update auth client version</li>
 </ul></div>
 				</div>
 			</div>
