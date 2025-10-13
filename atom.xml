@@ -5,7 +5,7 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2025-10-13T16:15:04+02:00</updated>
+  <updated>2025-10-13T17:17:27+02:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
@@ -17,8 +17,38 @@
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
-    <published>2025-10-13T16:15:04+02:00</published>
-    <updated>2025-10-13T16:15:04+02:00</updated>
+    <published>2025-10-13T17:17:27+02:00</published>
+    <updated>2025-10-13T17:17:27+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/</id>
+    <title>libplist 2.7.0</title>
+    <content type="html">
+      <![CDATA[<p><a href="/#download-libplist">libplist 2.7.0</a> has been released.</p>
+<!-- excerpt -->
+<h2 id="Changes" name="Changes">Changes</h2>
+<ul>
+<li>Add <code>plist_new_unix_date</code>, <code>plist_get_unix_date_val</code>, <code>plist_set_unix_date_val</code> functions
+that work with <code>int64_t</code> values representing a UNIX timestamp instead of
+using the 'MAC epoch'.
+These new functions should be used instead of <code>plist_new_date</code>,
+<code>plist_get_date_val</code>, and <code>plist_set_date_val</code>, which are now marked deprecated
+and might be removed in a future version of libplist.</li>
+<li>Allow building the library without tool(s)</li>
+<li>Switch to more generic global initializer method</li>
+<li>json: Allow e+/E+ in exponent as per RFC 8259</li>
+<li>C++: Add more convenience functions to the interface</li>
+<li>C++: Add more type variants to different constructors and operators
+<h2 id="Bugfixes%3A" name="Bugfixes%3A">Bugfixes:</h2></li>
+<li>Fix segmentation fault when calling <code>plist_sort()</code> on an empty dictionary</li>
+<li>Fix compilation on MSVC</li>
+<li>C++: Fix bug in internal helper function of Array class</li>
+<li>C++: Fix String::GetValue memory leaking and support assignment of <code>const char*</code></li>
+</ul>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/" rel="alternate" type="text/html" />
+    <published>2025-05-14T20:36:00+02:00</published>
+    <updated>2025-05-14T20:36:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2020/09/27/website-up-on-github/</id>
