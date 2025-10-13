@@ -58,7 +58,7 @@ jobs:
       - name: Install node dependencies 🏗
         shell: bash
         run: |
-          yarn install
+          npm install
 
       - name: Build 🔧
         shell: bash

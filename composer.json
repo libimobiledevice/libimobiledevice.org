@@ -47,6 +47,8 @@
     "ext-intl": "*",
     "ext-gettext": "*",
     "cecil/cecil": "^5.33.0",
+    "cocur/slugify": "4.0.0",
+    "keinos/parsedown-toc": "^1.4.1",
     "yosymfony/resource-watcher": "3.0.0 as 2.0.1",
     "twig/extensions": "^1.5"
   },
