@@ -5,7 +5,7 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2025-10-14T00:50:42+02:00</updated>
+  <updated>2025-10-14T00:58:25+02:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
@@ -17,23 +17,23 @@
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
-    <published>2025-10-14T00:50:42+02:00</published>
-    <updated>2025-10-14T00:50:42+02:00</updated>
+    <published>2025-10-14T00:58:25+02:00</published>
+    <updated>2025-10-14T00:58:25+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2025/10/10/libimobiledevice-1.4.0-release/</id>
-    <title>libimobiledevice-glue 1.3.2</title>
+    <title>libimobiledevice 1.4.0</title>
     <content type="html">
       <![CDATA[<p><a href="/#download-libimobiledevice">libimobiledevice 1.4.0</a> has been released.
 Finally a new official release!</p>
+<!-- excerpt -->
 <h2 id="Changes" name="Changes">Changes</h2>
 <ul>
 <li>Add support for MbedTLS</li>
 <li>Add Reverse Proxy implementation</li>
 <li>Add support for wireless pairing (AppleTV)</li>
 <li>Embed 3rd party libraries for <em>ed25519</em> and <em>SRP6a</em></li>
-<li>Fixes in idevicedebug
-<!-- excerpt --></li>
+<li>Fixes in idevicedebug</li>
 <li>idevicecrashreport: Allow filtering crash reports by filename</li>
 <li>Add <code>idevicedevmodectl</code> tool</li>
 <li>Fixes for <code>idevicebackup2</code></li>
@@ -67,12 +67,12 @@ Finally a new official release!</p>
     <title>libirecovery 1.3.0</title>
     <content type="html">
       <![CDATA[<p><a href="/#download-libirecovery">libirecovery 1.3.0</a> has been released.</p>
+<!-- excerpt -->
 <h2 id="Changes" name="Changes">Changes</h2>
 <ul>
 <li>Switch to better initializer strategy</li>
 <li>Allow building without readline support for the irecovery tool</li>
-<li>Added support for iOS 1 and iOS 2 recovery mode (Linux, macOS)
-<!-- excerpt --></li>
+<li>Added support for iOS 1 and iOS 2 recovery mode (Linux, macOS)</li>
 </ul>
 <h2 id="Device+database+changes" name="Device+database+changes">Device database changes</h2>
 <ul>

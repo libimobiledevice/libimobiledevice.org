@@ -12,18 +12,18 @@
   </author>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2025/10/10/libimobiledevice-1.4.0-release/</id>
-    <title>libimobiledevice-glue 1.3.2</title>
+    <title>libimobiledevice 1.4.0</title>
     <content type="html">
       <![CDATA[<p><a href="/#download-libimobiledevice">libimobiledevice 1.4.0</a> has been released.
 Finally a new official release!</p>
+<!-- excerpt -->
 <h2 id="Changes" name="Changes">Changes</h2>
 <ul>
 <li>Add support for MbedTLS</li>
 <li>Add Reverse Proxy implementation</li>
 <li>Add support for wireless pairing (AppleTV)</li>
 <li>Embed 3rd party libraries for <em>ed25519</em> and <em>SRP6a</em></li>
-<li>Fixes in idevicedebug
-<!-- excerpt --></li>
+<li>Fixes in idevicedebug</li>
 <li>idevicecrashreport: Allow filtering crash reports by filename</li>
 <li>Add <code>idevicedevmodectl</code> tool</li>
 <li>Fixes for <code>idevicebackup2</code></li>
@@ -57,12 +57,12 @@ Finally a new official release!</p>
     <title>libirecovery 1.3.0</title>
     <content type="html">
       <![CDATA[<p><a href="/#download-libirecovery">libirecovery 1.3.0</a> has been released.</p>
+<!-- excerpt -->
 <h2 id="Changes" name="Changes">Changes</h2>
 <ul>
 <li>Switch to better initializer strategy</li>
 <li>Allow building without readline support for the irecovery tool</li>
-<li>Added support for iOS 1 and iOS 2 recovery mode (Linux, macOS)
-<!-- excerpt --></li>
+<li>Added support for iOS 1 and iOS 2 recovery mode (Linux, macOS)</li>
 </ul>
 <h2 id="Device+database+changes" name="Device+database+changes">Device database changes</h2>
 <ul>
