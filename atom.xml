@@ -5,7 +5,7 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2025-10-13T17:17:27+02:00</updated>
+  <updated>2025-10-13T17:24:05+02:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
@@ -17,8 +17,8 @@
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
-    <published>2025-10-13T17:17:27+02:00</published>
-    <updated>2025-10-13T17:17:27+02:00</updated>
+    <published>2025-10-13T17:24:05+02:00</published>
+    <updated>2025-10-13T17:24:05+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2025/05/14/libplist-2.7.0-release/</id>
@@ -38,8 +38,10 @@ and might be removed in a future version of libplist.</li>
 <li>Switch to more generic global initializer method</li>
 <li>json: Allow e+/E+ in exponent as per RFC 8259</li>
 <li>C++: Add more convenience functions to the interface</li>
-<li>C++: Add more type variants to different constructors and operators
-<h2 id="Bugfixes%3A" name="Bugfixes%3A">Bugfixes:</h2></li>
+<li>C++: Add more type variants to different constructors and operators</li>
+</ul>
+<h2 id="Bugfixes" name="Bugfixes">Bugfixes</h2>
+<ul>
 <li>Fix segmentation fault when calling <code>plist_sort()</code> on an empty dictionary</li>
 <li>Fix compilation on MSVC</li>
 <li>C++: Fix bug in internal helper function of Array class</li>

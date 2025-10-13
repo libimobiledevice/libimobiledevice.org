@@ -28,8 +28,10 @@ and might be removed in a future version of libplist.</li>
 <li>Switch to more generic global initializer method</li>
 <li>json: Allow e+/E+ in exponent as per RFC 8259</li>
 <li>C++: Add more convenience functions to the interface</li>
-<li>C++: Add more type variants to different constructors and operators
-<h2 id="Bugfixes%3A" name="Bugfixes%3A">Bugfixes:</h2></li>
+<li>C++: Add more type variants to different constructors and operators</li>
+</ul>
+<h2 id="Bugfixes" name="Bugfixes">Bugfixes</h2>
+<ul>
 <li>Fix segmentation fault when calling <code>plist_sort()</code> on an empty dictionary</li>
 <li>Fix compilation on MSVC</li>
 <li>C++: Fix bug in internal helper function of Array class</li>
