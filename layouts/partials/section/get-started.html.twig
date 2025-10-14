@@ -44,7 +44,7 @@
 							{% set guides = site.pages | filter_by('section', section.slug ~ '/' ~ platform.slug) | sort_by_weight %}
 
 							{% if platform.content | trim | length -%}
-							{{- include(template_from_string(platform.content), {'page': platform}) | replace({'href=': 'class="text-reset" rel="noreferrer" target="_blank" href='}) -}}
+							{{- include(template_from_string(platform.content), {'page': platform}) | replace({'href=': 'rel="noreferrer" target="_blank" href='}) -}}
 							{%- endif %}
 
 							{% if guides | length %}
