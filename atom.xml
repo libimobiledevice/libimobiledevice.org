@@ -5,7 +5,7 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2025-10-14T02:46:13+02:00</updated>
+  <updated>2025-10-14T03:10:49+02:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
@@ -17,8 +17,24 @@
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
-    <published>2025-10-14T02:46:13+02:00</published>
-    <updated>2025-10-14T02:46:13+02:00</updated>
+    <published>2025-10-14T03:10:49+02:00</published>
+    <updated>2025-10-14T03:10:49+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2025/10/14/ifuse-1.2.0-release/</id>
+    <title>ifuse 1.2.0</title>
+    <content type="html">
+      <![CDATA[<p><a href="/#download-ifuse">ifuse 1.2.0</a> has been released.</p>
+<!-- excerpt -->
+<h2 id="Changes" name="Changes">Changes</h2>
+<ul>
+<li>Switch to libfuse 3</li>
+<li>Require libimobiledevice 1.4.0</li>
+</ul>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2025/10/14/ifuse-1.2.0-release/" rel="alternate" type="text/html" />
+    <published>2025-10-14T03:09:00+02:00</published>
+    <updated>2025-10-14T03:09:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2025/10/10/libimobiledevice-1.4.0-release/</id>

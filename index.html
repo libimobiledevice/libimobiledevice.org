@@ -149,7 +149,7 @@
 				<a id="download-btn-dropdown" class="btn btn-lg btn-success dropdown-toggle dropdown-toggle-split mb-2" href="https://github.com/libimobiledevice/libimobiledevice/releases/latest" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"><span class="sr-only">Toggle Dropdown</span></a>
 
 				<div class="dropdown-menu" aria-labelledby="download-btn-dropdown">
-																<a class="dropdown-item" href="https://github.com/libimobiledevice/ifuse/releases/download/1.1.4/ifuse-1.1.4.tar.bz2">ifuse <span class="font-weight-light text-muted">1.1.4</span></a>
+																<a class="dropdown-item" href="https://github.com/libimobiledevice/ifuse/releases/download/1.2.0/ifuse-1.2.0.tar.bz2">ifuse <span class="font-weight-light text-muted">1.2.0</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/usbmuxd/releases/download/1.1.1/usbmuxd-1.1.1.tar.bz2">usbmuxd <span class="font-weight-light text-muted">1.1.1</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libplist/releases/download/2.7.0/libplist-2.7.0.tar.bz2">libplist <span class="font-weight-light text-muted">2.7.0</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libtatsu/releases/download/1.0.5/libtatsu-1.0.5.tar.bz2">libtatsu <span class="font-weight-light text-muted">1.0.5</span></a>
@@ -646,12 +646,12 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-ifuse" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ifuse" href="#download-details-ifuse" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ifuse</a>&nbsp;<a href="https://github.com/libimobiledevice/ifuse/releases/tag/1.1.4"><small class="font-weight-light text-muted">1.1.4</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ifuse/build.yml?branch=master"></div></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ifuse" href="#download-details-ifuse" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ifuse</a>&nbsp;<a href="https://github.com/libimobiledevice/ifuse/releases/tag/1.2.0"><small class="font-weight-light text-muted">1.2.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ifuse/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-ifuse" data-parent="#download-ifuse">
 				<div class="card-body">
 					<p class="card-text">A fuse filesystem to access the contents of iOS devices</p>
-										<a href="https://github.com/libimobiledevice/ifuse/releases/download/1.1.4/ifuse-1.1.4.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+										<a href="https://github.com/libimobiledevice/ifuse/releases/download/1.2.0/ifuse-1.2.0.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
 					
 															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
 									</div>
@@ -664,20 +664,11 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4 id="1.1.4+%282020-06-15%29" name="1.1.4+%282020-06-15%29">1.1.4 (2020-06-15)</h4>
-<p>Maintenance release.</p>
-<h5 id="Features" name="Features">Features</h5>
+					<h4 id="1.2.0+%282025-10-14%29" name="1.2.0+%282025-10-14%29">1.2.0 (2025-10-14)</h4>
+<h5 id="Changes" name="Changes">Changes</h5>
 <ul>
-<li>Use automake silent rules if available</li>
-<li>Add helpful message when mounting an app document folder fails</li>
-<li>Add new <code>--list-apps</code> option to print list of apps with file sharing enabled</li>
-<li>Remove length check on UDID argument to support newer devices</li>
-<li>Add <code>--network</code> option to allow connecting to network devices</li>
-<li>Add title row and use double quotes for <code>--list-apps</code> output</li>
-<li>Drop support for older versions of libimobiledevice</li>
-<li>Bump libimobiledevice dependency to 1.3.0</li>
-<li>Bump libplist dependency to 2.2.0</li>
-<li>Improve README.md with project description, installation, contributing and usage sections</li>
+<li>Switch to libfuse 3</li>
+<li>Require libimobiledevice 1.4.0</li>
 </ul>
 				</div>
 							</div>
@@ -1183,6 +1174,22 @@ $ make</code></pre>
 		<div class="col mb-4">
 		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
 						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
+				<a href="https://libimobiledevice.org/news/2025/10/14/ifuse-1.2.0-release/">
+					<img data-src="https://libimobiledevice.org/img/logo.svg" class="img-fluid filter-grayscale-hover" height="180" alt="Download">
+				</a>
+			</div>
+						<div class="card-body">
+				<h5 class="card-title"><a href="https://libimobiledevice.org/news/2025/10/14/ifuse-1.2.0-release/" class="text-reset">ifuse 1.2.0</a></h5>
+				<p class="card-text"><p><a href="/#download-ifuse">ifuse 1.2.0</a> has been released.</p></p>
+			</div>
+			<div class="card-footer">
+				<p class="card-text"><small class="text-muted">Oct 14, 2025, 3:09 AM</small></p>
+			</div>
+		</div>
+	</div>
+		<div class="col mb-4">
+		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
+						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
 				<a href="https://libimobiledevice.org/news/2025/10/10/libimobiledevice-1.4.0-release/">
 					<img data-src="https://libimobiledevice.org/img/logo.svg" class="img-fluid filter-grayscale-hover" height="180" alt="Download">
 				</a>
@@ -1210,22 +1217,6 @@ Finally a new official release!</p></p>
 			</div>
 			<div class="card-footer">
 				<p class="card-text"><small class="text-muted">Sep 12, 2025, 11:28 AM</small></p>
-			</div>
-		</div>
-	</div>
-		<div class="col mb-4">
-		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
-						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
-				<a href="https://libimobiledevice.org/news/2025/06/04/libusbmuxd-2.1.1-release/">
-					<img data-src="https://libimobiledevice.org/img/logo.svg" class="img-fluid filter-grayscale-hover" height="180" alt="Download">
-				</a>
-			</div>
-						<div class="card-body">
-				<h5 class="card-title"><a href="https://libimobiledevice.org/news/2025/06/04/libusbmuxd-2.1.1-release/" class="text-reset">libusbmuxd 2.1.1</a></h5>
-				<p class="card-text"><p><a href="/#download-libusbmuxd">libusbmuxd 2.1.1</a> has been released.</p></p>
-			</div>
-			<div class="card-footer">
-				<p class="card-text"><small class="text-muted">Jun 4, 2025, 3:26 PM</small></p>
 			</div>
 		</div>
 	</div>
@@ -1538,7 +1529,7 @@ Finally a new official release!</p></p>
 		<hr>
 								<div class="row">
 			<div class="col-12 text-center text-md-left">
-				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Tue, 14 Oct 2025 02:46:35 +0200</small>
+				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Tue, 14 Oct 2025 03:11:14 +0200</small>
 			</div>
 		</div>
 	</div>
