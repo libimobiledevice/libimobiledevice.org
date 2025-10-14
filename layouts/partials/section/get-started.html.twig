@@ -63,7 +63,7 @@
 									<div class="tab-content">
 										{% for guide in guides %}
 										<div class="tab-pane{{ loop.first ? ' active': '' }}" id="{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tabpanel">
-											{{- guide.body | trim | replace({'# ': '#### '}) | markdown_to_html | raw | replace({'href=': 'class="text-reset" rel="noreferrer" target="_blank" href='}) -}}
+											{{- guide.body | trim | replace({'# ': '#### '}) | markdown_to_html | raw | replace({'href=': 'rel="noreferrer" target="_blank" href='}) -}}
 										</div>
 										{% endfor %}
 									</div>
