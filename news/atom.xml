@@ -192,7 +192,7 @@ and might be removed in a future version of libplist.</li>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2024/05/23/libtatsu-new/</id>
-    <title>NEW libtatsu</title>
+    <title>NEW: libtatsu</title>
     <content type="html">
       <![CDATA[<p>A new library was added to the project portfolio: <a href="/#download-libtatsu">libtatsu</a>.
 The main purpose of this library is to allow creating TSS request payloads,
@@ -204,6 +204,23 @@ while obviously idevicerestore will remain the main consumer.</p>]]>
     <link href="https://libimobiledevice.org/news/2024/05/23/libtatsu-new/" rel="alternate" type="text/html" />
     <published>2024-05-23T23:15:00+02:00</published>
     <updated>2024-05-23T23:15:00+02:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2023/04/21/libimobiledevice-glue-new/</id>
+    <title>NEW: ibimobiledevice-glue</title>
+    <content type="html">
+      <![CDATA[<p>A new helper library has been added to the project portfolio: <a href="/#download-libimobiledevice-glue">libimobiledevice-glue</a>.
+This library contains common code that is used by the libraries and tools around the libimobiledevice project.</p>
+<!-- excerpt -->
+<p>The main functionality provided by this library are <strong>socket</strong> helper
+functions and a platform independent <strong>thread/mutex</strong> implementation.
+Besides that it comes with a number of string, file, and plist helper
+functions, as well as some other commonly used code that was originally
+duplicated in the dedicated projects.</p>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2023/04/21/libimobiledevice-glue-new/" rel="alternate" type="text/html" />
+    <published>2023-04-21T18:00:00+02:00</published>
+    <updated>2023-04-21T18:00:00+02:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2020/09/27/website-up-on-github/</id>

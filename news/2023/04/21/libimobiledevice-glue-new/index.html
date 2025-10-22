@@ -8,31 +8,31 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Release Galore &middot; libimobiledevice</title>
+	<title>NEW: ibimobiledevice-glue &middot; libimobiledevice</title>
 
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="en">
 
 		<link rel="preload" as="style" href="https://libimobiledevice.org/css/main.min.css">
 
-	    <title>Release Galore &middot; libimobiledevice</title>
+	    <title>NEW: ibimobiledevice-glue &middot; libimobiledevice</title>
     <meta name="description" content="libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking." />
     <meta name="keywords" content="Linux, iOS, iPhone, iPod Touch, iPad, iPad mini, Apple TV, iTunes, development, library, afc, lockdownd, libplist, installation_proxy, usbmux, plist, libirecovery, idevicerestore, iTunesCDB, tethering, backup, restore, C/C++, instruments, MDM, mobileconfig, provisioning, FOSS" />
-    <meta name="author" content="https://github.com/FunkyM">
+    <meta name="author" content="https://github.com/nikias">
 
-    <link rel="canonical" type="text/html" title="Release Galore &middot; libimobiledevice" href="https://libimobiledevice.org/news/2020/06/15/release-galore/" />    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" type="text/html" title="NEW: ibimobiledevice-glue &middot; libimobiledevice" href="https://libimobiledevice.org/news/2023/04/21/libimobiledevice-glue-new/" />    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="libimobiledevice" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Release Galore &middot; libimobiledevice" />
+    <meta property="og:title" content="NEW: ibimobiledevice-glue &middot; libimobiledevice" />
     <meta property="og:description" content="libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking." />
-    <meta property="og:url" content="https://libimobiledevice.org/news/2020/06/15/release-galore" />
-    <meta property="og:image" content="https://libimobiledevice.org/img/news/release-galore-github.png" />
+    <meta property="og:url" content="https://libimobiledevice.org/news/2023/04/21/libimobiledevice-glue-new" />
+    <meta property="og:image" content="https://libimobiledevice.org/img/brand/brand-ontop-gradient-alpha.png" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@libimobiledev">
 
 	<meta name="theme-color" content="#0a9197">
 
-	<link rel="canonical" href="https://libimobiledevice.org/news/2020/06/15/release-galore/">
+	<link rel="canonical" href="https://libimobiledevice.org/news/2023/04/21/libimobiledevice-glue-new/">
 
 	<link rel="stylesheet" href="https://libimobiledevice.org/css/main.min.css">
 
@@ -135,7 +135,7 @@
 <ol class="breadcrumb">
 	<li class="breadcrumb-item"><a href="https://libimobiledevice.org/">Home</a></li>
 			<li class="breadcrumb-item" aria-current="page"><a href="https://libimobiledevice.org/news/">News</a></li>
-			<li class="breadcrumb-item active" aria-current="page">Release Galore</li>
+			<li class="breadcrumb-item active" aria-current="page">NEW: ibimobiledevice-glue</li>
 		</ol>
 </nav>
 	</div>
@@ -148,31 +148,20 @@
 	<div class="col">
 		<article>
 			<header class="mb-4">
-				<h1 class="section-title">Release Galore</h1>
-				<p class="text-muted">Posted on <time>June 15, 2020 at 8:00 PM</time> by <a href="https://github.com/FunkyM" target="_blank" rel="noreferrer">@FunkyM</a></p>
+				<h1 class="section-title">NEW: ibimobiledevice-glue</h1>
+				<p class="text-muted">Posted on <time>April 21, 2023 at 6:00 PM</time> by <a href="https://github.com/nikias" target="_blank" rel="noreferrer">@nikias</a></p>
 			</header>
 			<hr class="bg-info">
 			<div class="row mt-4">
-								<div class="col-12 col-md-4 order-md-last">
-					<div class="entry-image border mb-4"><img src="https://libimobiledevice.org/img/news/release-galore-github.png" class="img-fluid" alt="Release Galore"></div>
-				</div>
 								<div class="col">
-					<div class="entry-content"><p>Proud to announce long standing releases with first time releases of <a href="/#download-libirecovery">libirecovery</a> and <a href="/#download-libirecovery">idevicerestore</a>.
-Bear with us for some cool stuff coming up next.</p>
+					<div class="entry-content"><p>A new helper library has been added to the project portfolio: <a href="/#download-libimobiledevice-glue">libimobiledevice-glue</a>.
+This library contains common code that is used by the libraries and tools around the libimobiledevice project.</p>
 <span id="more"></span>
-<p>Please find the latest source archives in our <a href="/#downloads">download section</a> alongside release information.</p>
-<p>This release round included:</p>
-<ul>
-<li><strong>libirecovery</strong> 1.0.0</li>
-<li><strong>libplist</strong> 2.2.0</li>
-<li><strong>libusbmuxd</strong> 2.0.2</li>
-<li><strong>libimobiledevice</strong> 1.3.0</li>
-<li><strong>usbmuxd</strong> 1.1.1</li>
-<li><strong>libideviceactivation</strong> 1.1.1</li>
-<li><strong>ideviceinstaller</strong> 1.1.1</li>
-<li><strong>idevicerestore</strong> 1.0.0</li>
-<li><strong>ifuse</strong> 1.1.4.</li>
-</ul></div>
+<p>The main functionality provided by this library are <strong>socket</strong> helper
+functions and a platform independent <strong>thread/mutex</strong> implementation.
+Besides that it comes with a number of string, file, and plist helper
+functions, as well as some other commonly used code that was originally
+duplicated in the dedicated projects.</p></div>
 				</div>
 			</div>
 		</article>
