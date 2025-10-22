@@ -1,5 +1,5 @@
 ---
-title: NEW libtatsu
+title: "NEW: libtatsu"
 date: 2024-05-23 23:15 CEST
 author: https://github.com/nikias
 ---
