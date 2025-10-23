@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Page - libplist 2.6.0</title>
+<title>libplist - libplist 2.6.0</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
@@ -43,16 +43,181 @@
     </ul>
   </div>
 </div><!-- top -->
-<div class="header">
-  <div class="headertitle"><div class="title">libplist Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">libplist </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#autotoc_md1">Features</a></li>
+<li class="level1"><a href="#autotoc_md2">Building</a><ul><li class="level2"><a href="#autotoc_md3">Prerequisites</a><ul><li class="level3"><a href="#autotoc_md4">Linux (Debian/Ubuntu based)</a></li>
+<li class="level3"><a href="#autotoc_md5">macOS</a></li>
+<li class="level3"><a href="#autotoc_md6">Windows</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md7">Configuring the source tree</a></li>
+<li class="level2"><a href="#autotoc_md8">Building and installation</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md9">Usage</a></li>
+<li class="level1"><a href="#autotoc_md10">Contributing</a></li>
+<li class="level1"><a href="#autotoc_md11">Links</a></li>
+<li class="level1"><a href="#autotoc_md12">License</a></li>
+<li class="level1"><a href="#autotoc_md13">Credits</a></li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2libimobiledevice_8org_2libimobiledevice_8org_2libplist-2_86_80_2docs_2_r_e_a_d_m_e_8doxygen"></a> <em>A small portable C library to handle Apple Property List files in binary, XML, JSON, or OpenStep format.</em></p>
+<p><img src="https://github.com/libimobiledevice/libplist/workflows/build/badge.svg" alt="" style="pointer-events: none;" class="inline"/> <img src="https://github.com/libimobiledevice/libplist/workflows/CodeQL/badge.svg" alt="" style="pointer-events: none;" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Features</h1>
+<p>The project provides an interface to read and write plist files in binary, XML, JSON, or OpenStep format alongside a command-line utility named <code>plistutil</code>.</p>
+<p>Some key features are:</p>
+<ul>
+<li><b>Formats:</b> Supports binary, XML, JSON, and OpenStep format</li>
+<li><b>Utility:</b> Provides a <code>plistutil</code> utility for the command-line</li>
+<li><b>Python:</b> Provides Cython based bindings for Python</li>
+<li><b>Tested:</b> Uses fuzzing (<a href="https://github.com/google/oss-fuzz">OSS-Fuzz</a>) and data compliance tests</li>
+<li><b>Efficient:</b> Lean library with performance and resources in mind</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Building</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Prerequisites</h2>
+<p>You need to have a working compiler (gcc/clang) and development environent available. This project uses autotools for the build process, allowing to have common build steps across different platforms. Only the prerequisites differ and they are described in this section.</p>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Linux (Debian/Ubuntu based)</h3>
+<ul>
+<li><p class="startli">Install all required dependencies and build tools: </p><div class="fragment"><div class="line">sudo apt-get install \</div>
+<div class="line">      build-essential \</div>
+<div class="line">      checkinstall \</div>
+<div class="line">      git \</div>
+<div class="line">      autoconf \</div>
+<div class="line">      automake \</div>
+<div class="line">      libtool-bin</div>
+</div><!-- fragment --><p class="startli">If you want to optionally build the documentation or Python bindings use: </p><div class="fragment"><div class="line">sudo apt-get install \</div>
+<div class="line">      doxygen \</div>
+<div class="line">      cython3</div>
+</div><!-- fragment --></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md5"></a>
+macOS</h3>
+<ul>
+<li><p class="startli">Make sure the Xcode command line tools are installed. Then, use either <a href="https://www.macports.org/">MacPorts</a> or <a href="https://brew.sh/">Homebrew</a> to install <code>automake</code>, <code>autoconf</code>, and <code>libtool</code>.</p>
+<p class="startli">Using MacPorts: </p><div class="fragment"><div class="line">sudo port install libtool autoconf automake</div>
+</div><!-- fragment --><p class="startli">Using Homebrew: </p><div class="fragment"><div class="line">brew install libtool autoconf automake</div>
+</div><!-- fragment --><p class="startli">In case you want to build the documentation, install <code>doxygen</code> using the corresponding install command from above.</p>
+<p class="startli">If you want to build Python bindings, you need to install cython: </p><div class="fragment"><div class="line">pip3 install cython</div>
+</div><!-- fragment --><p class="startli">You might need to set a few environment variables if building of the Python bindings fail. For example, the <a href="https://github.com/libimobiledevice/libplist/blob/master/.github/workflows/build.yml">automated build via GitHub actions</a> is setting the following environment variables: </p><div class="fragment"><div class="line">PYTHON3_BIN=`xcrun -f python3`</div>
+<div class="line">export PYTHON=$PYTHON3_BIN</div>
+<div class="line">PYTHON_VER=`$PYTHON3_BIN -c &quot;import distutils.sysconfig; print(distutils.sysconfig.get_config_var(&#39;VERSION&#39;))&quot;`</div>
+<div class="line">PYTHON_EXEC_PREFIX=`$PYTHON3_BIN -c &quot;import distutils.sysconfig; print(distutils.sysconfig.get_config_var(&#39;exec_prefix&#39;))&quot;`</div>
+<div class="line">PYTHON_LIBS_PATH=$PYTHON_EXEC_PREFIX/lib</div>
+<div class="line">PYTHON_FRAMEWORK_PATH=$PYTHON_EXEC_PREFIX/Python3</div>
+<div class="line">export PYTHON_LIBS=&quot;-L$PYTHON_LIBS_PATH -lpython$PYTHON_VER&quot;</div>
+<div class="line">export PYTHON_EXTRA_LDFLAGS=&quot;-Wl,-stack_size,1000000  -framework CoreFoundation $PYTHON_FRAMEWORK_PATH&quot;</div>
+</div><!-- fragment --></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Windows</h3>
+<ul>
+<li><p class="startli">Using <a href="https://www.msys2.org/">MSYS2</a> is the official way of compiling this project on Windows. Download the MSYS2 installer and follow the installation steps.</p>
+<p class="startli">It is recommended to use the <em>MSYS2 MinGW 64-bit</em> shell. Run it and make sure the required dependencies are installed:</p>
+<div class="fragment"><div class="line">pacman -S base-devel \</div>
+<div class="line">      git \</div>
+<div class="line">      mingw-w64-x86_64-gcc \</div>
+<div class="line">      make \</div>
+<div class="line">      libtool \</div>
+<div class="line">      autoconf \</div>
+<div class="line">      automake-wrapper</div>
+</div><!-- fragment --><p> NOTE: You can use a different shell and different compiler according to your needs. Adapt the above command accordingly.</p>
+<p class="startli">If you want to optionally build Python bindings, you need to also install <code>cython</code> and make sure you have a working python environment.</p>
+<div class="fragment"><div class="line">pacman -S cython</div>
+</div><!-- fragment --></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Configuring the source tree</h2>
+<p>You can build the source code from a git checkout, or from a <code>.tar.bz2</code> release tarball from <a href="https://github.com/libimobiledevice/libplist/releases">Releases</a>. Before we can build it, the source tree has to be configured for building. The steps depend on where you got the source from.</p>
+<ul>
+<li><p class="startli"><b>From git</b></p>
+<p class="startli">If you haven't done already, clone the actual project repository and change into the directory. </p><div class="fragment"><div class="line">git clone https://github.com/libimobiledevice/libplist.git</div>
+<div class="line">cd libplist</div>
+</div><!-- fragment --><p class="startli">Configure the source tree for building: </p><div class="fragment"><div class="line">./autogen.sh</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b>From release tarball (.tar.bz2)</b></p>
+<p class="startli">When using an official <a href="https://github.com/libimobiledevice/libplist/releases">release tarball</a> (<code>libplist-x.y.z.tar.bz2</code>) the procedure is slightly different.</p>
+<p class="startli">Extract the tarball: </p><div class="fragment"><div class="line">tar xjf libplist-x.y.z.tar.bz2</div>
+<div class="line">cd libplist-x.y.z</div>
+</div><!-- fragment --><p class="startli">Configure the source tree for building: </p><div class="fragment"><div class="line">./configure</div>
+</div><!-- fragment --></li>
+</ul>
+<p>Both <code>./configure</code> and <code>./autogen.sh</code> (which generates and calls <code>configure</code>) accept a few options, for example <code>--enable-debug</code> to allow printing debug messages in the final product, or <code>--without-cython</code> to skip building the Python bindings. You can simply pass them like this:</p>
+<div class="fragment"><div class="line">./autogen.sh --prefix=/usr/local --enable-debug --without-cython</div>
+</div><!-- fragment --><p> or </p><div class="fragment"><div class="line">./configure --prefix=/usr/local --enable-debug</div>
+</div><!-- fragment --><p>Once the command is successful, the last few lines of output will look like this: </p><div class="fragment"><div class="line">[...]</div>
+<div class="line">config.status: creating config.h</div>
+<div class="line">config.status: executing depfiles commands</div>
+<div class="line">config.status: executing libtool commands</div>
+<div class="line"> </div>
+<div class="line">Configuration for libplist 2.3.1:</div>
+<div class="line">-------------------------------------------</div>
+<div class="line"> </div>
+<div class="line">  Install prefix ..........: /usr/local</div>
+<div class="line">  Debug code ..............: yes</div>
+<div class="line">  Python bindings .........: yes</div>
+<div class="line"> </div>
+<div class="line">  Now type &#39;make&#39; to build libplist 2.3.1,</div>
+<div class="line">  and then &#39;make install&#39; for installation.</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+Building and installation</h2>
+<p>If you followed all the steps successfully, and <code>autogen.sh</code> or <code>configure</code> did not print any errors, you are ready to build the project. This is simply done with</p>
+<div class="fragment"><div class="line">make</div>
+</div><!-- fragment --><p>If no errors are emitted you are ready for installation. Depending on whether the current user has permissions to write to the destination directory or not, you would either run </p><div class="fragment"><div class="line">make install</div>
+</div><!-- fragment --><p> <em>OR</em> </p><div class="fragment"><div class="line">sudo make install</div>
+</div><!-- fragment --><p>If you are on Linux, you want to run <code>sudo ldconfig</code> after installation to make sure the installed libraries are made available.</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Usage</h1>
+<p>Usage is simple; <code>libplist</code> has a straight-forward API. It is used in <a href="https://github.com/libimobiledevice/libimobiledevice">libimobiledevice</a> and <a href="https://github.com/libimobiledevice/">corresponding projects</a>.</p>
+<p>Furthermore, it comes with a command line utility <code>plistutil</code> that is really easy to use: </p><div class="fragment"><div class="line">plistutil -i foobar.plist -o output.plist</div>
+</div><!-- fragment --><p> This converts the <code>foobar.plist</code> file to the opposite format, e.g. binary to XML or vice versa, and outputs it to the <code>output.plist</code> file.</p>
+<p>To convert to a specific format - and also to convert from JSON or OpenStep format - use the <code>-f</code> command line switch: </p><div class="fragment"><div class="line">plistutil -i input.plist -f json</div>
+</div><!-- fragment --><p> This will convert <code>input.plist</code>, regardless of the input format, to JSON. The code auto-detects the input format and parses it accordingly.</p>
+<p>Please consult the usage information or manual page for a full documentation of available command line options: </p><div class="fragment"><div class="line">plistutil --help</div>
+</div><!-- fragment --><p> or </p><div class="fragment"><div class="line">man plistutil</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+Contributing</h1>
+<p>We welcome contributions from anyone and are grateful for every pull request!</p>
+<p>If you'd like to contribute, please fork the <code>master</code> branch, change, commit and send a pull request for review. Once approved it can be merged into the main code base.</p>
+<p>If you plan to contribute larger changes or a major refactoring, please create a ticket first to discuss the idea upfront to ensure less effort for everyone.</p>
+<p>Please make sure your contribution adheres to:</p><ul>
+<li>Try to follow the code style of the project</li>
+<li>Commit messages should describe the change well without being too short</li>
+<li>Try to split larger changes into individual commits of a common domain</li>
+<li>Use your real name and a valid email address for your commits</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Links</h1>
+<ul>
+<li>Homepage: <a href="https://libimobiledevice.org/">https://libimobiledevice.org/</a></li>
+<li>Repository: <a href="https://git.libimobiledevice.org/libplist.git">https://git.libimobiledevice.org/libplist.git</a></li>
+<li>Repository (Mirror): <a href="https://github.com/libimobiledevice/libplist.git">https://github.com/libimobiledevice/libplist.git</a></li>
+<li>Issue Tracker: <a href="https://github.com/libimobiledevice/libplist/issues">https://github.com/libimobiledevice/libplist/issues</a></li>
+<li>Mailing List: <a href="https://lists.libimobiledevice.org/mailman/listinfo/libimobiledevice-devel">https://lists.libimobiledevice.org/mailman/listinfo/libimobiledevice-devel</a></li>
+<li>Twitter: <a href="https://twitter.com/libimobiledev">https://twitter.com/libimobiledev</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md12"></a>
+License</h1>
+<p>This project is licensed under the <a href="https://www.gnu.org/licenses/lgpl-2.1.en.html">GNU Lesser General Public License v2.1</a>, also included in the repository in the <code>COPYING</code> file.</p>
+<h1><a class="anchor" id="autotoc_md13"></a>
+Credits</h1>
+<p>Apple, iPhone, iPad, iPod, iPod Touch, Apple TV, Apple Watch, Mac, iOS, iPadOS, tvOS, watchOS, and macOS are trademarks of Apple Inc.</p>
+<p>This project is an independent software library and has not been authorized, sponsored, or otherwise approved by Apple Inc.</p>
+<p>README Updated on: 2024-02-21 </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <hr class="footer"/>
 <address class="footer">
 	<ul class="navpath">
 		<li class="footer">&copy; 2007-2025 <a href="https://libimobiledevice.org">libplist</a>&nbsp;&nbsp;All rights reserved</li>
-		<li class="footer">Generated on <em>Thu Oct 23 2025 01:27:45</em> by <a href="https://www.doxygen.org">doxygen 1.9.8</a></li>
+		<li class="footer">Generated on <em>Thu Oct 23 2025 01:42:14</em> by <a href="https://www.doxygen.org">doxygen 1.9.8</a></li>
 		<li class="footer">Icons by <a href="http://tango-project.org/">Tango</a></li>
 		<li class="footer">Design &copy; 2025 by <a href="https://mirell.com" target="_blank">Mirell</a></li>
 	</ui>

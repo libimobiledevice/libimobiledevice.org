@@ -86,7 +86,7 @@
 					<a class="dropdown-item" href="#examples">Examples</a>
 					<div class="dropdown-divider"></div>
 					<a class="dropdown-item" href="https://libimobiledevice.org/docs/libimobiledevice/latest">libimobiledevice <span class="badge badge-info">API</span></a>
-					<a class="dropdown-item" href="https://libimobiledevice.org/docs/libplist/latest">libplist <span class="badge badge-muted">API</span></a>
+					<a class="dropdown-item" href="https://libimobiledevice.org/docs/libplist/latest">libplist <span class="badge badge-info">API</span></a>
 					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libideviceactivation <span class="badge badge-muted">API</span></a>
 					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libusbmuxd <span class="badge badge-muted">API</span></a>
 					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libirecovery <span class="badge badge-muted">API</span></a>
@@ -152,12 +152,14 @@
 																<a class="dropdown-item" href="https://github.com/libimobiledevice/ifuse/releases/download/1.2.0/ifuse-1.2.0.tar.bz2">ifuse <span class="font-weight-light text-muted">1.2.0</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/usbmuxd/releases/download/1.1.1/usbmuxd-1.1.1.tar.bz2">usbmuxd <span class="font-weight-light text-muted">1.1.1</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libplist/releases/download/2.7.0/libplist-2.7.0.tar.bz2">libplist <span class="font-weight-light text-muted">2.7.0</span></a>
+											<a class="dropdown-item" href="https://github.com/libimobiledevice/libtatsu/releases/download/1.0.5/libtatsu-1.0.5.tar.bz2">libtatsu <span class="font-weight-light text-muted">1.0.5</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libusbmuxd/releases/download/2.1.1/libusbmuxd-2.1.1.tar.bz2">libusbmuxd <span class="font-weight-light text-muted">2.1.1</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libirecovery/releases/download/1.3.1/libirecovery-1.3.1.tar.bz2">libirecovery <span class="font-weight-light text-muted">1.3.1</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/idevicerestore/releases/download/1.0.0/idevicerestore-1.0.0.tar.bz2">idevicerestore <span class="font-weight-light text-muted">1.0.0</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libimobiledevice/releases/download/1.4.0/libimobiledevice-1.4.0.tar.bz2">libimobiledevice <span class="font-weight-light text-muted">1.4.0</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/ideviceinstaller/releases/download/1.1.1/ideviceinstaller-1.1.1.tar.bz2">ideviceinstaller <span class="font-weight-light text-muted">1.1.1</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libideviceactivation/releases/download/1.1.1/libideviceactivation-1.1.1.tar.bz2">libideviceactivation <span class="font-weight-light text-muted">1.1.1</span></a>
+											<a class="dropdown-item" href="https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.2/libimobiledevice-glue-1.3.2.tar.bz2">libimobiledevice-glue <span class="font-weight-light text-muted">1.3.2</span></a>
 									</div>
 			</div>
 		</div>
@@ -438,9 +440,9 @@ Restarting device.</code></pre>
 					<ul class="list-inline m-0">
 																		<li class="list-inline-item"><a href="#download-libusbmuxd" class="text-reset"><span class="badge p-1 badge-info">libusbmuxd</span></a></li>
 																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
+																		<li class="list-inline-item"><a href="#download-libtatsu" class="text-reset"><span class="badge p-1 badge-info">libtatsu</span></a></li>
 																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libgnutls</span></li>
 																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libtasn1</span></li>
-																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libtatsu</span></li>
 																		<li class="list-inline-item"><span class="badge p-1 badge-dark">limd_glue</span></li>
 																		<li class="list-inline-item"><span class="badge p-1 badge-dark">openssl</span></li>
 																		<li class="list-inline-item"><span class="badge p-1 badge-dark">readline</span></li>
@@ -822,6 +824,76 @@ and might be removed in a future version of libplist.</li>
 <h5 id="Bug+Fixes" name="Bug+Fixes">Bug Fixes</h5>
 <ul>
 <li>Ignore <code>SIGPIPE</code> signal</li>
+</ul>
+				</div>
+							</div>
+		</div>
+	</div>
+
+			<div class="col mb-4">
+		<div id="download-libimobiledevice-glue" class="card card-download accordion h-100 shadow">
+			<div class="card-header">
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libimobiledevice-glue" href="#download-details-libimobiledevice-glue" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libimobiledevice-glue</a>&nbsp;<a href="https://github.com/libimobiledevice/libimobiledevice-glue/releases/tag/1.3.2"><small class="font-weight-light text-muted">1.3.2</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libimobiledevice-glue/build.yml?branch=master"></div></h3>
+			</div>
+			<div class="card-details collapse" id="download-details-libimobiledevice-glue" data-parent="#download-libimobiledevice-glue">
+				<div class="card-body">
+					<p class="card-text">A library with common code used by libraries and tools around the libimobiledevice project</p>
+										<a href="https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.2/libimobiledevice-glue-1.3.2.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+					
+															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
+									</div>
+												<div class="card-header border-top">
+					<small class="text-muted">Depends on:</small>
+					<ul class="list-inline m-0">
+																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
+											</ul>
+				</div>
+												<div class="card-body">
+					<h4 id="1.3.2+%282025-06-04%29" name="1.3.2+%282025-06-04%29">1.3.2 (2025-06-04)</h4>
+<h5 id="Changes" name="Changes">Changes</h5>
+<ul>
+<li>socket: [macOS] Fix build on older macOS</li>
+<li>socket: [Windows] Prevent crash by properly initializing memory buffers</li>
+<li>Switch to better initializer strategy</li>
+<li>Fix compilation on MSVC</li>
+<li>Add <code>extern "C"</code> guards to public headers</li>
+<li>socket: Improve error message output/verbose logging</li>
+<li>socket: [Windows] Make sure errno is set in error conditions</li>
+<li>socket: Allow setting debug level via environment variable</li>
+<li>socket: [Windows] Use <code>WSAAddressToStringA</code> (ANSI version)</li>
+<li>socket: [Windows] Use <code>inet_ntop</code> instead of <code>WSAAddressToStringA</code> for &gt;= Vista</li>
+</ul>
+				</div>
+							</div>
+		</div>
+	</div>
+
+			<div class="col mb-4">
+		<div id="download-libtatsu" class="card card-download accordion h-100 shadow">
+			<div class="card-header">
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libtatsu" href="#download-details-libtatsu" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libtatsu</a>&nbsp;<a href="https://github.com/libimobiledevice/libtatsu/releases/tag/1.0.5"><small class="font-weight-light text-muted">1.0.5</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libtatsu/build.yml?branch=master"></div></h3>
+			</div>
+			<div class="card-details collapse" id="download-details-libtatsu" data-parent="#download-libtatsu">
+				<div class="card-body">
+					<p class="card-text">Library handling the communication with Apple's Tatsu Signing Server (TSS)</p>
+										<a href="https://github.com/libimobiledevice/libtatsu/releases/download/1.0.5/libtatsu-1.0.5.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+					
+															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
+									</div>
+												<div class="card-header border-top">
+					<small class="text-muted">Depends on:</small>
+					<ul class="list-inline m-0">
+																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
+																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libcurl</span></li>
+											</ul>
+				</div>
+												<div class="card-body">
+					<h4 id="1.0.5+%282025-06-04%29" name="1.0.5+%282025-06-04%29">1.0.5 (2025-06-04)</h4>
+<h5 id="Changes%3A" name="Changes%3A">Changes:</h5>
+<ul>
+<li>Fix compilation on MSVC</li>
+<li>Add <code>extern "C"</code> guards to public headers</li>
+<li>Update auth client version</li>
 </ul>
 				</div>
 							</div>
@@ -1468,7 +1540,7 @@ Finally a new official release!</p></p>
 		<hr>
 								<div class="row">
 			<div class="col-12 text-center text-md-left">
-				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Thu, 23 Oct 2025 03:27:38 +0200</small>
+				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Thu, 23 Oct 2025 03:42:05 +0200</small>
 			</div>
 		</div>
 	</div>
