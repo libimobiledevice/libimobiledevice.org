@@ -116,7 +116,6 @@ jobs:
             cp -r $PACKAGE-$I/docs/html/* public/docs/$PACKAGE/$I/
           done
           ln -s $I public/docs/$PACKAGE/latest
-          ls -l public/docs/$PACKAGE
 
       - name: Build libplist documentation
         shell: bash
@@ -140,6 +139,7 @@ jobs:
             if ! test -d docs/doxygen; then
               cp -r ../$PACKAGE-master/docs/doxygen docs/
             fi
+            awk '/\#\# Table of Contents/{while(getline && $$0 != ""){}{print "[TOC]"}}1' README.md > docs/README.doxygen.md
             echo "Building docs for $PACKAGE-$I..."
             doxygen doxygen.cfg
             cd $CURDIR
@@ -147,7 +147,6 @@ jobs:
             cp -r $PACKAGE-$I/docs/html/* public/docs/$PACKAGE/$I/
           done
           ln -s $I public/docs/$PACKAGE/latest
-          ls -l public/docs/$PACKAGE
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
