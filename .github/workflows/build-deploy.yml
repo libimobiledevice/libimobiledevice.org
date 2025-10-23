@@ -50,6 +50,12 @@ jobs:
           php-version: '7.4'
           extensions: intl-69.1
 
+      - name: Install additional packages 🏗
+        shell: bash
+        run: |
+          sudo apt-get -y update
+          sudo apt-get -y install doxygen
+
       - name: Install composer dependencies 🏗
         shell: bash
         run: |
@@ -60,10 +66,89 @@ jobs:
         run: |
           npm install
 
+      - name: Get libimobiledevice releases
+        uses: yakubique/github-releases@v1.2
+        id: get_releases_libimobiledevice
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          repository: libimobiledevice/libimobiledevice
+
+      - name: Get libplist releases
+        uses: yakubique/github-releases@v1.2
+        id: get_releases_libplist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          repository: libimobiledevice/libplist
+
       - name: Build 🔧
         shell: bash
         run: |
           make production
+
+      - name: Build libimobiledevice documentation
+        shell: bash
+        run: |
+          PACKAGE=libimobiledevice
+          CURDIR=`pwd`
+          curl -o $PACKAGE-master.zip -Ls https://github.com/libimobiledevice/$PACKAGE/archive/refs/heads/master.zip
+          unzip $PACKAGE-master.zip
+          for I in `echo '${{ steps.get_releases_libimobiledevice.outputs.releases }}' |jq -r '.[]'`; do
+            echo Downloading https://github.com/libimobiledevice/$PACKAGE/releases/download/$I/$PACKAGE-$I.tar.bz2
+            RES=`curl -L -s -o /dev/null -I -w "%{http_code}" https://github.com/libimobiledevice/$PACKAGE/releases/download/$I/$PACKAGE-$I.tar.bz2`
+            if test "$RES" = "200"; then
+              curl -o $PACKAGE-$I.tar.bz2 -Ls https://github.com/libimobiledevice/$PACKAGE/releases/download/$I/$PACKAGE-$I.tar.bz2
+              tar xjf $PACKAGE-$I.tar.bz2
+            else
+              curl -o $PACKAGE-$I.tar.gz -Ls https://github.com/libimobiledevice/$PACKAGE/archive/refs/tags/$I.tar.gz
+              tar xzf $PACKAGE-$I.tar.gz
+            fi
+            cd $PACKAGE-$I
+            sed -e s/@PACKAGE@/$PACKAGE/g -e s/@VERSION@/$I/g < ../$PACKAGE-master/doxygen.cfg.in > doxygen.cfg
+            if ! test -d docs/doxygen; then
+              cp -r ../$PACKAGE-master/docs/doxygen docs/
+            fi
+            echo "Building docs for $PACKAGE-$I..."
+            doxygen doxygen.cfg
+            cd $CURDIR
+            mkdir -p public/docs/$PACKAGE/$I
+            cp -r $PACKAGE-$I/docs/html/* public/docs/$PACKAGE/$I/
+            ln -s -f $I public/docs/$PACKAGE/latest
+            ls -l public/docs/$PACKAGE
+          done
+
+      - name: Build libplist documentation
+        shell: bash
+        run: |
+          PACKAGE=libplist
+          CURDIR=`pwd`
+          curl -o $PACKAGE-master.zip -Ls https://github.com/libimobiledevice/$PACKAGE/archive/refs/heads/master.zip
+          unzip $PACKAGE-master.zip
+          for I in `echo '${{ steps.get_releases_libplist.outputs.releases }}' |jq -r '.[]'`; do
+            echo Downloading https://github.com/libimobiledevice/$PACKAGE/releases/download/$I/$PACKAGE-$I.tar.bz2
+            RES=`curl -L -s -o /dev/null -I -w "%{http_code}" https://github.com/libimobiledevice/$PACKAGE/releases/download/$I/$PACKAGE-$I.tar.bz2`
+            if test "$RES" = "200"; then
+              curl -o $PACKAGE-$I.tar.bz2 -Ls https://github.com/libimobiledevice/$PACKAGE/releases/download/$I/$PACKAGE-$I.tar.bz2
+              tar xjf $PACKAGE-$I.tar.bz2
+            else
+              curl -o $PACKAGE-$I.tar.gz -Ls https://github.com/libimobiledevice/$PACKAGE/archive/refs/tags/$I.tar.gz
+              tar xzf $PACKAGE-$I.tar.gz
+            fi
+            cd $PACKAGE-$I
+            sed -e s/@PACKAGE@/$PACKAGE/g -e s/@VERSION@/$I/g < ../$PACKAGE-master/doxygen.cfg.in > doxygen.cfg
+            if ! test -d docs/doxygen; then
+              cp -r ../$PACKAGE-master/docs/doxygen docs/
+            fi
+            echo "Building docs for $PACKAGE-$I..."
+            doxygen doxygen.cfg
+            cd $CURDIR
+            mkdir -p public/docs/$PACKAGE/$I
+            cp -r $PACKAGE-$I/docs/html/* public/docs/$PACKAGE/$I/
+            ln -s -f $I public/docs/$PACKAGE/latest
+            ls -l public/docs/$PACKAGE/
+          done
+
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
