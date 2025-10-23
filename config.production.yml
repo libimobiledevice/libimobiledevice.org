@@ -9,7 +9,7 @@ googleanalytics: "UA-4831747-7"
 twitter:
   username: libimobiledev
 urls:
-  docs: https://docs.libimobiledevice.org
+  docs: https://libimobiledevice.org/docs
 language: en
 languages:
   - code: en
