@@ -114,9 +114,9 @@ jobs:
             cd $CURDIR
             mkdir -p public/docs/$PACKAGE/$I
             cp -r $PACKAGE-$I/docs/html/* public/docs/$PACKAGE/$I/
-            ln -s -f $I public/docs/$PACKAGE/latest
-            ls -l public/docs/$PACKAGE
           done
+          ln -s $I public/docs/$PACKAGE/latest
+          ls -l public/docs/$PACKAGE
 
       - name: Build libplist documentation
         shell: bash
@@ -145,10 +145,9 @@ jobs:
             cd $CURDIR
             mkdir -p public/docs/$PACKAGE/$I
             cp -r $PACKAGE-$I/docs/html/* public/docs/$PACKAGE/$I/
-            ln -s -f $I public/docs/$PACKAGE/latest
-            ls -l public/docs/$PACKAGE/
           done
-
+          ln -s $I public/docs/$PACKAGE/latest
+          ls -l public/docs/$PACKAGE
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
