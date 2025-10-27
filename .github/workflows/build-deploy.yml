@@ -78,13 +78,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p data/github/libimobiledevice/libimobiledevice
-          echo '${{ steps.get_releases_libimobiledevice.outputs.releases }} > data/github/libimobiledevice/libimobiledevice/tags.json
-
-      - name: Write release tags for libplist
-        shell: bash
-        run: |
-          mkdir -p data/github/libimobiledevice/libplist
-          echo '${{ steps.get_releases_libplist.outputs.releases }} > data/github/libimobiledevice/libplist/tags.json
+          echo '${{ steps.get_releases_libimobiledevice.outputs.releases }}' > data/github/libimobiledevice/libimobiledevice/tags.json
 
       - name: Get libplist releases
         uses: yakubique/github-releases@v1.2
@@ -93,6 +87,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           repository: libimobiledevice/libplist
+
+      - name: Write release tags for libplist
+        shell: bash
+        run: |
+          mkdir -p data/github/libimobiledevice/libplist
+          echo '${{ steps.get_releases_libplist.outputs.releases }}' > data/github/libimobiledevice/libplist/tags.json
 
       - name: Build 🔧
         shell: bash
