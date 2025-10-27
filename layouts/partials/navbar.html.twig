@@ -22,7 +22,7 @@
 
 		<ul class="navbar-nav mr-auto">
 			{% if site.menus.main is defined %}
-			{% for entry in site.menus.main | sort_by_weight %}
+			{% for entry in site.menus.main | sort_by_weight | filter(e => e.weight is not defined or e.weight < 1000) %}
 			<li class="nav-item{% if (url(page) == url(entry.url)) or (entry.url starts with page.section) %} active{% endif %}">
 				<a class="nav-link" href="{{ url(entry.url) }}">{{ entry.name }}{% if url(page) == url(entry.url) %} <span class="sr-only">(current)</span>{% endif %}</a>
 			</li>
