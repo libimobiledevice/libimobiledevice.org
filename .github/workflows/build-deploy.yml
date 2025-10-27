@@ -66,6 +66,11 @@ jobs:
         run: |
           npm install
 
+      - name: Prepare GitHub data
+        shell: bash
+        run: |
+          make data/github
+
       - name: Get libimobiledevice releases
         uses: yakubique/github-releases@v1.2
         id: get_releases_libimobiledevice
