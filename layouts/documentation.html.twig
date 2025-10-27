@@ -20,8 +20,8 @@
 			<article class="col-12">
 			<div class="entry-content">{{ page.content }}</div>
         {% set component = page.component %}
-	{% set tags = site.data.github.libimobiledevice[component].tags %}
-        {% for tag in tags.releases %}
+	{% set tags = site.data.github.libimobiledevice[component].tags | sort((a,b) => version_compare(b, a)) %}
+        {% for tag in tags %}
 	<div class="entry-content">
 	    <a href="{{ component }}/{{ tag }}/">{{ component }} {{ tag }}</a>
 	</div>
