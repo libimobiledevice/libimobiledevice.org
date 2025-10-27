@@ -5,11 +5,31 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2025-10-23T04:08:15+02:00</updated>
+  <updated>2025-10-27T19:31:28+01:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
   </author>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/docs/libimobiledevice/</id>
+    <title>libimobiledevice API documentation</title>
+    <content type="html">
+      <![CDATA[<p>The libimobiledevice API documentation is available for the following releases:</p>]]>
+    </content>
+    <link href="https://libimobiledevice.org/docs/libimobiledevice/" rel="alternate" type="text/html" />
+    <published>2025-10-27T19:31:28+01:00</published>
+    <updated>2025-10-27T19:31:28+01:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/docs/libplist/</id>
+    <title>libplist API documentation</title>
+    <content type="html">
+      <![CDATA[<p>The libplist API documentation is available for the following releases:</p>]]>
+    </content>
+    <link href="https://libimobiledevice.org/docs/libplist/" rel="alternate" type="text/html" />
+    <published>2025-10-27T19:31:28+01:00</published>
+    <updated>2025-10-27T19:31:28+01:00</updated>
+  </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/status/</id>
     <title>Status</title>
@@ -17,8 +37,8 @@
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
-    <published>2025-10-23T04:08:15+02:00</published>
-    <updated>2025-10-23T04:08:15+02:00</updated>
+    <published>2025-10-27T19:31:28+01:00</published>
+    <updated>2025-10-27T19:31:28+01:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2025/10/14/ifuse-1.2.0-release/</id>
