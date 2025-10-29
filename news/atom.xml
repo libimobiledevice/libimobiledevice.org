@@ -14,9 +14,9 @@
     <id>https://libimobiledevice.org/news/2025/10/24/docs-updated/</id>
     <title>Updated Documentation</title>
     <content type="html">
-      <![CDATA[<p>The <a href="docs/libimobiledevice/latest">libimobiledevice API documentation</a> has been updated for the latest release of 1.4.0,
-and also the <a href="docs/libplist/latest">libplist API documentation</a> is now available on this website.</p>
-<p>An overview of all available documentation can be found <a href="docs">here</a>.</p>]]>
+      <![CDATA[<p>The <a href="https://libimobiledevice.org/docs/libimobiledevice/latest">libimobiledevice API documentation</a> has been updated for the latest release of 1.4.0,
+and also the <a href="https://libimobiledevice.org/docs/libplist/latest">libplist API documentation</a> is now available on this website.</p>
+<p>An overview of all available documentation can be found <a href="https://libimobiledevice.org/docs">here</a>.</p>]]>
     </content>
     <link href="https://libimobiledevice.org/news/2025/10/24/docs-updated/" rel="alternate" type="text/html" />
     <published>2025-10-24T03:21:00+02:00</published>
