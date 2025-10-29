@@ -23,7 +23,7 @@
 	{% set tags = site.data.github.libimobiledevice[component].tags | sort((a,b) => (b|split('.')|map(v => '%05d'|format(v))|join) <=> (a|split('.')|map(v => '%05d'|format(v))|join)) %}
         {% for tag in tags %}
 	<div class="entry-content">
-	    <a href="{{ component }}/{{ tag }}/">{{ component }} {{ tag }}</a>
+	    <a href="{{ tag }}/">{{ component }} {{ tag }}</a>
 	</div>
 	{% endfor %}
 			</article>
