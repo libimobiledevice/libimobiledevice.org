@@ -5,7 +5,7 @@
   <subtitle><![CDATA[libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking.]]></subtitle>
   <link href="https://libimobiledevice.org/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://libimobiledevice.org/" rel="alternate" type="text/html" />
-  <updated>2025-10-29T02:06:23+01:00</updated>
+  <updated>2025-10-31T01:25:18+01:00</updated>
   <author>
     <name>Mirell Development</name>
     <uri>https://mirell.com</uri>
@@ -17,8 +17,8 @@
       <![CDATA[<p>The libimobiledevice API documentation is available for the following releases:</p>]]>
     </content>
     <link href="https://libimobiledevice.org/docs/libimobiledevice/" rel="alternate" type="text/html" />
-    <published>2025-10-29T02:06:23+01:00</published>
-    <updated>2025-10-29T02:06:23+01:00</updated>
+    <published>2025-10-31T01:25:18+01:00</published>
+    <updated>2025-10-31T01:25:18+01:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/docs/libplist/</id>
@@ -27,8 +27,8 @@
       <![CDATA[<p>The libplist API documentation is available for the following releases:</p>]]>
     </content>
     <link href="https://libimobiledevice.org/docs/libplist/" rel="alternate" type="text/html" />
-    <published>2025-10-29T02:06:23+01:00</published>
-    <updated>2025-10-29T02:06:23+01:00</updated>
+    <published>2025-10-31T01:25:18+01:00</published>
+    <updated>2025-10-31T01:25:18+01:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/status/</id>
@@ -37,8 +37,35 @@
       <![CDATA[]]>
     </content>
     <link href="https://libimobiledevice.org/status/" rel="alternate" type="text/html" />
-    <published>2025-10-29T02:06:23+01:00</published>
-    <updated>2025-10-29T02:06:23+01:00</updated>
+    <published>2025-10-31T01:25:18+01:00</published>
+    <updated>2025-10-31T01:25:18+01:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://libimobiledevice.org/news/2025/10/30/ideviceinstaller-1.2.0-release/</id>
+    <title>ideviceinstaller 1.2.0</title>
+    <content type="html">
+      <![CDATA[<p><a href="/#download-ideviceinstaller">ideviceinstaller 1.2.0</a> has been released.</p>
+<h2 id="Breaking+changes" name="Breaking+changes">Breaking changes</h2>
+<ul>
+<li>Command line options are now using subcommands like <code>install</code>, <code>list</code>, etc. instead of the old <code>-i</code>, <code>-l</code>
+<!-- excerpt -->
+<h2 id="Changes" name="Changes">Changes</h2></li>
+<li>Add options for using external sinf and iTunes metadata</li>
+<li>Add JSON output capability</li>
+<li>Use CFBundleShortVersionString to display the app version</li>
+<li>Add -a command line switch to specify return attributes for 'list' command</li>
+<li>Add -b, --bundle-identifier command line switch to allow querying for bundle identifier</li>
+</ul>
+<h2 id="Bug+Fixes%3A" name="Bug+Fixes%3A">Bug Fixes:</h2>
+<ul>
+<li>Fix picking wrong app directory from zip/ipa when there are other directories</li>
+<li>Fix wrong exit code on specific output format (xml or json)</li>
+<li>Make sure to always return an error code if something goes wrong</li>
+</ul>]]>
+    </content>
+    <link href="https://libimobiledevice.org/news/2025/10/30/ideviceinstaller-1.2.0-release/" rel="alternate" type="text/html" />
+    <published>2025-10-30T20:24:00+01:00</published>
+    <updated>2025-10-30T20:24:00+01:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://libimobiledevice.org/news/2025/10/24/docs-updated/</id>

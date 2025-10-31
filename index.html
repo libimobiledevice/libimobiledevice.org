@@ -162,7 +162,7 @@
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libirecovery/releases/download/1.3.1/libirecovery-1.3.1.tar.bz2">libirecovery <span class="font-weight-light text-muted">1.3.1</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/idevicerestore/releases/download/1.0.0/idevicerestore-1.0.0.tar.bz2">idevicerestore <span class="font-weight-light text-muted">1.0.0</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libimobiledevice/releases/download/1.4.0/libimobiledevice-1.4.0.tar.bz2">libimobiledevice <span class="font-weight-light text-muted">1.4.0</span></a>
-											<a class="dropdown-item" href="https://github.com/libimobiledevice/ideviceinstaller/releases/download/1.1.1/ideviceinstaller-1.1.1.tar.bz2">ideviceinstaller <span class="font-weight-light text-muted">1.1.1</span></a>
+											<a class="dropdown-item" href="https://github.com/libimobiledevice/ideviceinstaller/releases/download/1.2.0/ideviceinstaller-1.2.0.tar.bz2">ideviceinstaller <span class="font-weight-light text-muted">1.2.0</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libideviceactivation/releases/download/1.1.1/libideviceactivation-1.1.1.tar.bz2">libideviceactivation <span class="font-weight-light text-muted">1.1.1</span></a>
 											<a class="dropdown-item" href="https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.2/libimobiledevice-glue-1.3.2.tar.bz2">libimobiledevice-glue <span class="font-weight-light text-muted">1.3.2</span></a>
 									</div>
@@ -603,12 +603,12 @@ Restarting device.</code></pre>
 			<div class="col mb-4">
 		<div id="download-ideviceinstaller" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ideviceinstaller" href="#download-details-ideviceinstaller" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ideviceinstaller</a>&nbsp;<a href="https://github.com/libimobiledevice/ideviceinstaller/releases/tag/1.1.1"><small class="font-weight-light text-muted">1.1.1</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ideviceinstaller/build.yml?branch=master"></div></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ideviceinstaller" href="#download-details-ideviceinstaller" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ideviceinstaller</a>&nbsp;<a href="https://github.com/libimobiledevice/ideviceinstaller/releases/tag/1.2.0"><small class="font-weight-light text-muted">1.2.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ideviceinstaller/build.yml?branch=master"></div></h3>
 			</div>
 			<div class="card-details collapse" id="download-details-ideviceinstaller" data-parent="#download-ideviceinstaller">
 				<div class="card-body">
 					<p class="card-text">Manage apps of iOS devices</p>
-										<a href="https://github.com/libimobiledevice/ideviceinstaller/releases/download/1.1.1/ideviceinstaller-1.1.1.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+										<a href="https://github.com/libimobiledevice/ideviceinstaller/releases/download/1.2.0/ideviceinstaller-1.2.0.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
 					
 															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/gpl-2.0" target="_blank" rel="noreferrer" class="text-reset" title="View GNU General Public License v2.0">GPL-2.0 License</a></span>
 									</div>
@@ -621,27 +621,24 @@ Restarting device.</code></pre>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4 id="1.1.1+%282020-06-15%29" name="1.1.1+%282020-06-15%29">1.1.1 (2020-06-15)</h4>
-<p>Maintenance release.</p>
-<h5 id="Features" name="Features">Features</h5>
+					<h4 id="1.2.0+%282025-10-30%29" name="1.2.0+%282025-10-30%29">1.2.0 (2025-10-30)</h4>
+<h5 id="Breaking+changes" name="Breaking+changes">Breaking changes</h5>
 <ul>
-<li>Bump autoconf requirement to 2.64</li>
-<li>Bump libzip dependency to 0.10</li>
-<li>Ignore <code>.DS_Store</code> and hidden files when parsing ZIP files</li>
-<li>Improve excessive progress output</li>
-<li>Return non-zero exit status on errors</li>
-<li>Remove length check on UDID argument to support newer devices</li>
-<li>Add <code>-n</code> option to make waiting on install/uninstall notification optional</li>
-<li>Add <code>--network</code> and <code>--version</code> options to ideviceactivation tool</li>
-<li>Bump libimobiledevice dependency to 1.3.0</li>
-<li>Bump libplist dependency to 2.2.0</li>
-<li>Improve README.md with project description, installation, contributing and usage sections</li>
+<li>Command line options are now using subcommands like <code>install</code>, <code>list</code>, etc. instead of the old <code>-i</code>, <code>-l</code></li>
 </ul>
-<h5 id="Bug+Fixes" name="Bug+Fixes">Bug Fixes</h5>
+<h5 id="Changes" name="Changes">Changes</h5>
 <ul>
-<li>Fix device removal detection triggering on any device unplug</li>
-<li>Fix win32 build</li>
-<li>Ignore <code>SIGPIPE</code> signal</li>
+<li>Add options for using external sinf and iTunes metadata</li>
+<li>Add JSON output capability</li>
+<li>Use CFBundleShortVersionString to display the app version</li>
+<li>Add -a command line switch to specify return attributes for 'list' command</li>
+<li>Add -b, --bundle-identifier command line switch to allow querying for bundle identifier</li>
+</ul>
+<h5 id="Bug+Fixes%3A" name="Bug+Fixes%3A">Bug Fixes:</h5>
+<ul>
+<li>Fix picking wrong app directory from zip/ipa when there are other directories</li>
+<li>Fix wrong exit code on specific output format (xml or json)</li>
+<li>Make sure to always return an error code if something goes wrong</li>
 </ul>
 				</div>
 							</div>
@@ -1190,6 +1187,25 @@ $ make</code></pre>
 		<div class="col mb-4">
 		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
 						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
+				<a href="https://libimobiledevice.org/news/2025/10/30/ideviceinstaller-1.2.0-release/">
+					<img data-src="https://libimobiledevice.org/img/logo.svg" class="img-fluid filter-grayscale-hover" height="180" alt="Download">
+				</a>
+			</div>
+						<div class="card-body">
+				<h5 class="card-title"><a href="https://libimobiledevice.org/news/2025/10/30/ideviceinstaller-1.2.0-release/" class="text-reset">ideviceinstaller 1.2.0</a></h5>
+				<p class="card-text"><p><a href="/#download-ideviceinstaller">ideviceinstaller 1.2.0</a> has been released.</p>
+<h2 id="Breaking+changes" name="Breaking+changes">Breaking changes</h2>
+<ul>
+<li>Command line options are now using subcommands like <code>install</code>, <code>list</code>, etc. instead of the old <code>-i</code>, <code>-l</code></p>
+			</div>
+			<div class="card-footer">
+				<p class="card-text"><small class="text-muted">Oct 30, 2025, 8:24 PM</small></p>
+			</div>
+		</div>
+	</div>
+		<div class="col mb-4">
+		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
+						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
 				<a href="https://libimobiledevice.org/news/2025/10/24/docs-updated/">
 					<img data-src="https://libimobiledevice.org/assets/thumbnails/384/img/news/new-docs.e20ed7801e765c801f9b107898656430.png" class="img-fluid filter-grayscale-hover" alt="Updated Documentation Picture">
 				</a>
@@ -1216,22 +1232,6 @@ $ make</code></pre>
 			</div>
 			<div class="card-footer">
 				<p class="card-text"><small class="text-muted">Oct 17, 2025, 7:35 PM</small></p>
-			</div>
-		</div>
-	</div>
-		<div class="col mb-4">
-		<div class="card h-100 shadow-hover filter-grayscale-hover-trigger">
-						<div class="card-img-top border-bottom overflow-hidden" style="max-height: 160px">
-				<a href="https://libimobiledevice.org/news/2025/10/14/ifuse-1.2.0-release/">
-					<img data-src="https://libimobiledevice.org/img/logo.svg" class="img-fluid filter-grayscale-hover" height="180" alt="Download">
-				</a>
-			</div>
-						<div class="card-body">
-				<h5 class="card-title"><a href="https://libimobiledevice.org/news/2025/10/14/ifuse-1.2.0-release/" class="text-reset">ifuse 1.2.0</a></h5>
-				<p class="card-text"><p><a href="/#download-ifuse">ifuse 1.2.0</a> has been released.</p></p>
-			</div>
-			<div class="card-footer">
-				<p class="card-text"><small class="text-muted">Oct 14, 2025, 3:09 AM</small></p>
 			</div>
 		</div>
 	</div>
@@ -1544,7 +1544,7 @@ $ make</code></pre>
 		<hr>
 								<div class="row">
 			<div class="col-12 text-center text-md-left">
-				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Wed, 29 Oct 2025 02:07:13 +0100</small>
+				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Fri, 31 Oct 2025 01:26:05 +0100</small>
 			</div>
 		</div>
 	</div>

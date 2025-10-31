@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>ideviceinstaller 1.2.0 &middot; libimobiledevice</title>
+
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="en">
+
+		<link rel="preload" as="style" href="https://libimobiledevice.org/css/main.min.css">
+
+	    <title>ideviceinstaller 1.2.0 &middot; libimobiledevice</title>
+    <meta name="description" content="libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking." />
+    <meta name="keywords" content="Linux, iOS, iPhone, iPod Touch, iPad, iPad mini, Apple TV, iTunes, development, library, afc, lockdownd, libplist, installation_proxy, usbmux, plist, libirecovery, idevicerestore, iTunesCDB, tethering, backup, restore, C/C++, instruments, MDM, mobileconfig, provisioning, FOSS" />
+    <meta name="author" content="https://github.com/nikias">
+
+    <link rel="canonical" type="text/html" title="ideviceinstaller 1.2.0 &middot; libimobiledevice" href="https://libimobiledevice.org/news/2025/10/30/ideviceinstaller-1.2.0-release/" />    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="libimobiledevice" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ideviceinstaller 1.2.0 &middot; libimobiledevice" />
+    <meta property="og:description" content="libimobiledevice is a software library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices running iOS on Linux without the need for jailbreaking." />
+    <meta property="og:url" content="https://libimobiledevice.org/news/2025/10/30/ideviceinstaller-1.2.0-release" />
+    <meta property="og:image" content="https://libimobiledevice.org/img/brand/brand-ontop-gradient-alpha.png" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@libimobiledev">
+
+	<meta name="theme-color" content="#0a9197">
+
+	<link rel="canonical" href="https://libimobiledevice.org/news/2025/10/30/ideviceinstaller-1.2.0-release/">
+
+	<link rel="stylesheet" href="https://libimobiledevice.org/css/main.min.css">
+
+	<link rel="shortcut icon" href="https://libimobiledevice.org/favicon.ico">
+	<link rel="icon" href="https://libimobiledevice.org/favicon.ico" type="image/x-icon">
+	
+</head>
+
+<body class="template-page-news">
+
+		<header class="banner fixed-top bg-light shadow-sm">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+	<a href="https://libimobiledevice.org/#" class="navbar-brand" title="Go Home">
+		<img class="d-inline-block align-top" src="https://libimobiledevice.org/img/logo.svg" alt="Brand for libimobiledevice" height="48" onerror="this.onerror=null; this.src='https://libimobiledevice.org/img/logo.png'">
+	</a>
+
+	<div class="d-flex text-muted align-items-center d-lg-none ml-auto mr-2">
+		<a class="text-reset mx-2" href="https://github.com/libimobiledevice/libimobiledevice/releases/tag/1.4.0" target="_blank" rel="noopener">v1.4.0</a>
+
+						<a class="text-reset mx-2" href="https://github.com/libimobiledevice" target="_blank" rel="noopener"><i class="fab fa-github fa-fw" target="_blank" rel="noopener" title="Contribute on GitHub"></i></a>
+				<a class="text-reset mx-2" href="https://twitter.com/intent/user?screen_name=libimobiledev" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" target="_blank" rel="noopener" title="Follow on Twitter"></i></a>
+				<a class="text-reset mx-2" href="https://t.me/libimobiledevice" target="_blank" rel="noopener"><i class="fab fa-telegram fa-fw" target="_blank" rel="noopener" title="Chat on Telegram"></i></a>
+					</div>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent" data-toggle="collapse" data-target="#navbarSupportedContent.show">
+
+		<ul class="navbar-nav mr-auto">
+									<li class="nav-item">
+				<a class="nav-link" href="https://libimobiledevice.org/">Home</a>
+			</li>									<li class="nav-item active">
+				<a class="nav-link" href="https://libimobiledevice.org/news/">News</a>
+			</li>									<li class="nav-item">
+				<a class="nav-link" href="https://libimobiledevice.org/#downloads">Download</a>
+			</li>									<li class="nav-item">
+				<a class="nav-link" href="https://libimobiledevice.org/#community">Community</a>
+			</li>									<li class="nav-item">
+				<a class="nav-link" href="https://libimobiledevice.org/#faq">FAQ</a>
+			</li>									<li class="nav-item">
+				<a class="nav-link" href="https://libimobiledevice.org/status/">Status</a>
+			</li>						
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="https://libimobiledevice.org/#get-started">Get Started</a>
+					<a class="dropdown-item" href="https://libimobiledevice.org/#features">Features</a>
+					<a class="dropdown-item" href="https://libimobiledevice.org/#examples">Examples</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="https://libimobiledevice.org/docs">All Documentation</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="https://libimobiledevice.org/docs/libimobiledevice/latest">libimobiledevice <span class="badge badge-info">API</span></a>
+					<a class="dropdown-item" href="https://libimobiledevice.org/docs/libplist/latest">libplist <span class="badge badge-info">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libimobiledevice-glue <span class="badge badge-muted">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libusbmuxd <span class="badge badge-muted">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libirecovery <span class="badge badge-muted">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libtatsu <span class="badge badge-muted">API</span></a>
+					<a class="dropdown-item disabled" href="#" title="Oh noe. Sorry, that one is not available yet.">libideviceactivation <span class="badge badge-muted">API</span></a>
+				</div>
+			</li>
+						<li class="nav-item">
+				<a class="nav-link" href="https://libimobiledevice.org/#resources">Resources</a>
+			</li>
+					</ul>
+
+		<ul class="navbar-nav ml-auto align-items-center d-none d-md-flex">
+			<li class="nav-item">
+				<a class="nav-link" href="https://github.com/libimobiledevice/libimobiledevice/releases/tag/1.4.0" target="_blank" rel="noopener">v1.4.0</a>
+			</li>
+									<li class="nav-item">
+				<a class="nav-link" href="https://github.com/libimobiledevice"><i class="fab fa-github fa-fw" target="_blank" rel="noopener" title="Contribute on GitHub"></i></a>
+			</li>
+						<li class="nav-item">
+				<a class="nav-link" href="https://twitter.com/intent/user?screen_name=libimobiledev"><i class="fab fa-twitter fa-fw" target="_blank" rel="noopener" title="Follow on Twitter"></i></a>
+			</li>
+						<li class="nav-item">
+				<a class="nav-link" href="https://t.me/libimobiledevice"><i class="fab fa-telegram fa-fw" target="_blank" rel="noopener" title="Chat on Telegram"></i></a>
+			</li>
+								</ul>
+
+	</div>
+</nav>
+		</div>
+
+		<!--[if lt IE 10]>
+<div class="mb-0 pt-5 alert alert-warning alert-dismissible fade show" role="alert">
+	<div class="container text-center">
+		<h1><i class="fas fa-exclamation-triangle"></i>&nbsp;You are using an outdated browser.</h1>
+		<p>Please <a href="https://browsehappy.com/" target="_blank" rel="noopener" class="alert-link">upgrade your browser</a> to improve your experience.</p>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+</div>
+<![endif]-->	</header>
+	
+	<main class="content">
+
+							<div class="container-fluid bg-white">
+	<div class="container py-4 px-lg-5 px-0">
+	<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="https://libimobiledevice.org/">Home</a></li>
+			<li class="breadcrumb-item" aria-current="page"><a href="https://libimobiledevice.org/news/">News</a></li>
+			<li class="breadcrumb-item active" aria-current="page">ideviceinstaller 1.2.0</li>
+		</ol>
+</nav>
+	</div>
+</div>
+				
+		
+<section id="news-article" class="container-fluid bg-white">
+	<div class="container py-4 p-lg-5 px-0">
+				<div class="row">
+	<div class="col">
+		<article>
+			<header class="mb-4">
+				<h1 class="section-title">ideviceinstaller 1.2.0</h1>
+				<p class="text-muted">Posted on <time>October 30, 2025 at 8:24 PM</time> by <a href="https://github.com/nikias" target="_blank" rel="noreferrer">@nikias</a></p>
+			</header>
+			<hr class="bg-info">
+			<div class="row mt-4">
+								<div class="col">
+					<div class="entry-content"><p><a href="/#download-ideviceinstaller">ideviceinstaller 1.2.0</a> has been released.</p>
+<h2 id="Breaking+changes" name="Breaking+changes">Breaking changes</h2>
+<ul>
+<li>Command line options are now using subcommands like <code>install</code>, <code>list</code>, etc. instead of the old <code>-i</code>, <code>-l</code>
+<span id="more"></span>
+<h2 id="Changes" name="Changes">Changes</h2></li>
+<li>Add options for using external sinf and iTunes metadata</li>
+<li>Add JSON output capability</li>
+<li>Use CFBundleShortVersionString to display the app version</li>
+<li>Add -a command line switch to specify return attributes for 'list' command</li>
+<li>Add -b, --bundle-identifier command line switch to allow querying for bundle identifier</li>
+</ul>
+<h2 id="Bug+Fixes%3A" name="Bug+Fixes%3A">Bug Fixes:</h2>
+<ul>
+<li>Fix picking wrong app directory from zip/ipa when there are other directories</li>
+<li>Fix wrong exit code on specific output format (xml or json)</li>
+<li>Make sure to always return an error code if something goes wrong</li>
+</ul></div>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>
+			</div>
+</section>
+
+
+		<section id="community" class="container-fluid bg-white">
+	<div class="container py-4 p-lg-5 px-0">
+		<div class="row section-heading">
+	<div class="col-12">
+		<h2 class="section-title mb-5">Join the Community</h2>
+	</div>
+</div>
+<div class="row mb-4">
+	<div class="col-12">
+		<p class="lead">We are thrilled that you would like to contribute to this project. Your help is essential for keeping it great.</p>
+	</div>
+</div>
+		<div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
+
+			<div class="col mb-4 h-100">
+		<div class="card justify-content-center mb-1 border-0">
+			<div class="row no-gutters align-items-center">
+				<div class="card-body">
+					<div class="card-img-top"><i class="fab fa-github fa-2x" title="Our GitHub Project"></i></div>
+					<hr class="border-warning">
+					<a target="_blank" rel="noopener" href="https://github.com/libimobiledevice" class="card-link text-dark stretched-link"><h5 class="my-2">Contribute on GitHub</h5></a>
+					<p class="card-text">Warm welcome for pull requests and technical stuff.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="col mb-4 h-100">
+		<div class="card justify-content-center mb-1 border-0">
+			<div class="row no-gutters align-items-center">
+				<div class="card-body">
+					<div class="card-img-top"><i class="fas fa-envelope fa-2x" title="Our Mailing List"></i></div>
+					<hr class="border-warning">
+					<a target="_blank" rel="noopener" href="https://lists.libimobiledevice.org/mailman/listinfo/libimobiledevice-devel" class="card-link text-dark stretched-link"><h5 class="my-2">Discuss on Mailing List</h5></a>
+					<p class="card-text">The classic way by E-Mail.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="col mb-4 h-100">
+		<div class="card justify-content-center mb-1 border-0">
+			<div class="row no-gutters align-items-center">
+				<div class="card-body">
+					<div class="card-img-top"><i class="fab fa-stack-overflow fa-2x" title="Questions about libimobiledevice on Stackoverflow"></i></div>
+					<hr class="border-warning">
+					<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/libimobiledevice" class="card-link text-dark stretched-link"><h5 class="my-2">Ask on Stackoverflow</h5></a>
+					<p class="card-text">Best for general questions and support.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="col mb-4 h-100">
+		<div class="card justify-content-center mb-1 border-0">
+			<div class="row no-gutters align-items-center">
+				<div class="card-body">
+					<div class="card-img-top"><i class="fab fa-twitter fa-2x" title="Our Twitter Profile"></i></div>
+					<hr class="border-warning">
+					<a target="_blank" rel="noopener" href="https://twitter.com/intent/user?screen_name=libimobiledev" class="card-link text-dark stretched-link"><h5 class="my-2">Follow on Twitter</h5></a>
+					<p class="card-text">For latest updates in a birdly manner.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="col mb-4 h-100">
+		<div class="card justify-content-center mb-1 border-0">
+			<div class="row no-gutters align-items-center">
+				<div class="card-body">
+					<div class="card-img-top"><i class="fab fa-telegram fa-2x" title="Our Telegram Group"></i></div>
+					<hr class="border-warning">
+					<a target="_blank" rel="noopener" href="https://t.me/libimobiledevice" class="card-link text-dark stretched-link"><h5 class="my-2">Chat on Telegram</h5></a>
+					<p class="card-text">Get hands on with developers.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="col mb-4 h-100">
+		<div class="card justify-content-center mb-1 border-0">
+			<div class="row no-gutters align-items-center">
+				<div class="card-body">
+					<div class="card-img-top"><i class="fas fa-hashtag fa-2x" title="Our IRC Channel"></i></div>
+					<hr class="border-warning">
+					<a target="_blank" rel="noopener" href="irc://libera.chat#libimobiledevice" class="card-link text-dark stretched-link"><h5 class="my-2">Chat on IRC</h5></a>
+					<p class="card-text">Get hands on in ASCII style.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+</div>
+			</div>
+</section>
+
+		<div class="shape-1 bottom" style="background-color: var(--white); overflow: hidden; width: 100%; height: 40px;"><svg viewBox="0 0 600 40" preserveAspectRatio="none" style="width: 100%; height: 100%; -webkit-transform: scale(1); transform: scale(1);"><path d="M 0,20 C 40,40 400,-20 600,20 V 40 H 0 Z" style="stroke: none; fill: var(--info);"></path></svg></div>
+		<section id="quote" class="container-fluid bg-info text-white">
+	<div class="container py-4 p-lg-5 px-0">
+				<div class="row">
+	<div class="col-12">
+		<blockquote class="blockquote text-center">
+			<p class="mb-0">We'll miss you, Steve.</p>
+			<footer class="blockquote-footer text-light"><a href="https://www.apple.com/stevejobs/" target="_blank" rel="noreferrer" class="text-white">Steve Jobs</a>, 1955 - 2011</footer>
+		</blockquote>
+	</div>
+</div>
+			</div>
+</section>
+
+	</main>
+
+	<footer class="bg-light text-muted border-top">
+	<div class="container py-4">
+		<div class="row">
+			<div class="col-12 text-center text-md-left">
+				<ul class="list-inline d-flex align-items-center justify-content-center justify-content-md-start">
+					<li class="list-inline-item"><img class="pb-2" alt="GitHub Stars" data-src="https://img.shields.io/github/stars/libimobiledevice/libimobiledevice?style=social"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-lg-6 text-center text-md-left">
+				<span class="navbar-text">&copy; 2025 <strong>libimobiledevice</strong>. All rights reserved.</span>
+			</div>
+			<div class="col d-flex align-items-center justify-content-center justify-content-md-end">
+				<ul class="nav justify-content-center justify-content-md-end">
+					
+															<li class="nav-item">
+						<a class="nav-link" href="https://github.com/libimobiledevice"><i class="fab fa-github fa-fw" target="_blank" rel="noopener" title="Contribute on GitHub"></i></a>
+					</li>
+										<li class="nav-item">
+						<a class="nav-link" href="https://lists.libimobiledevice.org/mailman/listinfo/libimobiledevice-devel"><i class="fas fa-envelope fa-fw" target="_blank" rel="noopener" title="Discuss on Mailing List"></i></a>
+					</li>
+										<li class="nav-item">
+						<a class="nav-link" href="https://stackoverflow.com/questions/tagged/libimobiledevice"><i class="fab fa-stack-overflow fa-fw" target="_blank" rel="noopener" title="Ask on Stackoverflow"></i></a>
+					</li>
+										<li class="nav-item">
+						<a class="nav-link" href="https://twitter.com/intent/user?screen_name=libimobiledev"><i class="fab fa-twitter fa-fw" target="_blank" rel="noopener" title="Follow on Twitter"></i></a>
+					</li>
+										<li class="nav-item">
+						<a class="nav-link" href="https://t.me/libimobiledevice"><i class="fab fa-telegram fa-fw" target="_blank" rel="noopener" title="Chat on Telegram"></i></a>
+					</li>
+										<li class="nav-item">
+						<a class="nav-link" href="irc://libera.chat#libimobiledevice"><i class="fas fa-hashtag fa-fw" target="_blank" rel="noopener" title="Chat on IRC"></i></a>
+					</li>
+										
+					<li class="nav-item">
+						<a class="nav-link" href="https://libimobiledevice.org/news/atom.xml" title="Subscribe to our news" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+								<div class="row">
+			<div class="col-12 text-center text-md-left">
+				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Fri, 31 Oct 2025 01:26:05 +0100</small>
+			</div>
+		</div>
+	</div>
+</footer>
+
+	<a href="#" class="d-none back-to-top animated shadow" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+
+	<script src="https://libimobiledevice.org/js/vendor.578c959c8f33213a65a36cdf384f8f2f.min.js"></script>
+	<script src="https://libimobiledevice.org/js/vendor2.9325883cc35d519ef9c449b5a57d8bfc.min.js"></script>
+
+	<script src="https://libimobiledevice.org/js/prism.de789170a16e0f1c97bb0b53fda365ea.min.js" async></script>
+
+	<script src="https://libimobiledevice.org/js/waypoints.7bfd4c33d7f7fab5ebda017c89eaefac.min.js" async></script>
+
+	<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-4831747-7', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src="//www.google-analytics.com/analytics.js"></script>
+<!-- End Google Analytics -->
+
+</body>
+</html>
