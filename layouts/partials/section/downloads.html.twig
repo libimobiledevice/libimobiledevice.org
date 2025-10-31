@@ -37,7 +37,7 @@
 					<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/{{ license.key }}" target="_blank" rel="noreferrer" class="text-reset" title="View {{ license.name | e }}">{{ repo.license.spdx_id }} License</a></span>
 					{% endif %}
 				</div>
-				{% set deps = site.data.github.libimobiledevice[repo.name].dependencies %}
+				{% set deps = site.data.github.libimobiledevice[repo.name].dependencies | map(i => i == 'limd_glue' ? 'libimobiledevice-glue' : i) %}
 				{% if deps | length %}
 				<div class="card-header border-top">
 					<small class="text-muted">Depends on:</small>
