@@ -16,8 +16,36 @@
 {% block section_content %}
 <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
 
-	{% set repos = site.data.github.libimobiledevice.repos | filter(p => site.data.github.libimobiledevice[p.name].releases.latest is defined) | sort((a, b) => a.stargazers_count < b.stargazers_count) %}
-
+	{% set repos = site.data.github.libimobiledevice.repos | filter(p => site.data.github.libimobiledevice[p.name].releases.latest is defined) %}
+	{% set updated = [] %}
+	{% for repo in repos %}
+		{% set weight = 0 %}
+		{% if repo.name == 'libimobiledevice' %}
+			{% set weight = 20 %}
+		{% elseif repo.name == 'libplist' %}
+			{% set weight = 19 %}
+		{% elseif repo.name == 'libimobiledevice-glue' %}
+			{% set weight = 18 %}
+		{% elseif repo.name == 'libusbmuxd' %}
+			{% set weight = 17 %}
+		{% elseif repo.name == 'usbmuxd' %}
+			{% set weight = 16 %}
+		{% elseif repo.name == 'ideviceinstaller' %}
+			{% set weight = 15 %}
+		{% elseif repo.name == 'libirecovery' %}
+			{% set weight = 14 %}
+		{% elseif repo.name == 'libtatsu' %}
+			{% set weight = 13 %}
+		{% elseif repo.name == 'libideviceactivation' %}
+			{% set weight = 12 %}
+		{% elseif repo.name == 'idevicerestore' %}
+			{% set weight = 11 %}
+		{% elseif repo.name == 'ifuse' %}
+			{% set weight = 10 %}
+		{% endif %}
+		{% set updated = updated|merge([repo|merge({'weight': weight})]) %}
+	{% endfor %}
+	{% set repos = updated | sort((a, b) => a.weight < b.weight) %}
 	{% for repo in repos %}
 	{% set release = site.data.github.libimobiledevice[repo.name].releases.latest %}
 	<div class="col mb-4">
