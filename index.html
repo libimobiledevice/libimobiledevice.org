@@ -427,8 +427,7 @@ Restarting device.</code></pre>
 </div>
 		<div class="row row-cols-1 row-cols-md-1 row-cols-lg-1">
 
-	
-			<div class="col mb-4">
+																																																																																																																																											<div class="col mb-4">
 		<div id="download-libimobiledevice" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
 				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libimobiledevice" href="#download-details-libimobiledevice" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libimobiledevice</a>&nbsp;<a href="https://github.com/libimobiledevice/libimobiledevice/releases/tag/1.4.0"><small class="font-weight-light text-muted">1.4.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libimobiledevice/build.yml?branch=master"></div></h3>
@@ -485,6 +484,119 @@ Restarting device.</code></pre>
 <h5 id="Bug+fixes" name="Bug+fixes">Bug fixes</h5>
 <ul>
 <li>definitely some, it has been to long to go through everything</li>
+</ul>
+				</div>
+							</div>
+		</div>
+	</div>
+
+			<div class="col mb-4">
+		<div id="download-libplist" class="card card-download accordion h-100 shadow">
+			<div class="card-header">
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libplist" href="#download-details-libplist" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libplist</a>&nbsp;<a href="https://github.com/libimobiledevice/libplist/releases/tag/2.7.0"><small class="font-weight-light text-muted">2.7.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libplist/build.yml?branch=master"></div></h3>
+			</div>
+			<div class="card-details collapse" id="download-details-libplist" data-parent="#download-libplist">
+				<div class="card-body">
+					<p class="card-text">A library to handle Apple Property List format in binary or XML</p>
+										<a href="https://github.com/libimobiledevice/libplist/releases/download/2.7.0/libplist-2.7.0.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+					
+															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
+									</div>
+													<hr>
+												<div class="card-body">
+					<h4 id="2.7.0+%282025-05-14%29" name="2.7.0+%282025-05-14%29">2.7.0 (2025-05-14)</h4>
+<h5 id="Changes" name="Changes">Changes</h5>
+<ul>
+<li>Add <code>plist_new_unix_date</code>, <code>plist_get_unix_date_val</code>, <code>plist_set_unix_date_val</code> functions
+that work with <code>int64_t</code> values representing a UNIX timestamp instead of
+using the 'MAC epoch'.
+These new functions should be used instead of <code>plist_new_date</code>,
+<code>plist_get_date_val</code>, and <code>plist_set_date_val</code>, which are now marked deprecated
+and might be removed in a future version of libplist.</li>
+<li>Allow building the library without tool(s)</li>
+<li>Switch to more generic global initializer method</li>
+<li>json: Allow e+/E+ in exponent as per RFC 8259</li>
+<li>C++: Add more convenience functions to the interface</li>
+<li>C++: Add more type variants to different constructors and operators</li>
+</ul>
+<h5 id="Bugfixes%3A" name="Bugfixes%3A">Bugfixes:</h5>
+<ul>
+<li>Fix segmentation fault when calling <code>plist_sort()</code> on an empty dictionary</li>
+<li>Fix compilation on MSVC</li>
+<li>C++: Fix bug in internal helper function of Array class</li>
+<li>C++: Fix String::GetValue memory leaking and support assignment of <code>const char*</code></li>
+</ul>
+				</div>
+							</div>
+		</div>
+	</div>
+
+			<div class="col mb-4">
+		<div id="download-libimobiledevice-glue" class="card card-download accordion h-100 shadow">
+			<div class="card-header">
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libimobiledevice-glue" href="#download-details-libimobiledevice-glue" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libimobiledevice-glue</a>&nbsp;<a href="https://github.com/libimobiledevice/libimobiledevice-glue/releases/tag/1.3.2"><small class="font-weight-light text-muted">1.3.2</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libimobiledevice-glue/build.yml?branch=master"></div></h3>
+			</div>
+			<div class="card-details collapse" id="download-details-libimobiledevice-glue" data-parent="#download-libimobiledevice-glue">
+				<div class="card-body">
+					<p class="card-text">A library with common code used by libraries and tools around the libimobiledevice project</p>
+										<a href="https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.2/libimobiledevice-glue-1.3.2.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+					
+															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
+									</div>
+												<div class="card-header border-top">
+					<small class="text-muted">Depends on:</small>
+					<ul class="list-inline m-0">
+																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
+											</ul>
+				</div>
+												<div class="card-body">
+					<h4 id="1.3.2+%282025-06-04%29" name="1.3.2+%282025-06-04%29">1.3.2 (2025-06-04)</h4>
+<h5 id="Changes" name="Changes">Changes</h5>
+<ul>
+<li>socket: [macOS] Fix build on older macOS</li>
+<li>socket: [Windows] Prevent crash by properly initializing memory buffers</li>
+<li>Switch to better initializer strategy</li>
+<li>Fix compilation on MSVC</li>
+<li>Add <code>extern "C"</code> guards to public headers</li>
+<li>socket: Improve error message output/verbose logging</li>
+<li>socket: [Windows] Make sure errno is set in error conditions</li>
+<li>socket: Allow setting debug level via environment variable</li>
+<li>socket: [Windows] Use <code>WSAAddressToStringA</code> (ANSI version)</li>
+<li>socket: [Windows] Use <code>inet_ntop</code> instead of <code>WSAAddressToStringA</code> for &gt;= Vista</li>
+</ul>
+				</div>
+							</div>
+		</div>
+	</div>
+
+			<div class="col mb-4">
+		<div id="download-libusbmuxd" class="card card-download accordion h-100 shadow">
+			<div class="card-header">
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libusbmuxd" href="#download-details-libusbmuxd" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libusbmuxd</a>&nbsp;<a href="https://github.com/libimobiledevice/libusbmuxd/releases/tag/2.1.1"><small class="font-weight-light text-muted">2.1.1</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libusbmuxd/build.yml?branch=master"></div></h3>
+			</div>
+			<div class="card-details collapse" id="download-details-libusbmuxd" data-parent="#download-libusbmuxd">
+				<div class="card-body">
+					<p class="card-text">A client library to multiplex connections from and to iOS devices</p>
+										<a href="https://github.com/libimobiledevice/libusbmuxd/releases/download/2.1.1/libusbmuxd-2.1.1.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+					
+															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
+									</div>
+												<div class="card-header border-top">
+					<small class="text-muted">Depends on:</small>
+					<ul class="list-inline m-0">
+																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
+																		<li class="list-inline-item"><a href="#download-libimobiledevice-glue" class="text-reset"><span class="badge p-1 badge-info">libimobiledevice-glue</span></a></li>
+											</ul>
+				</div>
+												<div class="card-body">
+					<h4 id="2.1.1+%282025-06-04%29" name="2.1.1+%282025-06-04%29">2.1.1 (2025-06-04)</h4>
+<h5 id="Changes" name="Changes">Changes</h5>
+<ul>
+<li>tools: Fix potential issue with <code>select()</code> in case the network fd is higher than the usbmux fd</li>
+<li>Switch to better initializer strategy</li>
+<li>Fix compilation on MSVC</li>
+<li>iproxy: Make sure to print correct socket error messages</li>
+<li>inetcat: Make sure to report correct error messages</li>
 </ul>
 				</div>
 							</div>
@@ -555,52 +667,6 @@ Restarting device.</code></pre>
 	</div>
 
 			<div class="col mb-4">
-		<div id="download-idevicerestore" class="card card-download accordion h-100 shadow">
-			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-idevicerestore" href="#download-details-idevicerestore" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;idevicerestore</a>&nbsp;<a href="https://github.com/libimobiledevice/idevicerestore/releases/tag/1.0.0"><small class="font-weight-light text-muted">1.0.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/idevicerestore/build.yml?branch=master"></div></h3>
-			</div>
-			<div class="card-details collapse" id="download-details-idevicerestore" data-parent="#download-idevicerestore">
-				<div class="card-body">
-					<p class="card-text">Restore/upgrade firmware of iOS devices</p>
-										<a href="https://github.com/libimobiledevice/idevicerestore/releases/download/1.0.0/idevicerestore-1.0.0.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
-					
-															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-3.0" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v3.0">LGPL-3.0 License</a></span>
-									</div>
-												<div class="card-header border-top">
-					<small class="text-muted">Depends on:</small>
-					<ul class="list-inline m-0">
-																		<li class="list-inline-item"><a href="#download-libirecovery" class="text-reset"><span class="badge p-1 badge-info">libirecovery</span></a></li>
-																		<li class="list-inline-item"><a href="#download-libimobiledevice" class="text-reset"><span class="badge p-1 badge-info">libimobiledevice</span></a></li>
-																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
-																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libcurl</span></li>
-																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libzip</span></li>
-																		<li class="list-inline-item"><span class="badge p-1 badge-dark">openssl</span></li>
-																		<li class="list-inline-item"><span class="badge p-1 badge-dark">zlib</span></li>
-											</ul>
-				</div>
-												<div class="card-body">
-					<h4 id="1.0.0+%282020-06-15%29" name="1.0.0+%282020-06-15%29">1.0.0 (2020-06-15)</h4>
-<p>First official public release!</p>
-<h5 id="Features" name="Features">Features</h5>
-<ul>
-<li>Restore firmware files to iOS devices</li>
-<li>Use official IPSW firmware archive file or directory</li>
-<li>Updates the device by default or allows full restore erasing all data</li>
-<li>Download latest available firmware for device on demand</li>
-<li>Cache downloaded firmware files</li>
-<li>Restore using custom firmware files <em>(requires bootrom exploit)</em></li>
-<li>Skip NOR/Baseband upgrade</li>
-<li>Fetch TSS records as <code>.shsh</code> files</li>
-<li>Put devices in pwned DFU mode <em>(limera1n devices only)</em></li>
-<li>Use custom AP ticket from file</li>
-<li>Developed since 2010</li>
-</ul>
-				</div>
-							</div>
-		</div>
-	</div>
-
-			<div class="col mb-4">
 		<div id="download-ideviceinstaller" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
 				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ideviceinstaller" href="#download-details-ideviceinstaller" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ideviceinstaller</a>&nbsp;<a href="https://github.com/libimobiledevice/ideviceinstaller/releases/tag/1.2.0"><small class="font-weight-light text-muted">1.2.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ideviceinstaller/build.yml?branch=master"></div></h3>
@@ -646,72 +712,6 @@ Restarting device.</code></pre>
 	</div>
 
 			<div class="col mb-4">
-		<div id="download-ifuse" class="card card-download accordion h-100 shadow">
-			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ifuse" href="#download-details-ifuse" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ifuse</a>&nbsp;<a href="https://github.com/libimobiledevice/ifuse/releases/tag/1.2.0"><small class="font-weight-light text-muted">1.2.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ifuse/build.yml?branch=master"></div></h3>
-			</div>
-			<div class="card-details collapse" id="download-details-ifuse" data-parent="#download-ifuse">
-				<div class="card-body">
-					<p class="card-text">A fuse filesystem to access the contents of iOS devices</p>
-										<a href="https://github.com/libimobiledevice/ifuse/releases/download/1.2.0/ifuse-1.2.0.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
-					
-															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
-									</div>
-												<div class="card-header border-top">
-					<small class="text-muted">Depends on:</small>
-					<ul class="list-inline m-0">
-																		<li class="list-inline-item"><a href="#download-libimobiledevice" class="text-reset"><span class="badge p-1 badge-info">libimobiledevice</span></a></li>
-																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
-																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libfuse</span></li>
-											</ul>
-				</div>
-												<div class="card-body">
-					<h4 id="1.2.0+%282025-10-14%29" name="1.2.0+%282025-10-14%29">1.2.0 (2025-10-14)</h4>
-<h5 id="Changes" name="Changes">Changes</h5>
-<ul>
-<li>Switch to libfuse 3</li>
-<li>Require libimobiledevice 1.4.0</li>
-</ul>
-				</div>
-							</div>
-		</div>
-	</div>
-
-			<div class="col mb-4">
-		<div id="download-libusbmuxd" class="card card-download accordion h-100 shadow">
-			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libusbmuxd" href="#download-details-libusbmuxd" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libusbmuxd</a>&nbsp;<a href="https://github.com/libimobiledevice/libusbmuxd/releases/tag/2.1.1"><small class="font-weight-light text-muted">2.1.1</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libusbmuxd/build.yml?branch=master"></div></h3>
-			</div>
-			<div class="card-details collapse" id="download-details-libusbmuxd" data-parent="#download-libusbmuxd">
-				<div class="card-body">
-					<p class="card-text">A client library to multiplex connections from and to iOS devices</p>
-										<a href="https://github.com/libimobiledevice/libusbmuxd/releases/download/2.1.1/libusbmuxd-2.1.1.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
-					
-															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
-									</div>
-												<div class="card-header border-top">
-					<small class="text-muted">Depends on:</small>
-					<ul class="list-inline m-0">
-																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
-																		<li class="list-inline-item"><a href="#download-libimobiledevice-glue" class="text-reset"><span class="badge p-1 badge-info">libimobiledevice-glue</span></a></li>
-											</ul>
-				</div>
-												<div class="card-body">
-					<h4 id="2.1.1+%282025-06-04%29" name="2.1.1+%282025-06-04%29">2.1.1 (2025-06-04)</h4>
-<h5 id="Changes" name="Changes">Changes</h5>
-<ul>
-<li>tools: Fix potential issue with <code>select()</code> in case the network fd is higher than the usbmux fd</li>
-<li>Switch to better initializer strategy</li>
-<li>Fix compilation on MSVC</li>
-<li>iproxy: Make sure to print correct socket error messages</li>
-<li>inetcat: Make sure to report correct error messages</li>
-</ul>
-				</div>
-							</div>
-		</div>
-	</div>
-
-			<div class="col mb-4">
 		<div id="download-libirecovery" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
 				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libirecovery" href="#download-details-libirecovery" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libirecovery</a>&nbsp;<a href="https://github.com/libimobiledevice/libirecovery/releases/tag/1.3.1"><small class="font-weight-light text-muted">1.3.1</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libirecovery/build.yml?branch=master"></div></h3>
@@ -748,40 +748,31 @@ Restarting device.</code></pre>
 	</div>
 
 			<div class="col mb-4">
-		<div id="download-libplist" class="card card-download accordion h-100 shadow">
+		<div id="download-libtatsu" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libplist" href="#download-details-libplist" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libplist</a>&nbsp;<a href="https://github.com/libimobiledevice/libplist/releases/tag/2.7.0"><small class="font-weight-light text-muted">2.7.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libplist/build.yml?branch=master"></div></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libtatsu" href="#download-details-libtatsu" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libtatsu</a>&nbsp;<a href="https://github.com/libimobiledevice/libtatsu/releases/tag/1.0.5"><small class="font-weight-light text-muted">1.0.5</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libtatsu/build.yml?branch=master"></div></h3>
 			</div>
-			<div class="card-details collapse" id="download-details-libplist" data-parent="#download-libplist">
+			<div class="card-details collapse" id="download-details-libtatsu" data-parent="#download-libtatsu">
 				<div class="card-body">
-					<p class="card-text">A library to handle Apple Property List format in binary or XML</p>
-										<a href="https://github.com/libimobiledevice/libplist/releases/download/2.7.0/libplist-2.7.0.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+					<p class="card-text">Library handling the communication with Apple's Tatsu Signing Server (TSS)</p>
+										<a href="https://github.com/libimobiledevice/libtatsu/releases/download/1.0.5/libtatsu-1.0.5.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
 					
 															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
 									</div>
-													<hr>
+												<div class="card-header border-top">
+					<small class="text-muted">Depends on:</small>
+					<ul class="list-inline m-0">
+																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
+																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libcurl</span></li>
+											</ul>
+				</div>
 												<div class="card-body">
-					<h4 id="2.7.0+%282025-05-14%29" name="2.7.0+%282025-05-14%29">2.7.0 (2025-05-14)</h4>
-<h5 id="Changes" name="Changes">Changes</h5>
+					<h4 id="1.0.5+%282025-06-04%29" name="1.0.5+%282025-06-04%29">1.0.5 (2025-06-04)</h4>
+<h5 id="Changes%3A" name="Changes%3A">Changes:</h5>
 <ul>
-<li>Add <code>plist_new_unix_date</code>, <code>plist_get_unix_date_val</code>, <code>plist_set_unix_date_val</code> functions
-that work with <code>int64_t</code> values representing a UNIX timestamp instead of
-using the 'MAC epoch'.
-These new functions should be used instead of <code>plist_new_date</code>,
-<code>plist_get_date_val</code>, and <code>plist_set_date_val</code>, which are now marked deprecated
-and might be removed in a future version of libplist.</li>
-<li>Allow building the library without tool(s)</li>
-<li>Switch to more generic global initializer method</li>
-<li>json: Allow e+/E+ in exponent as per RFC 8259</li>
-<li>C++: Add more convenience functions to the interface</li>
-<li>C++: Add more type variants to different constructors and operators</li>
-</ul>
-<h5 id="Bugfixes%3A" name="Bugfixes%3A">Bugfixes:</h5>
-<ul>
-<li>Fix segmentation fault when calling <code>plist_sort()</code> on an empty dictionary</li>
 <li>Fix compilation on MSVC</li>
-<li>C++: Fix bug in internal helper function of Array class</li>
-<li>C++: Fix String::GetValue memory leaking and support assignment of <code>const char*</code></li>
+<li>Add <code>extern "C"</code> guards to public headers</li>
+<li>Update auth client version</li>
 </ul>
 				</div>
 							</div>
@@ -833,37 +824,45 @@ and might be removed in a future version of libplist.</li>
 	</div>
 
 			<div class="col mb-4">
-		<div id="download-libimobiledevice-glue" class="card card-download accordion h-100 shadow">
+		<div id="download-idevicerestore" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libimobiledevice-glue" href="#download-details-libimobiledevice-glue" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libimobiledevice-glue</a>&nbsp;<a href="https://github.com/libimobiledevice/libimobiledevice-glue/releases/tag/1.3.2"><small class="font-weight-light text-muted">1.3.2</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libimobiledevice-glue/build.yml?branch=master"></div></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-idevicerestore" href="#download-details-idevicerestore" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;idevicerestore</a>&nbsp;<a href="https://github.com/libimobiledevice/idevicerestore/releases/tag/1.0.0"><small class="font-weight-light text-muted">1.0.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/idevicerestore/build.yml?branch=master"></div></h3>
 			</div>
-			<div class="card-details collapse" id="download-details-libimobiledevice-glue" data-parent="#download-libimobiledevice-glue">
+			<div class="card-details collapse" id="download-details-idevicerestore" data-parent="#download-idevicerestore">
 				<div class="card-body">
-					<p class="card-text">A library with common code used by libraries and tools around the libimobiledevice project</p>
-										<a href="https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.2/libimobiledevice-glue-1.3.2.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+					<p class="card-text">Restore/upgrade firmware of iOS devices</p>
+										<a href="https://github.com/libimobiledevice/idevicerestore/releases/download/1.0.0/idevicerestore-1.0.0.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
 					
-															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
+															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-3.0" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v3.0">LGPL-3.0 License</a></span>
 									</div>
 												<div class="card-header border-top">
 					<small class="text-muted">Depends on:</small>
 					<ul class="list-inline m-0">
+																		<li class="list-inline-item"><a href="#download-libirecovery" class="text-reset"><span class="badge p-1 badge-info">libirecovery</span></a></li>
+																		<li class="list-inline-item"><a href="#download-libimobiledevice" class="text-reset"><span class="badge p-1 badge-info">libimobiledevice</span></a></li>
 																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
+																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libcurl</span></li>
+																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libzip</span></li>
+																		<li class="list-inline-item"><span class="badge p-1 badge-dark">openssl</span></li>
+																		<li class="list-inline-item"><span class="badge p-1 badge-dark">zlib</span></li>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4 id="1.3.2+%282025-06-04%29" name="1.3.2+%282025-06-04%29">1.3.2 (2025-06-04)</h4>
-<h5 id="Changes" name="Changes">Changes</h5>
+					<h4 id="1.0.0+%282020-06-15%29" name="1.0.0+%282020-06-15%29">1.0.0 (2020-06-15)</h4>
+<p>First official public release!</p>
+<h5 id="Features" name="Features">Features</h5>
 <ul>
-<li>socket: [macOS] Fix build on older macOS</li>
-<li>socket: [Windows] Prevent crash by properly initializing memory buffers</li>
-<li>Switch to better initializer strategy</li>
-<li>Fix compilation on MSVC</li>
-<li>Add <code>extern "C"</code> guards to public headers</li>
-<li>socket: Improve error message output/verbose logging</li>
-<li>socket: [Windows] Make sure errno is set in error conditions</li>
-<li>socket: Allow setting debug level via environment variable</li>
-<li>socket: [Windows] Use <code>WSAAddressToStringA</code> (ANSI version)</li>
-<li>socket: [Windows] Use <code>inet_ntop</code> instead of <code>WSAAddressToStringA</code> for &gt;= Vista</li>
+<li>Restore firmware files to iOS devices</li>
+<li>Use official IPSW firmware archive file or directory</li>
+<li>Updates the device by default or allows full restore erasing all data</li>
+<li>Download latest available firmware for device on demand</li>
+<li>Cache downloaded firmware files</li>
+<li>Restore using custom firmware files <em>(requires bootrom exploit)</em></li>
+<li>Skip NOR/Baseband upgrade</li>
+<li>Fetch TSS records as <code>.shsh</code> files</li>
+<li>Put devices in pwned DFU mode <em>(limera1n devices only)</em></li>
+<li>Use custom AP ticket from file</li>
+<li>Developed since 2010</li>
 </ul>
 				</div>
 							</div>
@@ -871,31 +870,31 @@ and might be removed in a future version of libplist.</li>
 	</div>
 
 			<div class="col mb-4">
-		<div id="download-libtatsu" class="card card-download accordion h-100 shadow">
+		<div id="download-ifuse" class="card card-download accordion h-100 shadow">
 			<div class="card-header">
-				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-libtatsu" href="#download-details-libtatsu" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;libtatsu</a>&nbsp;<a href="https://github.com/libimobiledevice/libtatsu/releases/tag/1.0.5"><small class="font-weight-light text-muted">1.0.5</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/libtatsu/build.yml?branch=master"></div></h3>
+				<h3 class="card-title mb-0"><a class="accordion-header collapsed text-reset" data-toggle="collapse" data-parent="#download-ifuse" href="#download-details-ifuse" aria-expanded="true"><i class="fas fa-angle-right"></i>&nbsp;ifuse</a>&nbsp;<a href="https://github.com/libimobiledevice/ifuse/releases/tag/1.2.0"><small class="font-weight-light text-muted">1.2.0</small></a><div class="float-right"><img alt="GitHub Workflow Status" data-src="https://img.shields.io/github/actions/workflow/status/libimobiledevice/ifuse/build.yml?branch=master"></div></h3>
 			</div>
-			<div class="card-details collapse" id="download-details-libtatsu" data-parent="#download-libtatsu">
+			<div class="card-details collapse" id="download-details-ifuse" data-parent="#download-ifuse">
 				<div class="card-body">
-					<p class="card-text">Library handling the communication with Apple's Tatsu Signing Server (TSS)</p>
-										<a href="https://github.com/libimobiledevice/libtatsu/releases/download/1.0.5/libtatsu-1.0.5.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
+					<p class="card-text">A fuse filesystem to access the contents of iOS devices</p>
+										<a href="https://github.com/libimobiledevice/ifuse/releases/download/1.2.0/ifuse-1.2.0.tar.bz2" class="btn btn-success btn-sm mb-0"><i class="fas fa-download fa-fw mr-2"></i>Download (<em>tar.bz2</em>)</a>
 					
 															<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw mr-2"></i><a href="http://choosealicense.com/licenses/lgpl-2.1" target="_blank" rel="noreferrer" class="text-reset" title="View GNU Lesser General Public License v2.1">LGPL-2.1 License</a></span>
 									</div>
 												<div class="card-header border-top">
 					<small class="text-muted">Depends on:</small>
 					<ul class="list-inline m-0">
+																		<li class="list-inline-item"><a href="#download-libimobiledevice" class="text-reset"><span class="badge p-1 badge-info">libimobiledevice</span></a></li>
 																		<li class="list-inline-item"><a href="#download-libplist" class="text-reset"><span class="badge p-1 badge-info">libplist</span></a></li>
-																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libcurl</span></li>
+																		<li class="list-inline-item"><span class="badge p-1 badge-dark">libfuse</span></li>
 											</ul>
 				</div>
 												<div class="card-body">
-					<h4 id="1.0.5+%282025-06-04%29" name="1.0.5+%282025-06-04%29">1.0.5 (2025-06-04)</h4>
-<h5 id="Changes%3A" name="Changes%3A">Changes:</h5>
+					<h4 id="1.2.0+%282025-10-14%29" name="1.2.0+%282025-10-14%29">1.2.0 (2025-10-14)</h4>
+<h5 id="Changes" name="Changes">Changes</h5>
 <ul>
-<li>Fix compilation on MSVC</li>
-<li>Add <code>extern "C"</code> guards to public headers</li>
-<li>Update auth client version</li>
+<li>Switch to libfuse 3</li>
+<li>Require libimobiledevice 1.4.0</li>
 </ul>
 				</div>
 							</div>
@@ -1544,7 +1543,7 @@ $ make</code></pre>
 		<hr>
 								<div class="row">
 			<div class="col-12 text-center text-md-left">
-				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Fri, 31 Oct 2025 02:49:10 +0100</small>
+				<small class="text-muted">Logo, Artwork &amp; UI by <a href="https://github.com/FunkyM" class="text-reset" target="_blank" rel="noopener">Martin Szulecki</a>.</small>&nbsp;<small class="ml-auto text-muted">Generated by <a href="https://cecil.app/#5.x-dev" class="text-reset" target="_blank" rel="noopener">Cecil v5.x-dev</a> on Mon, 03 Nov 2025 01:27:21 +0100</small>
 			</div>
 		</div>
 	</div>
