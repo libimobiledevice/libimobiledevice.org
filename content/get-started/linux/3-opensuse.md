@@ -12,5 +12,5 @@ Open a command-line terminal on your machine.
 Enter the commands provided below.
 
 ```shell-session
-$ sudo zypper install libimobiledevice6 usbmuxd
+$ sudo zypper install imobiledevice-tools usbmuxd
 ```
