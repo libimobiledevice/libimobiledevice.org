@@ -3,7 +3,7 @@
   $.fn.waypointLazyLoadImage = function( options ) {
     return $(this).each(function(index, item) {
       var inview = new Waypoint.Inview({
-        element: $(item),
+        element: item,
         enter: function(direction) {
           $(this.element).attr('src', $(this.element).data('src'));
           $(this.element).removeAttr('data-src');
@@ -35,7 +35,7 @@
 
       const animationClass = element.attr('data-animation'),
         animationDelay = element.attr('data-animation-delay') || settings.delay,
-        animationOffset = element.attr('data-animation-offset') || settings.offset;
+        animationOffset = element.attr('data-animation-offset') || settings.offset,
         animationDuration = element.attr('data-animation-duration') || settings.duration;
 
 
@@ -49,16 +49,18 @@
         'opacity': 0
       });
 
-      element.waypoint(function () {
-        element
-          .addClass('animated')
-          .addClass(animationClass)
-          .css({
-            'opacity': 1
-          });
-      }, {
-        element: $(item),
-        triggerOnce: true,
+      new Waypoint({
+        element: item,
+        handler: function () {
+          element
+            .addClass('animated')
+            .addClass(animationClass)
+            .css({
+              'opacity': 1
+            });
+          // trigger once
+          this.destroy();
+        },
         offset: animationOffset
       });
 

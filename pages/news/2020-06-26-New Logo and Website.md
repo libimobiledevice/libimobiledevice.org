@@ -11,7 +11,7 @@ In that process upfront I decided to go for a *full rebranding of the project*, 
 
 Looking at the results I think it was worth the wait. The new colorful isometric logo that relates to the letters *"L"* and *"i"* alongside the flow of colors which symbolizes the "flow of communication and related components" should hopefully hit the spot of what the project stands for.
 
-![libimobiledevice logo](/img/brand/brand-ontop-gradient-alpha.png?resize=512 "The new logo and font")
+![libimobiledevice logo](/img/brand/brand-ontop-gradient-alpha.png "The new logo and font"){width=512}
 
 The next milestone is to integrate this page to be hosted using [Github Pages](https://pages.github.com).
 This should allow contributions for all content by the community!

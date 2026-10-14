@@ -7,9 +7,10 @@ on:
     paths:
       - 'Makefile'
       - 'assets/**'
-      - 'content/**'
+      - 'pages/**'
       - 'data/*.json'
       - 'layouts/**'
+      - 'cecil.yml'
       - 'config.*.yml'
       - 'composer.json'
       - 'package.json'
@@ -47,8 +48,8 @@ jobs:
       - name: Setup PHP with intl 🏗
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
-          extensions: intl-69.1
+          php-version: '8.3'
+          extensions: intl, gd, mbstring
 
       - name: Install additional packages 🏗
         shell: bash

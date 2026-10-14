@@ -7,3 +7,5 @@ public*
 node_modules
 vendor
 data/github
+assets/fonts/fontawesome
+package-lock.json

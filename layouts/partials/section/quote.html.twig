@@ -2,13 +2,15 @@
 
 {% block section_header %}{% endblock section_header %}
 
-{% block section_content %}
-<div class="row">
-	<div class="col-12">
-		<blockquote class="blockquote text-center">
-			<p class="mb-0">We'll miss you, Steve.</p>
-			<footer class="blockquote-footer text-light"><a href="https://www.apple.com/stevejobs/" target="_blank" rel="noreferrer" class="text-white">Steve Jobs</a>, 1955 - 2011</footer>
-		</blockquote>
-	</div>
-</div>
-{% endblock section_content %}
+          {%- block section_content ~%}
+          <div class="row">
+            <div class="col-12">
+              <figure class="text-center">
+                <blockquote class="blockquote">
+                  <p class="mb-0">We'll miss you, Steve.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer text-light mt-0"><a href="https://www.apple.com/stevejobs/" target="_blank" rel="noreferrer" class="text-white">Steve Jobs</a>, 1955 - 2011</figcaption>
+              </figure>
+            </div>
+          </div>
+          {%- endblock section_content ~%}

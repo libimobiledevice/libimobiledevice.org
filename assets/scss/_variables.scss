@@ -7,7 +7,7 @@ $navbar-height:                74px;
 $theme-colors: map-merge($theme-colors, (
   "primary":                   #005082,
   "secondary":                 #023e49,
-  "success":                   $green,
+  "success":                   #28a745, // Bootstrap 4 green
   "info":                      #0a9197,
   "warning":                   #f7ae1a,
   "danger":                    #ab2333,
@@ -19,16 +19,53 @@ $theme-colors: map-merge($theme-colors, (
 
 $enable-shadows:               false;
 $enable-gradients:             false;
-$enable-responsive-font-sizes: false;
-$enable-print-styles:          false;
+$enable-rfs:                   false;
+$enable-dark-mode:             false;
 $enable-validation-icons:      false;
 $enable-deprecation-messages:  false;
+
+// keep Bootstrap 4 defaults
+$min-contrast-ratio:           3;
+$link-decoration:              none;
+$link-hover-decoration:        underline;
+$grid-gutter-width:            30px;
+$container-padding-x:          $grid-gutter-width;
+$container-max-widths: (
+  sm:                          540px,
+  md:                          720px,
+  lg:                          960px,
+  xl:                          1140px,
+  xxl:                         1140px
+);
 
 $font-size-base:               1rem;
 $headings-margin-bottom:       $spacer;
 
 $breadcrumb-bg:                transparent;
 $breadcrumb-margin-bottom:     0;
+$breadcrumb-padding-y:         .75rem;
+$breadcrumb-padding-x:         1rem;
+
+$card-spacer-y:                1.25rem;
+$card-spacer-x:                1.25rem;
+$card-cap-padding-y:           .75rem;
+$card-cap-padding-x:           $card-spacer-x;
+
+$list-group-item-padding-y:    .75rem;
+$list-group-item-padding-x:    1.25rem;
+
+$table-cell-padding-y:         .75rem;
+$table-cell-padding-x:         .75rem;
+$table-bg-scale:               -75%;
+// table variants are computed by Bootstrap before the theme colors above
+$table-variants: ();
+@each $color in primary, secondary, success, info, warning, danger {
+  $table-variants: map-merge($table-variants, ($color: shift-color(map-get($theme-colors, $color), $table-bg-scale)));
+}
+$table-variants: map-merge($table-variants, (
+  "light":                     map-get($theme-colors, "light"),
+  "dark":                      map-get($theme-colors, "dark")
+));
 
 $jumbotron-bg:                 $gray-200;
 
@@ -39,24 +76,3 @@ $transition-filter:            filter .5s, opacity .5s !default;
 
 $use-fade:                     true;
 $base-duration:                4s;
-
-// fontawesome options
-
-$fa-font-path:                 "../fonts";
-$fac-font-path:                $fa-font-path;
-
-$fa-font-size-base:            16px;
-$fa-font-display:              block;
-$fa-css-prefix:                fa;
-$fa-version:                   "5.13.1";
-$fa-border-color:              #eee;
-$fa-inverse:                   #fff;
-$fa-li-width:                  2em;
-$fa-fw-width:                  (20em / 16);
-$fa-primary-opacity:           1;
-$fa-secondary-opacity:         .4;
-
-// Convenience function used to set content property
-@function fa-content($fa-var) {
-  @return unquote("\"#{ $fa-var }\"");
-}

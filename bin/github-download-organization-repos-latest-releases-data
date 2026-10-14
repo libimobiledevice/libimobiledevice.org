@@ -11,7 +11,12 @@ WGET_BIN=wget
 CURL_BIN=curl
 GREP_BIN=grep
 WC_BIN=wc
-JQ_BIN=jq
+JQ_BIN=jq_lf
+
+# Strip carriage returns added by jq on Windows
+jq_lf() {
+	jq "$@" | tr -d '\r'
+}
 
 if [[ $# -lt 1 ]];
 then
@@ -219,8 +224,11 @@ do
 				"${GITHUB_RAW_CONTENT_URL}/${ORGANIZATION}/${REPO_NAME}/${RELEASE_NAME}/configure.ac" \
 			| \
 			$GREP_BIN \
-				 -Po \
-				'(?<=PKG_CHECK_MODULES\()([^, ]*)' \
+				 -o \
+				'PKG_CHECK_MODULES([^, ]*' \
+			| \
+			sed \
+				's/^PKG_CHECK_MODULES(//' \
 		)
 
 		if [[ -n "${RESULT}" ]];

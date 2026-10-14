@@ -1,11 +1,17 @@
 {
+  "scripts": {
+    "postinstall": "node bin/copy-vendor-assets.js && node bin/build-fontawesome.js"
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.1",
+    "@fortawesome/fontawesome-free": "^7.3.1",
     "animate-sass": "https://github.com/tgdev/animate-sass",
-    "bootstrap": "^4.5.0",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
+    "bootstrap": "^5.3.8",
+    "jquery": "^4.0.0",
     "smoothscroll-polyfill": "^0.4.4",
     "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "fontawesome-subset": "^4.6.0",
+    "yaml": "^2.8.1"
   }
 }

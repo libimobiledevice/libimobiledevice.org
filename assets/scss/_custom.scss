@@ -27,8 +27,14 @@ main > section[id]:not([id='']):target::before {
 	margin-top: -2px;
 }
 
+/* Bootstrap 4 fluid jumbotron, removed in Bootstrap 5 */
 .jumbotron {
-	/* --animate-duration: 3s; */
+	padding: $spacer * 2 0;
+	background-color: $jumbotron-bg;
+
+	@include media-breakpoint-up(sm) {
+		padding: $spacer * 4 0;
+	}
 }
 
 .nav-tabs .nav-link {
@@ -37,13 +43,13 @@ main > section[id]:not([id='']):target::before {
 }
 
 .nav-tabs .nav-link.active {
-	border-color: theme-color('warning') #e1e4e8 transparent;
+	border-color: map-get($theme-colors, 'warning') #e1e4e8 transparent;
 }
 
 .tab-pane {
 	padding-top: 1rem;
 	h4 {
-		padding-bottom: $spacer / 2;
+		padding-bottom: $spacer * .5;
 		@extend .border-bottom;
 	}
 }
@@ -54,7 +60,7 @@ main > section[id]:not([id='']):target::before {
 }
 
 .card-tag-warning {
-	border-color: theme-color('warning') #e1e4e8 transparent;
+	border-color: map-get($theme-colors, 'warning') #e1e4e8 transparent;
 }
 
 .fa-1-5x {
@@ -74,7 +80,7 @@ pre > code {
 
 .card-download .card-body {
 	code {
-		color: theme-color('info');
+		color: map-get($theme-colors, 'info');
 		background: #f8f8f8;
 		font-size: $font-size-base;
 	}
@@ -141,7 +147,7 @@ svg#brand-logo #glogo #gt12 { animation-delay: calc(var(--hueshift-delay) + (12s
 svg#brand-logo #glogo #gt7 { opacity: 0.5; }
 
 @keyframes hueshift {
-	0%	{ fill: theme-color('warning'); }
+	0%	{ fill: map-get($theme-colors, 'warning'); }
 	10%	{ fill: #e45e25; }
 	20%	{ fill: #d2343e; }
 	35%	{ fill: #ab2333; }
@@ -176,7 +182,7 @@ svg#brand-logo #glogo #gt7 { opacity: 0.5; }
 	bottom: $spacer;
 	right: $spacer;
 
-	padding: $spacer / 2;
+	padding: $spacer * .5;
 	line-height: 1;
 	text-align: center;
 
@@ -218,7 +224,7 @@ svg#brand-logo #glogo #gt7 { opacity: 0.5; }
 			transform: rotate(90deg);
 			-webkit-transition: all .3s ease-in-out;
 			transition: all .3s ease-in-out;
-			margin-right: $spacer / 2;
+			margin-right: $spacer * .5;
 		}
 
 		&.collapsed i {
@@ -226,7 +232,7 @@ svg#brand-logo #glogo #gt7 { opacity: 0.5; }
 		}
 
 		&:hover {
-			color: theme-color(secondary);
+			color: map-get($theme-colors, 'secondary');
 		}
 	}
 }
@@ -243,7 +249,7 @@ svg#brand-logo #glogo #gt7 { opacity: 0.5; }
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
 		&#{$infix} {
-			@include media-breakpoint-down($breakpoint) {
+			@include media-breakpoint-down($next) {
 				caption,
 				thead,
 				tbody,
@@ -254,14 +260,14 @@ svg#brand-logo #glogo #gt7 { opacity: 0.5; }
 				}
 
 				th {
-					color: $table-head-color;
-					background-color: $table-head-bg;
+					color: $gray-700;
+					background-color: $gray-200;
 					border-color: $table-border-color;
 				}
 
 				&.table-bordered,
 				> .table-bordered {
-					border: 0;
+					border-width: 0;
 
 					th, td {
 						border-top: 0;
@@ -269,17 +275,8 @@ svg#brand-logo #glogo #gt7 { opacity: 0.5; }
 				}
 
 				&.table-striped {
-					tbody tr:nth-of-type(#{$table-striped-order}) {
-						background-color: inherit;
-					}
-				}
-
-				&.table-striped.table-hover {
-					tbody tr:nth-of-type(#{$table-striped-order}) {
-						@include hover() {
-							color: $table-hover-color;
-							background-color: $table-hover-bg;
-						}
+					tbody tr:nth-of-type(#{$table-striped-order}) > * {
+						--#{$prefix}table-bg-type: transparent;
 					}
 				}
 			}

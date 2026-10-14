@@ -12,7 +12,7 @@
       });
 
       // show after scrolling a bit (below 60% of window height)
-      $(window).scroll(function() {
+      $(window).on("scroll", function() {
         if ($(document).scrollTop() > ($(window).height() * 0.6)) {
           target.removeClass("d-none");
           target.removeClass("fadeOut");
@@ -27,7 +27,7 @@
 
 })(window.jQuery);
 
-$(document).ready(function($) {
+jQuery(function($) {
 
   // Enable "Back to Top" button
   $(".back-to-top").backToTop();

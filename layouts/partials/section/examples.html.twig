@@ -1,41 +1,38 @@
 {% extends 'partials/section.html.twig' %}
 
-{% block section_header %}{% endblock section_header %}
+          {%- block section_header %}{% endblock section_header ~%}
 
-{% block section_content %}
-{% set anchor_base_url = (page.type == 'homepage' ? '': url('/', {canonical:true})) %}
-<div class="row">
-	<div class="col-12 col-md-5 mb-5 mb-lg-0">
-		<p class="section-title">Native Protocols</p>
-		<h2 class="entry-title mb-4">Control devices running latest iOS firmware</h2>
-		<div class="entry-content">
-			<p>The library has been architected for easy access to native device features using an object-oriented higher-level API.</p>
-			<p>This allows interacting with various native device service APIs to manage Apps, Backup, Filesystem, Debugging, Activation, Provisioning, SpringBoard, Syslog, Firmware Updates and much more.</p>
-			<p>You can also use the bundled command-line utilities for these if you do not actually develop an application.</p>
-			<a href="{{ anchor_base_url }}#get-started" class="btn btn-lg btn-info" role="button"><i class="fas fa-rocket fa-fw"></i>&nbsp;Get Started</a>
-		</div>
-	</div>
-	<div class="col-12 col-md-7" style="opacity: 0.95;">
-		{# Tabs #}
-		{% apply spaceless %}
-		<ul class="nav nav-tabs" role="tablist">
-			<li class="nav-item">
-				<a class="nav-link active" id="example-content-connecting-tab" data-toggle="tab" href="#example-content-connecting" role="tab" aria-controls="example-content-connecting" aria-selected="true">Connect (C)</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="example-content-info-tab" data-toggle="tab" href="#example-content-info" role="tab" aria-controls="example-content-info" aria-selected="true">Read (C)</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="example-content-utilities-tab" data-toggle="tab" href="#example-content-utilities" role="tab" aria-controls="example-content-utilities" aria-selected="true">Utilities (Console)</a>
-			</li>
-		</ul>
-		{% endapply %}
-
-		{# Tabs Content #}
-		<div class="tab-content bg-white" id="example-content-tabs-content">
-
-			<div class="tab-pane p-1 border-left border-right border-bottom show active" id="example-content-connecting" role="tabpanel" aria-labelledby="example-content-connecting-tab">
-				<pre class="border border-muted rounded-lg mb-0"><code class="language-c c">{{ '...
+          {%- block section_content -%}
+          {%- set anchor_base_url = (page.type == 'homepage' ? '': url('/', {canonical:true})) ~%}
+          <div class="row">
+            <div class="col-12 col-md-5 mb-5 mb-lg-0">
+              <p class="section-title">Native Protocols</p>
+              <h2 class="entry-title mb-4">Control devices running latest iOS firmware</h2>
+              <div class="entry-content">
+                <p>The library has been architected for easy access to native device features using an object-oriented higher-level API.</p>
+                <p>This allows interacting with various native device service APIs to manage Apps, Backup, Filesystem, Debugging, Activation, Provisioning, SpringBoard, Syslog, Firmware Updates and much more.</p>
+                <p>You can also use the bundled command-line utilities for these if you do not actually develop an application.</p>
+                <a href="{{ anchor_base_url }}#get-started" class="btn btn-lg btn-info" role="button"><i class="fas fa-rocket fa-fw"></i>&nbsp;Get Started</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-7" style="opacity: 0.95;">
+              {#- Tabs ~#}
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="example-content-connecting-tab" data-bs-toggle="tab" href="#example-content-connecting" role="tab" aria-controls="example-content-connecting" aria-selected="true">Connect (C)</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="example-content-info-tab" data-bs-toggle="tab" href="#example-content-info" role="tab" aria-controls="example-content-info" aria-selected="true">Read (C)</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="example-content-utilities-tab" data-bs-toggle="tab" href="#example-content-utilities" role="tab" aria-controls="example-content-utilities" aria-selected="true">Utilities (Console)</a>
+                </li>
+              </ul>
+              {#- Tabs Content ~#}
+              <div class="tab-content bg-white" id="example-content-tabs-content">
+                <div class="tab-pane p-1 border-start border-end border-bottom show active" id="example-content-connecting" role="tabpanel" aria-labelledby="example-content-connecting-tab">
+                  <pre class="border border-muted rounded-3 mb-0"><code class="language-c c">
+{{- '...
 #include <libimobiledevice/libimobiledevice.h>
 
 /* Unique Device Identifier */
@@ -63,11 +60,12 @@ printf("Connected with UDID: %s\\n", udid);
 /* Cleanup */
 idevice_free(device);
 free(udid);
-...' | e('html') }}</code></pre>
-			</div>
-
-			<div class="tab-pane p-1 border-left border-right border-bottom" id="example-content-info" role="tabpanel" aria-labelledby="example-content-info-tab">
-				<pre class="border border-muted rounded-lg mb-0"><code class="language-c c">{{ '...
+...' | e('html') -}}
+                  </code></pre>
+                </div>
+                <div class="tab-pane p-1 border-start border-end border-bottom" id="example-content-info" role="tabpanel" aria-labelledby="example-content-info-tab">
+                  <pre class="border border-muted rounded-3 mb-0"><code class="language-c c">
+{{- '...
 #include <libimobiledevice/lockdown.h>
 #include <plist/plist.h>
 
@@ -101,11 +99,12 @@ printf("%s value is: %s\\n", "DeviceColor", value);
 plist_free(node);
 free(value);
 lockdownd_client_free(lockdown);
-...' | e('html') }}</code></pre>
-			</div>
-
-			<div class="tab-pane p-1 border-left border-right border-bottom" id="example-content-utilities" role="tabpanel" aria-labelledby="example-content-utilities-tab">
-				<pre class="border border-muted rounded-lg mb-0"><code class="language-shell-session shell">{{ '$ ideviceinfo -k ProductVersion
+...' | e('html') -}}
+                  </code></pre>
+                </div>
+                <div class="tab-pane p-1 border-start border-end border-bottom" id="example-content-utilities" role="tabpanel" aria-labelledby="example-content-utilities-tab">
+                  <pre class="border border-muted rounded-3 mb-0"><code class="language-shell-session shell">
+{{- '$ ideviceinfo -k ProductVersion
 12.4
 $ ideviceinfo -s
 BasebandCertId: xxxxxxxxxx
@@ -137,11 +136,10 @@ WiFiAddress: xx:xx:xx:xx:xx:xx
 $ ideviceactivation state
 ActivationState: Activated
 $ idevicediagnostics restart
-Restarting device.' | e('html') }}</code></pre>
-			</div>
-
-		</div>
-
-	</div>
-</div>
-{% endblock section_content %}
+Restarting device.' | e('html') -}}
+                  </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%- endblock section_content ~%}

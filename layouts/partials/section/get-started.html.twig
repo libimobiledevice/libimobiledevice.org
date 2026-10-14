@@ -2,82 +2,74 @@
 
 {% set section = site.pages['get-started'] %}
 
-{% block section_header %}
-<div class="row section-heading">
-	<div class="col-12">
-		<h2 class="section-title mb-5">{{ section.title }}</h2>
-		<div></div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-12">
-		{{ section.content }}
-	</div>
-</div>
-{% endblock section_header %}
+          {%- block section_header ~%}
+          <div class="row section-heading">
+            <div class="col-12">
+              <h2 class="section-title mb-5">{{ section.title }}</h2>
+              <div></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              {{ section.content ~}}
+            </div>
+          </div>
+          {%- endblock section_header ~%}
 
-{% block section_content %}
-{% set platforms = site.pages | filter_by('section', section.slug) | sort_by_weight %}
-<div class="row">
-	<div class="col-12">
-
-		{# Tabs #}
-		{% apply spaceless %}
-		<ul class="nav nav-tabs" role="tablist">
-			{% for platform in platforms %}
-			<li class="nav-item">
-				<a class="nav-link{{ loop.first ? ' active': '' }}" id="{{ platform.slug }}-tab" data-toggle="tab" href="#{{ section.slug }}-{{ platform.slug }}" role="tab" aria-controls="{{ section.slug }}-{{ platform.slug }}" aria-selected="true" title="{{ platform.title | e }}"><i class="{{ platform.icon }} fa-fw"></i>&nbsp;{{ platform.title }}</a>
-			</li>
-			{% endfor %}
-		</ul>
-		{% endapply %}
-
-
-		{# Tabs Content #}
-		<div class="tab-content bg-white" id="{{ section.slug }}-tabs-content">
-
-			{% for platform in platforms %}
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade{{ loop.first ? ' show active': '' }}" id="{{ section.slug }}-{{ platform.slug }}" role="tabpanel" aria-labelledby="{{ platform.slug }}-tab">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-12 mb-2">
-							{% set guides = site.pages | filter_by('section', section.slug ~ '/' ~ platform.slug) | sort_by_weight %}
-
-							{% if platform.content | trim | length -%}
-							{{- include(template_from_string(platform.content), {'page': platform}) | replace({'href=': 'rel="noreferrer" target="_blank" href='}) -}}
-							{%- endif %}
-
-							{% if guides | length %}
-							{#- Platform Options -#}
-							<div class="row">
-								<div class="col-12 col-md-3 mb-2">
-									{#- List group -#}
-									<div class="list-group" id="{{ section.slug }}-{{ platform.slug }}-tablist" role="tablist">
-										{% for guide in guides %}
-										<a class="list-group-item list-group-item-action{{ loop.first ? ' active': '' }}" data-toggle="list" href="#{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tab">{{ guide.title }}</a>
-										{% endfor %}
-									</div>
-								</div>
-								<div class="col-12 col-md-9 mb-2">
-									{#- Tab panes -#}
-									<div class="tab-content">
-										{% for guide in guides %}
-										<div class="tab-pane{{ loop.first ? ' active': '' }}" id="{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tabpanel">
-											{{- guide.body | trim | replace({'# ': '#### '}) | markdown_to_html | raw | replace({'href=': 'rel="noreferrer" target="_blank" href='}) -}}
-										</div>
-										{% endfor %}
-									</div>
-								</div>
-							</div>
-							{% endif %}
-						</div>
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-
-		</div>
-
-	</div>
-</div>
-{% endblock section_content %}
+          {%- block section_content -%}
+          {%- set platforms = site.pages | filter(p => p.type == 'page' and p.folder == section.slug and p.id != section.id) | sort_by_weight ~%}
+          <div class="row">
+            <div class="col-12">
+              {#- Tabs ~#}
+              {%- apply spaceless ~%}
+              <ul class="nav nav-tabs" role="tablist">
+                {%- for platform in platforms ~%}
+                <li class="nav-item">
+                  <a class="nav-link{{ loop.first ? ' active': '' }}" id="{{ platform.slug }}-tab" data-bs-toggle="tab" href="#{{ section.slug }}-{{ platform.slug }}" role="tab" aria-controls="{{ section.slug }}-{{ platform.slug }}" aria-selected="true" title="{{ platform.title | e }}"><i class="{{ platform.icon }} fa-fw"></i>&nbsp;{{ platform.title }}</a>
+                </li>
+                {%- endfor ~%}
+              </ul>
+              {%- endapply ~%}
+              {#- Tabs Content ~#}
+              <div class="tab-content bg-white" id="{{ section.slug }}-tabs-content">
+                {%- for platform in platforms ~%}
+                <div class="tab-pane pt-4 border-start border-end border-bottom fade{{ loop.first ? ' show active': '' }}" id="{{ section.slug }}-{{ platform.slug }}" role="tabpanel" aria-labelledby="{{ platform.slug }}-tab">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-12 mb-2">
+                        {%- set guides = site.pages | filter_by('section', section.slug ~ '/' ~ platform.slug) | sort_by_weight -%}
+                        {%- if platform.content | trim | length -%}
+                        {{- include(template_from_string(platform.content), {'page': platform}) | replace({'href=': 'rel="noreferrer" target="_blank" href='}) -}}
+                        {%- endif -%}
+                        {%- if guides | length -%}
+                        {#- Platform Options ~#}
+                        <div class="row">
+                          <div class="col-12 col-md-3 mb-2">
+                            {#- List group ~#}
+                            <div class="list-group" id="{{ section.slug }}-{{ platform.slug }}-tablist" role="tablist">
+                              {%- for guide in guides ~%}
+                              <a class="list-group-item list-group-item-action{{ loop.first ? ' active': '' }}" data-bs-toggle="list" href="#{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tab">{{ guide.title }}</a>
+                              {%- endfor ~%}
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-9 mb-2">
+                            {#- Tab panes ~#}
+                            <div class="tab-content">
+                              {%- for guide in guides ~%}
+                              <div class="tab-pane{{ loop.first ? ' active': '' }}" id="{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tabpanel">
+                                {{ guide.body | trim | replace({'# ': '#### '}) | markdown_to_html | raw | replace({'href=': 'rel="noreferrer" target="_blank" href='}) ~}}
+                              </div>
+                              {%- endfor ~%}
+                            </div>
+                          </div>
+                        </div>
+                        {%- endif ~%}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {%- endfor ~%}
+              </div>
+            </div>
+          </div>
+          {%- endblock section_content ~%}
